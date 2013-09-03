@@ -33,6 +33,8 @@
 		78CC30C817D6579D000B8D85 /* UIColor+RMRColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 78CC30C717D6579D000B8D85 /* UIColor+RMRColor.m */; };
 		78CC30CE17D65C4C000B8D85 /* RMRTextGrid.m in Sources */ = {isa = PBXBuildFile; fileRef = 78CC30CB17D65C4C000B8D85 /* RMRTextGrid.m */; };
 		78CC30CF17D65C4C000B8D85 /* RMRTextItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 78CC30CD17D65C4C000B8D85 /* RMRTextItem.m */; };
+		78CC30D417D668FD000B8D85 /* RMRPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 78CC30D117D668FD000B8D85 /* RMRPoint.m */; };
+		78CC30D517D668FD000B8D85 /* RMRRect.m in Sources */ = {isa = PBXBuildFile; fileRef = 78CC30D317D668FD000B8D85 /* RMRRect.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -103,6 +105,10 @@
 		78CC30CB17D65C4C000B8D85 /* RMRTextGrid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RMRTextGrid.m; path = source/views/textgrid/RMRTextGrid.m; sourceTree = SOURCE_ROOT; };
 		78CC30CC17D65C4C000B8D85 /* RMRTextItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RMRTextItem.h; path = source/views/textgrid/RMRTextItem.h; sourceTree = SOURCE_ROOT; };
 		78CC30CD17D65C4C000B8D85 /* RMRTextItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RMRTextItem.m; path = source/views/textgrid/RMRTextItem.m; sourceTree = SOURCE_ROOT; };
+		78CC30D017D668FD000B8D85 /* RMRPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RMRPoint.h; path = source/types/RMRPoint.h; sourceTree = SOURCE_ROOT; };
+		78CC30D117D668FD000B8D85 /* RMRPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RMRPoint.m; path = source/types/RMRPoint.m; sourceTree = SOURCE_ROOT; };
+		78CC30D217D668FD000B8D85 /* RMRRect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RMRRect.h; path = source/types/RMRRect.h; sourceTree = SOURCE_ROOT; };
+		78CC30D317D668FD000B8D85 /* RMRRect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RMRRect.m; path = source/types/RMRRect.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,12 +181,12 @@
 		78CC307817D64DD7000B8D85 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				78CC30C617D6579D000B8D85 /* UIColor+RMRColor.h */,
-				78CC30C717D6579D000B8D85 /* UIColor+RMRColor.m */,
 				78CC307917D64DE5000B8D85 /* NSArray+RMRArray.h */,
 				78CC307A17D64DE5000B8D85 /* NSArray+RMRArray.m */,
 				78CC307B17D64DE5000B8D85 /* NSObject+RMRCast.h */,
 				78CC307C17D64DE5000B8D85 /* NSObject+RMRCast.m */,
+				78CC30C617D6579D000B8D85 /* UIColor+RMRColor.h */,
+				78CC30C717D6579D000B8D85 /* UIColor+RMRColor.m */,
 				78CC307D17D64DE5000B8D85 /* UIView+RMRLayout.h */,
 				78CC307E17D64DE5000B8D85 /* UIView+RMRLayout.m */,
 			);
@@ -274,6 +280,10 @@
 			children = (
 				78CC30C317D6578F000B8D85 /* RMRPair.h */,
 				78CC30C417D6578F000B8D85 /* RMRPair.m */,
+				78CC30D017D668FD000B8D85 /* RMRPoint.h */,
+				78CC30D117D668FD000B8D85 /* RMRPoint.m */,
+				78CC30D217D668FD000B8D85 /* RMRRect.h */,
+				78CC30D317D668FD000B8D85 /* RMRRect.m */,
 			);
 			name = Types;
 			sourceTree = "<group>";
@@ -374,6 +384,8 @@
 				78CC30C817D6579D000B8D85 /* UIColor+RMRColor.m in Sources */,
 				78CC30CE17D65C4C000B8D85 /* RMRTextGrid.m in Sources */,
 				78CC30CF17D65C4C000B8D85 /* RMRTextItem.m in Sources */,
+				78CC30D417D668FD000B8D85 /* RMRPoint.m in Sources */,
+				78CC30D517D668FD000B8D85 /* RMRRect.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
