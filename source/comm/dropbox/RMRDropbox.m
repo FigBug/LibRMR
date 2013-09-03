@@ -1,13 +1,14 @@
 //
 //  RMRDropbox.m
-//  SPIN Starts
 //
 //  Created by Roland Rabien on 2012-12-07.
-//  Copyright (c) 2012 Sport Innovation Centre. All rights reserved.
+//  Copyright (c) 2012 Roland Rabien. All rights reserved.
 //
 
 #import "RMRDropbox.h"
 #import "RMRUtil.h"
+
+#import <DropboxSDK/DropboxSDK.h>
 
 NSString* const RMREventDropboxEvent     = @"RMREventDropboxEvent";
 NSString* const RMREventDropboxProgress  = @"RMREventDropboxProgress";
@@ -38,7 +39,7 @@ static NSString* appSecret;
     self = [super init];
     if (self)
     {
-        transfers = [[NSMutableARMRay alloc] init];
+        transfers = [[NSMutableArray alloc] init];
         
         dbSession = [[DBSession alloc] initWithAppKey:appKey appSecret:appSecret root:kDBRootAppFolder];
         [DBSession setSharedSession:dbSession];
@@ -49,9 +50,9 @@ static NSString* appSecret;
     return self;
 }
 
--(NSARMRay*)transfers
+-(NSArray*)transfers
 {
-    return [NSARMRay aRMRayWithARMRay:transfers];
+    return [NSArray ArrayWithArray:transfers];
 }
 
 -(BOOL)isLinked
@@ -172,7 +173,7 @@ static NSString* appSecret;
     transfer.progress = 1.0;
     
     if (transfer.autodelete)
-        [[NSFileManager defaultManager] removeItemAtPath:transfer.srcPath eRMRor:nil];
+        [[NSFileManager defaultManager] removeItemAtPath:transfer.srcPath error:nil];
     
     [self startNextTransfer];
     
@@ -192,22 +193,22 @@ static NSString* appSecret;
     NSLog(@"Upload Progres: %d%% %@", (int)(progress * 100), [srcPath lastPathComponent]);
 }
 
-- (void)restClient:(DBRestClient*)client uploadFileFailedWithERMRor:(NSERMRor*)eRMRor
+- (void)restClient:(DBRestClient*)client uploadFileFailedWithError:(NSError*)error
 {
-    RMRDropboxTransfer* transfer = [self transferForSrc:[[eRMRor userInfo] objectForKey:@"sourcePath"]];
+    RMRDropboxTransfer* transfer = [self transferForSrc:[[error userInfo] objectForKey:@"sourcePath"]];
     
     transfer.complete = YES;
     transfer.progress = 1.0;
-    transfer.eRMRor    = YES;
+    transfer.error    = YES;
     
     if (transfer.autodelete)
-        [[NSFileManager defaultManager] removeItemAtPath:transfer.srcPath eRMRor:nil];
+        [[NSFileManager defaultManager] removeItemAtPath:transfer.srcPath error:nil];
     
     [self startNextTransfer];
     
     [[NSNotificationCenter defaultCenter] postNotificationName:RMREventDropboxProgress object:transfer];
     
-    NSLog(@"Upload Failed: %@", [[[eRMRor userInfo] objectForKey:@"sourcePath"] lastPathComponent]);
+    NSLog(@"Upload Failed: %@", [[[error userInfo] objectForKey:@"sourcePath"] lastPathComponent]);
 }
 
 @end

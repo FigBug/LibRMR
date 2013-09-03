@@ -18,7 +18,7 @@
 }
 
 @property (nonatomic, assign) id <RMRTileProvider> tileProvider;
-@property (nonatomic) NSMutableARMRay* mapPaths;
+@property (nonatomic) NSMutableArray* mapPaths;
 
 - (void)configureLayer;
 - (NSString *)cacheDirectory;

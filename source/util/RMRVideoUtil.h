@@ -1,9 +1,8 @@
 //
 //  RMRVideoUtil.h
-//  SPIN Starts
 //
 //  Created by Roland Rabien on 2012-12-03.
-//  Copyright (c) 2012 Sport Innovation Centre. All rights reserved.
+//  Copyright (c) 2012 Roland Rabien. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

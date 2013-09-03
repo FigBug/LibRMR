@@ -34,7 +34,7 @@ static NSString* const kLastFlushedKey = @"lastFlushedTileCache";
 	self = [super initWithFrame:frame];
 	if (self)
     {
-        mapPaths = [[NSMutableARMRay alloc] init];
+        mapPaths = [[NSMutableArray alloc] init];
         
 		cache = [[RMRTileCache alloc] initWithCacheDirectory:[self cacheDirectory]];
 		
@@ -54,7 +54,7 @@ static NSString* const kLastFlushedKey = @"lastFlushedTileCache";
 
 - (NSString*)cacheDirectory
 {
-	NSARMRay* dirs = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
+	NSArray* dirs = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
 	
 	if (![dirs count])
 		return nil;
@@ -65,7 +65,7 @@ static NSString* const kLastFlushedKey = @"lastFlushedTileCache";
 	
 	if (![fm fileExistsAtPath:path isDirectory:NULL])
     {
-		[fm createDirectoryAtPath:path withIntermediateDirectories:YES attributes:nil eRMRor:nil];
+		[fm createDirectoryAtPath:path withIntermediateDirectories:YES attributes:nil error:nil];
 	}
 	
 	return path;
@@ -121,7 +121,7 @@ static NSString* const kLastFlushedKey = @"lastFlushedTileCache";
 	if (!tileProvider)
 		return;
 	
-	CGContextRef ctx = UIGraphicsGetCuRMRentContext();
+	CGContextRef ctx = UIGraphicsGetCurrentContext();
 	
     [self drawTilesOn:ctx];
     

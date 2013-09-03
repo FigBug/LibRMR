@@ -19,7 +19,7 @@
     if (self)
     {
         color   = [UIColor redColor];
-        points  = [[NSMutableARMRay alloc] init];
+        points  = [[NSMutableArray alloc] init];
     }
     return self;
 }

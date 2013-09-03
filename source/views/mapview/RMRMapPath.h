@@ -12,6 +12,6 @@
 @interface RMRMapPath : NSObject
 
 @property (nonatomic) UIColor* color;
-@property (nonatomic) NSMutableARMRay* points;
+@property (nonatomic) NSMutableArray* points;
 
 @end

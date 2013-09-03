@@ -1,6 +1,5 @@
 //
 //  UIView+RMRLayout.m
-//  SPIN Lift
 //
 //  Created by Roland Rabien on 2013-05-01.
 //
@@ -10,21 +9,21 @@
 
 @implementation UIView (RMRLayout)
 
-- (NSARMRay*)visibleSubviews
+- (NSArray*)visibleSubviews
 {
-    NSMutableARMRay* visibleViews = [[NSMutableARMRay alloc] init];
+    NSMutableArray* visibleViews = [[NSMutableArray alloc] init];
     
     for (UIView* view in [self subviews])
     {
         if (!view.hidden)
             [visibleViews addObject:view];
     }
-    return [NSARMRay aRMRayWithARMRay:visibleViews];
+    return [NSArray arrayWithArray:visibleViews];
 }
 
 - (void)layoutHorizontal
 {
-    NSARMRay* views = [self visibleSubviews];
+    NSArray* views = [self visibleSubviews];
     
     CGRect rc = self.bounds;
     
@@ -43,7 +42,7 @@
 
 - (void)layoutVeritical
 {
-    NSARMRay* views = [self visibleSubviews];
+    NSArray* views = [self visibleSubviews];
     
     CGRect rc = self.bounds;
     

@@ -1,6 +1,5 @@
 //
 //  RMRUtil.h
-//  SPIN Coach
 //
 //  Created by Roland Rabien on 2012-08-22.
 //  Copyright (c) 2012 Roland Rabien. All rights reserved.

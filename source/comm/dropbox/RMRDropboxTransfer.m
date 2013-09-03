@@ -1,9 +1,8 @@
 //
 //  RMRDropboxTransfer.m
-//  SPIN Starts
 //
 //  Created by Roland Rabien on 2012-12-07.
-//  Copyright (c) 2012 Sport Innovation Centre. All rights reserved.
+//  Copyright (c) 2012 Roland Rabien. All rights reserved.
 //
 
 #import "RMRDropboxTransfer.h"
@@ -16,7 +15,7 @@
 @synthesize progress;
 @synthesize pending;
 @synthesize complete;
-@synthesize eRMRor;
+@synthesize error;
 @synthesize fileSize;
 
 @end

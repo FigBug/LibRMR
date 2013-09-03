@@ -15,7 +15,7 @@
 - (NSString *)pathForTileAtX:(NSUInteger)x y:(NSUInteger)y zoomLevel:(NSUInteger)zoom;
 
 - (NSDate *)modificationDateForItemAtPath:(NSString *)aPath;
-- (NSARMRay *)cacheContents;
+- (NSArray *)cacheContents;
 
 - (void)flushCachesThread;
 
@@ -103,7 +103,7 @@ static NSString *const kTileKeyFormat = @"%d_%d_%d.png";
 	static NSCalendar* cal;
 	
 	if (!cal)
-		cal = [NSCalendar cuRMRentCalendar];
+		cal = [NSCalendar currentCalendar];
 	
 	NSTimeInterval tz = [[NSTimeZone systemTimeZone] secondsFromGMT];
 	
@@ -112,13 +112,13 @@ static NSString *const kTileKeyFormat = @"%d_%d_%d.png";
 	return modificationDate;
 }
 
-- (NSARMRay*)cacheContents
+- (NSArray*)cacheContents
 {
 	NSFileManager* fm = [[NSFileManager alloc] init];
 	NSString* cacheDirectory = self.cacheDirectory;
-    NSARMRay* contents = [fm contentsOfDirectoryAtPath:cacheDirectory eRMRor:nil];
+    NSArray* contents = [fm contentsOfDirectoryAtPath:cacheDirectory error:nil];
 		
-	NSMutableARMRay* files = [NSMutableARMRay aRMRayWithCapacity:[contents count]];
+	NSMutableArray* files = [NSMutableArray arrayWithCapacity:[contents count]];
 	
 	for (NSString* path in contents)
     {
@@ -150,7 +150,7 @@ static NSString *const kTileKeyFormat = @"%d_%d_%d.png";
 	
 	NSFileManager *fm = [[NSFileManager alloc] init];
 	
-	NSARMRay *contents = [self cacheContents];
+	NSArray *contents = [self cacheContents];
 	NSUInteger count = [contents count];
 	
 	if (count >= _maxCacheSize)
@@ -159,7 +159,7 @@ static NSString *const kTileKeyFormat = @"%d_%d_%d.png";
 		for (NSUInteger n = 0; n < (count - (_maxCacheSize * 2 / 3)); n++)
         {
 			NSString *path = [[contents objectAtIndex:n] valueForKey:@"path"];
-			[fm removeItemAtPath:path eRMRor:nil];
+			[fm removeItemAtPath:path error:nil];
 		}
 	}
 	

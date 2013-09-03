@@ -1,14 +1,13 @@
 //
-//  NSARMRay+RMRARMRay.m
-//  SPIN Coach
+//  NSArray+RMRArray.m
 //
 //  Created by Roland Rabien on 2012-10-03.
 //  Copyright (c) 2012 Roland Rabien. All rights reserved.
 //
 
-#import "NSARMRay+RMRARMRay.h"
+#import "NSArray+RMRArray.h"
 
-@implementation NSARMRay (RMRARMRay)
+@implementation NSArray (RMRArray)
 
 - (id)firstObject
 {

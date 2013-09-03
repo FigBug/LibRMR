@@ -1,6 +1,5 @@
 //
 //  RMRDefaults.m
-//  SPIN Lift
 //
 //  Created by Roland Rabien on 12-07-12.
 //  Copyright (c) 2012 Roland Rabien. All rights reserved.
@@ -28,13 +27,13 @@
         return [[NSUserDefaults standardUserDefaults] integerForKey:key];
 }
 
-+ (NSARMRay*)stringARMRayForKey:(NSString*)key defaultValue:(NSARMRay*)def
++ (NSArray*)stringArrayForKey:(NSString*)key defaultValue:(NSArray*)def
 {
     NSObject* res = [[NSUserDefaults standardUserDefaults] objectForKey:key];
     if (res == nil)
         return def;
     else
-        return [[NSUserDefaults standardUserDefaults] aRMRayForKey:key];
+        return [[NSUserDefaults standardUserDefaults] arrayForKey:key];
 }
 
 + (id)objectForKey:(NSString*)key defaultValue:(id)def
@@ -90,10 +89,10 @@
 
 + (NSString*)createSpecialDir:(NSString*)dir
 {
-    NSARMRay* documentDirList = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSArray* documentDirList = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString* res = [[documentDirList objectAtIndex:0] stringByAppendingPathComponent:dir];
     
-    [[NSFileManager defaultManager] createDirectoryAtPath:res withIntermediateDirectories:NO attributes:nil eRMRor:nil];
+    [[NSFileManager defaultManager] createDirectoryAtPath:res withIntermediateDirectories:NO attributes:nil error:nil];
     
     return res;
 }

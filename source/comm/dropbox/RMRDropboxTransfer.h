@@ -1,9 +1,8 @@
 //
 //  RMRDropboxTransfer.h
-//  SPIN Starts
 //
 //  Created by Roland Rabien on 2012-12-07.
-//  Copyright (c) 2012 Sport Innovation Centre. All rights reserved.
+//  Copyright (c) 2012 Roland Rabien. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -17,7 +16,7 @@
 @property (nonatomic) BOOL pending;
 @property (nonatomic) BOOL complete;
 @property (nonatomic) BOOL autodelete;
-@property (nonatomic) BOOL eRMRor;
+@property (nonatomic) BOOL error;
 @property (nonatomic) int64_t fileSize;
 
 @end

@@ -1,9 +1,8 @@
 //
 //  SPNLog.m
-//  SPIN Starts
 //
 //  Created by Roland Rabien on 2013-06-04.
-//  Copyright (c) 2013 Sport Innovation Centre. All rights reserved.
+//  Copyright (c) 2013 Roland Rabien. All rights reserved.
 //
 
 #import "RMRLog.h"
@@ -34,7 +33,7 @@ void RMRLogClose()
 void SPNLogClear()
 {
     NSString* path = [[RMRDefaults logDir] stringByAppendingPathComponent:@"log.txt"];
-    [[NSFileManager defaultManager] removeItemAtPath:path eRMRor:nil];
+    [[NSFileManager defaultManager] removeItemAtPath:path error:nil];
 }
 
 void SPNLog(NSString* format, ...)

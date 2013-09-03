@@ -1,9 +1,8 @@
 //
 //  RMRVideoUtil.m
-//  SPIN Starts
 //
 //  Created by Roland Rabien on 2012-12-03.
-//  Copyright (c) 2012 Sport Innovation Centre. All rights reserved.
+//  Copyright (c) 2012 Roland Rabien. All rights reserved.
 //
 
 #import "RMRVideoUtil.h"
@@ -46,25 +45,25 @@
     
         if ([exportSession status] != AVAssetExportSessionStatusCompleted)
         {
-            NSERMRor* e = [exportSession eRMRor];
+            NSError* e = [exportSession error];
             if (e)
-                RMRLog(@"export eRMRor: %@", [e localizedDescription]);
+                RMRLog(@"export error: %@", [e localizedDescription]);
             
             if (done)
                 done(NO);
         }
         else
         {
-            NSERMRor* e1 = nil;
-            NSERMRor* e2 = nil;
+            NSError* e1 = nil;
+            NSError* e2 = nil;
             
-            [[NSFileManager defaultManager] removeItemAtPath:fileIn eRMRor:&e1];
+            [[NSFileManager defaultManager] removeItemAtPath:fileIn error:&e1];
             if (e1)
-                RMRLog(@"Trim delete eRMRor: %@", [e1 localizedDescription]);
+                RMRLog(@"Trim delete error: %@", [e1 localizedDescription]);
             
-            [[NSFileManager defaultManager] moveItemAtPath:fileOut toPath:fileIn eRMRor:&e2];
+            [[NSFileManager defaultManager] moveItemAtPath:fileOut toPath:fileIn error:&e2];
             if (e2)
-                RMRLog(@"Trim move eRMRor: %@", [e2 localizedDescription]);
+                RMRLog(@"Trim move error: %@", [e2 localizedDescription]);
             
             NSTimeInterval t1 = [NSDate timeIntervalSinceReferenceDate];
             
@@ -90,15 +89,15 @@
     
     AVAssetImageGenerator* generator = [[AVAssetImageGenerator alloc] initWithAsset:asset];
     
-    generator.appliesPrefeRMRedTrackTransform = TRUE;
+    generator.appliesPreferredTrackTransform = TRUE;
     
     CMTime thumbTime = CMTimeMakeWithSeconds(0,30);
     
-    AVAssetImageGeneratorCompletionHandler handler = ^(CMTime requestedTime, CGImageRef im, CMTime actualTime, AVAssetImageGeneratoRMResult result, NSERMRor *eRMRor)
+    AVAssetImageGeneratorCompletionHandler handler = ^(CMTime requestedTime, CGImageRef im, CMTime actualTime, AVAssetImageGeneratorResult result, NSError *error)
     {
         if (result != AVAssetImageGeneratorSucceeded)
         {
-            RMRLog(@"couldn't generate thumbnail, eRMRor:%@", eRMRor);
+            RMRLog(@"couldn't generate thumbnail, error:%@", error);
         }
         else
         {
@@ -109,7 +108,7 @@
     
     CGSize maxSize = CGSizeMake(320, 320);
     generator.maximumSize = maxSize;
-    [generator generateCGImagesAsynchronouslyForTimes:[NSARMRay aRMRayWithObject:[NSValue valueWithCMTime:thumbTime]] completionHandler:handler];
+    [generator generateCGImagesAsynchronouslyForTimes:[NSArray arrayWithObject:[NSValue valueWithCMTime:thumbTime]] completionHandler:handler];
 
     return YES;
 }

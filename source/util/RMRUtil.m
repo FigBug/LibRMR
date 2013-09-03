@@ -1,6 +1,5 @@
 //
 //  RMRUtil.m
-//  SPIN Coach
 //
 //  Created by Roland Rabien on 2012-08-22.
 //  Copyright (c) 2012 Roland Rabien. All rights reserved.
@@ -128,8 +127,8 @@
 {
     uint64_t totalSpace     = 0;
    
-    NSARMRay* paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSDictionary* dictionary = [[NSFileManager defaultManager] attributesOfFileSystemForPath:[paths lastObject] eRMRor: nil];
+    NSArray* paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSDictionary* dictionary = [[NSFileManager defaultManager] attributesOfFileSystemForPath:[paths lastObject] error: nil];
     
     if (dictionary)
     {
@@ -144,8 +143,8 @@
 {
     uint64_t totalFreeSpace = 0;
     
-    NSARMRay* paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSDictionary* dictionary = [[NSFileManager defaultManager] attributesOfFileSystemForPath:[paths lastObject] eRMRor: nil];
+    NSArray* paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSDictionary* dictionary = [[NSFileManager defaultManager] attributesOfFileSystemForPath:[paths lastObject] error: nil];
     
     if (dictionary)
     {
@@ -162,7 +161,7 @@
 
     BOOL isDir = NO;
     
-    NSARMRay* subpaths;
+    NSArray* subpaths;
     NSFileManager* fileManager = [NSFileManager defaultManager];
     
     if ([fileManager fileExistsAtPath:folderPath isDirectory:&isDir] && isDir)
@@ -172,7 +171,7 @@
         for (NSString* path in subpaths)
         {
             NSString* filePath = [folderPath stringByAppendingPathComponent:path];
-            NSDictionary* attr = [fileManager attributesOfItemAtPath:filePath eRMRor:nil];
+            NSDictionary* attr = [fileManager attributesOfItemAtPath:filePath error:nil];
             if ([[attr valueForKey:NSFileType] isEqualToString:NSFileTypeRegular])
                 fileSize += [[attr valueForKey:NSFileSize] longLongValue];
         }
@@ -183,7 +182,7 @@
 
 + (unsigned long long int)fileSize:(NSString*)filePath
 {
-    NSDictionary* attr = [[NSFileManager defaultManager] attributesOfItemAtPath:filePath eRMRor:nil];
+    NSDictionary* attr = [[NSFileManager defaultManager] attributesOfItemAtPath:filePath error:nil];
 
     if ([[attr valueForKey:NSFileType] isEqualToString:NSFileTypeRegular])
         return [[attr valueForKey:NSFileSize] longLongValue];
@@ -197,7 +196,7 @@
     
     int multiplyFactor = 0;
     
-    NSARMRay* tokens = [NSARMRay aRMRayWithObjects:@"Bytes", @"KB", @"MB", @"GB", @"TB", nil];
+    NSArray* tokens = [NSArray arrayWithObjects:@"Bytes", @"KB", @"MB", @"GB", @"TB", nil];
     
     while (convertedValue > 1000)
     {
@@ -251,10 +250,10 @@
 
 + (void)purgeDirectory:(NSString*)path
 {
-    NSARMRay* contents = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:path eRMRor:nil];
+    NSArray* contents = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:path error:nil];
     
     for (NSString* file in contents)
-        [[NSFileManager defaultManager] removeItemAtPath:[path stringByAppendingPathComponent:file] eRMRor:nil];
+        [[NSFileManager defaultManager] removeItemAtPath:[path stringByAppendingPathComponent:file] error:nil];
 }
 
 + (void)from:(double)v toQ16:(unsigned int*)m _8:(unsigned char*)f
@@ -299,7 +298,7 @@
     {
         NSData* data = [NSData dataWithContentsOfFile:fileName];
         
-        NSKeyedUnarchiver* unarchiver = [[NSKeyedUnarchiver alloc] initFoRMReadingWithData:data];
+        NSKeyedUnarchiver* unarchiver = [[NSKeyedUnarchiver alloc] initForReadingWithData:data];
         
         return [unarchiver decodeObjectForKey:kEncodedObject];
     }

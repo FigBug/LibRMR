@@ -1,16 +1,15 @@
 //
 //  RMRDropbox.h
-//  SPIN Starts
 //
 //  Created by Roland Rabien on 2012-12-07.
-//  Copyright (c) 2012 Sport Innovation Centre. All rights reserved.
+//  Copyright (c) 2012 Roland Rabien. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import <CoreGraphics/CoreGraphics.h>
 #import <UIKit/UIKit.h>
-#import <DropboxSDK/DropboxSDK.h>
 #import "RMRDropboxTransfer.h"
+#import <DropboxSDK/DropboxSDK.h>
 
 //==================================================================
 
@@ -23,7 +22,7 @@ FOUNDATION_EXPORT NSString* const RMREventDropboxProgress;
     DBSession* dbSession;
     DBRestClient* dbClient;
     
-    NSMutableARMRay* transfers;
+    NSMutableArray* transfers;
 }
 
 + (void)setKey:(NSString*)key secret:(NSString*)secret;
@@ -33,7 +32,7 @@ FOUNDATION_EXPORT NSString* const RMREventDropboxProgress;
 -(void)unlinkAll;
 -(void)linkFromController:(UIViewController*)controller;
 
--(NSARMRay*)transfers;
+-(NSArray*)transfers;
 
 -(BOOL)transferInProgress;
 -(BOOL)transferPending;
