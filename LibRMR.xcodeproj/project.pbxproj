@@ -38,6 +38,7 @@
 		78CC30DA17D67C75000B8D85 /* RMRLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 78CC30D817D67C75000B8D85 /* RMRLocationManager.m */; };
 		78CC30DD17D68F11000B8D85 /* RMRArchiveWritre.m in Sources */ = {isa = PBXBuildFile; fileRef = 78CC30DC17D68F11000B8D85 /* RMRArchiveWritre.m */; };
 		78CC30E017D692A4000B8D85 /* RMRArchiveReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 78CC30DF17D692A4000B8D85 /* RMRArchiveReader.m */; };
+		78CC30E717D6993C000B8D85 /* UIView+RMRRect.m in Sources */ = {isa = PBXBuildFile; fileRef = 78CC30E617D69939000B8D85 /* UIView+RMRRect.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -119,6 +120,8 @@
 		78CC30DC17D68F11000B8D85 /* RMRArchiveWritre.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RMRArchiveWritre.m; path = source/util/RMRArchiveWritre.m; sourceTree = SOURCE_ROOT; };
 		78CC30DE17D692A3000B8D85 /* RMRArchiveReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RMRArchiveReader.h; path = source/util/RMRArchiveReader.h; sourceTree = SOURCE_ROOT; };
 		78CC30DF17D692A4000B8D85 /* RMRArchiveReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RMRArchiveReader.m; path = source/util/RMRArchiveReader.m; sourceTree = SOURCE_ROOT; };
+		78CC30E517D69938000B8D85 /* UIView+RMRRect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+RMRRect.h"; path = "source/categories/UIView+RMRRect.h"; sourceTree = SOURCE_ROOT; };
+		78CC30E617D69939000B8D85 /* UIView+RMRRect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+RMRRect.m"; path = "source/categories/UIView+RMRRect.m"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +202,8 @@
 				78CC30C717D6579D000B8D85 /* UIColor+RMRColor.m */,
 				78CC307D17D64DE5000B8D85 /* UIView+RMRLayout.h */,
 				78CC307E17D64DE5000B8D85 /* UIView+RMRLayout.m */,
+				78CC30E517D69938000B8D85 /* UIView+RMRRect.h */,
+				78CC30E617D69939000B8D85 /* UIView+RMRRect.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -414,6 +419,7 @@
 				78CC30DA17D67C75000B8D85 /* RMRLocationManager.m in Sources */,
 				78CC30DD17D68F11000B8D85 /* RMRArchiveWritre.m in Sources */,
 				78CC30E017D692A4000B8D85 /* RMRArchiveReader.m in Sources */,
+				78CC30E717D6993C000B8D85 /* UIView+RMRRect.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

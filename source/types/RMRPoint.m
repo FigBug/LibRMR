@@ -13,22 +13,22 @@
 
 @implementation RMRPoint
 
-+ (RMRPoint*)pointWithPoint:(CGPoint)pt
++ (RMRPoint*)pointWithCGPoint:(CGPoint)pt
 {
-    return [[RMRPoint alloc] initWithPoint:pt];
+    return [[RMRPoint alloc] initWithCGPoint:pt];
 }
 
 + (RMRPoint*)pointWithX:(CGFloat)x y:(CGFloat)y
 {
-    return [[RMRPoint alloc] initWithPoint:CGPointMake(x, y)];
+    return [[RMRPoint alloc] initWithCGPoint:CGPointMake(x, y)];
 }
 
 - (id)init
 {
-    return [self initWithPoint:CGPointMake(0, 0)];
+    return [self initWithCGPoint:CGPointMake(0, 0)];
 }
 
-- (id)initWithPoint:(CGPoint)pt_
+- (id)initWithCGPoint:(CGPoint)pt_
 {
     self = [super init];
     if (self)
@@ -40,7 +40,7 @@
 
 - (id)initWithX:(CGFloat)x y:(CGFloat)y
 {
-    return [self initWithPoint:CGPointMake(x, y)];
+    return [self initWithCGPoint:CGPointMake(x, y)];
 }
 
 - (CGFloat)x
@@ -63,12 +63,12 @@
     pt.y = y;
 }
 
-- (CGPoint)point
+- (CGPoint)CGPoint
 {
     return pt;
 }
 
-- (void)setPoint:(CGPoint)pt_
+- (void)setCGPoint:(CGPoint)pt_
 {
     pt = pt_;
 }
@@ -81,7 +81,7 @@
 
 - (RMRPoint*)pointByTranslatingX:(CGFloat)x y:(CGFloat)y
 {
-    return [[RMRPoint alloc] initWithPoint:CGPointMake(x, y)];
+    return [[RMRPoint alloc] initWithCGPoint:CGPointMake(x, y)];
 }
 
 #pragma mark - NSObject

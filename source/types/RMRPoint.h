@@ -13,11 +13,11 @@
     CGPoint pt;
 }
 
-+ (RMRPoint*)pointWithPoint:(CGPoint)pt;
++ (RMRPoint*)pointWithCGPoint:(CGPoint)pt;
 + (RMRPoint*)pointWithX:(CGFloat)x y:(CGFloat)y;
 
 - (id)init;
-- (id)initWithPoint:(CGPoint)pt;
+- (id)initWithCGPoint:(CGPoint)pt;
 - (id)initWithX:(CGFloat)x y:(CGFloat)y;
 
 - (CGFloat)x;
@@ -26,8 +26,8 @@
 - (CGFloat)y;
 - (void)setY:(CGFloat)y;
 
-- (CGPoint)point;
-- (void)setPoint:(CGPoint)pt;
+- (CGPoint)CGPoint;
+- (void)setCGPoint:(CGPoint)pt;
 
 - (void)translateX:(CGFloat)x y:(CGFloat)y;
 - (RMRPoint*)pointByTranslatingX:(CGFloat)x y:(CGFloat)y;

@@ -14,11 +14,11 @@
     CGRect rc;
 }
 
-+ (RMRRect*)rectWithRect:(CGRect)rc;
++ (RMRRect*)rectWithCGRect:(CGRect)rc;
 + (RMRRect*)rectWithX:(CGFloat)x y:(CGFloat)y width:(CGFloat)width height:(CGFloat)height;
 
 - (id)init;
-- (id)initWithRect:(CGRect)rc;
+- (id)initWithCGRect:(CGRect)rc;
 - (id)initWithX:(CGFloat)x y:(CGFloat)y width:(CGFloat)width height:(CGFloat)height;
 
 - (CGFloat)x;
@@ -33,8 +33,8 @@
 - (CGFloat)height;
 - (void)setHeight:(CGFloat)height;
 
-- (CGRect)rect;
-- (void)setRect:(CGRect)rc;
+- (CGRect)CGRect;
+- (void)setCGRect:(CGRect)rc;
 
 - (RMRPoint*)topLeft;
 - (RMRPoint*)topRight;

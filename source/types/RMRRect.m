@@ -13,9 +13,9 @@
 
 @implementation RMRRect
 
-+ (RMRRect*)rectWithRect:(CGRect)rc
++ (RMRRect*)rectWithCGRect:(CGRect)rc
 {
-    return [[RMRRect alloc] initWithRect:rc];
+    return [[RMRRect alloc] initWithCGRect:rc];
 }
 
 + (RMRRect*)rectWithX:(CGFloat)x y:(CGFloat)y width:(CGFloat)width height:(CGFloat)height
@@ -25,10 +25,10 @@
 
 - (id)init
 {
-    return [self initWithRect:CGRectMake(0, 0, 0, 0)];
+    return [self initWithCGRect:CGRectMake(0, 0, 0, 0)];
 }
 
-- (id)initWithRect:(CGRect)rc_
+- (id)initWithCGRect:(CGRect)rc_
 {
     self = [super init];
     if (self)
@@ -40,7 +40,7 @@
 
 - (id)initWithX:(CGFloat)x y:(CGFloat)y width:(CGFloat)width height:(CGFloat)height
 {
-    return [self initWithRect:CGRectMake(x, y, width, height)];
+    return [self initWithCGRect:CGRectMake(x, y, width, height)];
 }
 
 - (CGFloat)x
@@ -85,12 +85,12 @@
     rc = CGRectStandardize(rc);
 }
 
-- (CGRect)rect
+- (CGRect)CGRect
 {
     return rc;
 }
 
-- (void)setRect:(CGRect)rc_
+- (void)setCGRect:(CGRect)rc_
 {
     rc = CGRectStandardize(rc_);
 }
@@ -137,17 +137,17 @@
 
 - (RMRRect*)intersctionWith:(RMRRect*)other
 {
-    return [RMRRect rectWithRect:CGRectIntersection(rc, other.rect)];
+    return [RMRRect rectWithCGRect:CGRectIntersection(rc, other.CGRect)];
 }
 
 - (RMRRect*)unionWith:(RMRRect*)other
 {
-    return [RMRRect rectWithRect:CGRectUnion(rc, other.rect)];
+    return [RMRRect rectWithCGRect:CGRectUnion(rc, other.CGRect)];
 }
 
 - (BOOL)containsPoint:(RMRPoint*)pt
 {
-    return CGRectContainsPoint(rc, pt.point);
+    return CGRectContainsPoint(rc, pt.CGPoint);
 }
 
 - (RMRPoint*)centerPoint
