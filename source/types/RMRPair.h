@@ -18,4 +18,6 @@
 - (id)first;
 - (id)second;
 
+- (NSArray*)allValues;
+
 @end

@@ -40,6 +40,11 @@
     return first;
 }
 
+- (NSArray*)allValues
+{
+    return @[first, second];
+}
+
 #pragma mark - NSObject
 
 - (BOOL)isEqual:(id)object
