@@ -35,6 +35,7 @@
 		78CC30CF17D65C4C000B8D85 /* RMRTextItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 78CC30CD17D65C4C000B8D85 /* RMRTextItem.m */; };
 		78CC30D417D668FD000B8D85 /* RMRPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 78CC30D117D668FD000B8D85 /* RMRPoint.m */; };
 		78CC30D517D668FD000B8D85 /* RMRRect.m in Sources */ = {isa = PBXBuildFile; fileRef = 78CC30D317D668FD000B8D85 /* RMRRect.m */; };
+		78CC30DA17D67C75000B8D85 /* RMRLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 78CC30D817D67C75000B8D85 /* RMRLocationManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -109,6 +110,9 @@
 		78CC30D117D668FD000B8D85 /* RMRPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RMRPoint.m; path = source/types/RMRPoint.m; sourceTree = SOURCE_ROOT; };
 		78CC30D217D668FD000B8D85 /* RMRRect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RMRRect.h; path = source/types/RMRRect.h; sourceTree = SOURCE_ROOT; };
 		78CC30D317D668FD000B8D85 /* RMRRect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RMRRect.m; path = source/types/RMRRect.m; sourceTree = SOURCE_ROOT; };
+		78CC30D717D67C75000B8D85 /* RMRLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RMRLocationManager.h; path = source/util/location/RMRLocationManager.h; sourceTree = SOURCE_ROOT; };
+		78CC30D817D67C75000B8D85 /* RMRLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RMRLocationManager.m; path = source/util/location/RMRLocationManager.m; sourceTree = SOURCE_ROOT; };
+		78CC30D917D67C75000B8D85 /* RMRLocationWatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RMRLocationWatcher.h; path = source/util/location/RMRLocationWatcher.h; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +219,7 @@
 		78CC308A17D64E2A000B8D85 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				78CC30D617D67C65000B8D85 /* Location */,
 				78CC308C17D64E59000B8D85 /* RMRDefaults.h */,
 				78CC308D17D64E59000B8D85 /* RMRDefaults.m */,
 				78CC308E17D64E59000B8D85 /* RMRLog.h */,
@@ -308,6 +313,16 @@
 			name = TextGrid;
 			sourceTree = "<group>";
 		};
+		78CC30D617D67C65000B8D85 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				78CC30D717D67C75000B8D85 /* RMRLocationManager.h */,
+				78CC30D817D67C75000B8D85 /* RMRLocationManager.m */,
+				78CC30D917D67C75000B8D85 /* RMRLocationWatcher.h */,
+			);
+			name = Location;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -386,6 +401,7 @@
 				78CC30CF17D65C4C000B8D85 /* RMRTextItem.m in Sources */,
 				78CC30D417D668FD000B8D85 /* RMRPoint.m in Sources */,
 				78CC30D517D668FD000B8D85 /* RMRRect.m in Sources */,
+				78CC30DA17D67C75000B8D85 /* RMRLocationManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
