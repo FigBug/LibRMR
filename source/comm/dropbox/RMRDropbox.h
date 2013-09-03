@@ -9,6 +9,8 @@
 #import <CoreGraphics/CoreGraphics.h>
 #import <UIKit/UIKit.h>
 #import "RMRDropboxTransfer.h"
+
+#ifdef HAS_DROPBOX
 #import <DropboxSDK/DropboxSDK.h>
 
 //==================================================================
@@ -42,3 +44,5 @@ FOUNDATION_EXPORT NSString* const RMREventDropboxProgress;
 -(void)handleUrl:(NSURL*)url;
 
 @end
+
+#endif

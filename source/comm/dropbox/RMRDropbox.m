@@ -8,7 +8,7 @@
 #import "RMRDropbox.h"
 #import "RMRUtil.h"
 
-#import <DropboxSDK/DropboxSDK.h>
+#ifdef HAS_DROPBOX
 
 NSString* const RMREventDropboxEvent     = @"RMREventDropboxEvent";
 NSString* const RMREventDropboxProgress  = @"RMREventDropboxProgress";
@@ -212,3 +212,5 @@ static NSString* appSecret;
 }
 
 @end
+
+#endif
