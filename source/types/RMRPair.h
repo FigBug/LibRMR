@@ -7,7 +7,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface RMRPair : NSObject {
+@interface RMRPair : NSObject<NSCopying,NSCoding> {
     id first;
     id second;
 }
