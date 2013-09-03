@@ -1,5 +1,5 @@
 //
-//  SPNLog.m
+//  RMRLog.m
 //
 //  Created by Roland Rabien on 2013-06-04.
 //  Copyright (c) 2013 Roland Rabien. All rights reserved.
@@ -12,7 +12,7 @@
 static FILE* fp = NULL;
 static NSString* syncer = @"mutex";
 
-void SPNLogOpen()
+void RMRLogOpen()
 {
     if (!fp)
     {
@@ -30,13 +30,13 @@ void RMRLogClose()
     }
 }
 
-void SPNLogClear()
+void RMRLogClear()
 {
     NSString* path = [[RMRDefaults logDir] stringByAppendingPathComponent:@"log.txt"];
     [[NSFileManager defaultManager] removeItemAtPath:path error:nil];
 }
 
-void SPNLog(NSString* format, ...)
+void RMRLog(NSString* format, ...)
 {
     va_list argList;
     va_start(argList, format);

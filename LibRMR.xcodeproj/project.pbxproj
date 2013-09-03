@@ -28,6 +28,11 @@
 		78CC30BA17D64E8A000B8D85 /* RMRMercatorProjection.m in Sources */ = {isa = PBXBuildFile; fileRef = 78CC30AE17D64E8A000B8D85 /* RMRMercatorProjection.m */; };
 		78CC30BB17D64E8A000B8D85 /* RMROSMTileProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 78CC30B017D64E8A000B8D85 /* RMROSMTileProvider.m */; };
 		78CC30BC17D64E8A000B8D85 /* RMRTileCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 78CC30B317D64E8A000B8D85 /* RMRTileCache.m */; };
+		78CC30C217D65784000B8D85 /* RMR2DArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 78CC30C117D65784000B8D85 /* RMR2DArray.m */; };
+		78CC30C517D6578F000B8D85 /* RMRPair.m in Sources */ = {isa = PBXBuildFile; fileRef = 78CC30C417D6578F000B8D85 /* RMRPair.m */; };
+		78CC30C817D6579D000B8D85 /* UIColor+RMRColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 78CC30C717D6579D000B8D85 /* UIColor+RMRColor.m */; };
+		78CC30CE17D65C4C000B8D85 /* RMRTextGrid.m in Sources */ = {isa = PBXBuildFile; fileRef = 78CC30CB17D65C4C000B8D85 /* RMRTextGrid.m */; };
+		78CC30CF17D65C4C000B8D85 /* RMRTextItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 78CC30CD17D65C4C000B8D85 /* RMRTextItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -88,6 +93,16 @@
 		78CC30B317D64E8A000B8D85 /* RMRTileCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RMRTileCache.m; path = source/views/mapview/RMRTileCache.m; sourceTree = SOURCE_ROOT; };
 		78CC30B417D64E8A000B8D85 /* RMRTileProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RMRTileProvider.h; path = source/views/mapview/RMRTileProvider.h; sourceTree = SOURCE_ROOT; };
 		78CC30BD17D64F06000B8D85 /* LibRMR-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "LibRMR-Prefix.pch"; path = "source/LibRMR-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		78CC30C017D65784000B8D85 /* RMR2DArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RMR2DArray.h; path = source/containers/RMR2DArray.h; sourceTree = SOURCE_ROOT; };
+		78CC30C117D65784000B8D85 /* RMR2DArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RMR2DArray.m; path = source/containers/RMR2DArray.m; sourceTree = SOURCE_ROOT; };
+		78CC30C317D6578F000B8D85 /* RMRPair.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RMRPair.h; path = source/types/RMRPair.h; sourceTree = SOURCE_ROOT; };
+		78CC30C417D6578F000B8D85 /* RMRPair.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RMRPair.m; path = source/types/RMRPair.m; sourceTree = SOURCE_ROOT; };
+		78CC30C617D6579D000B8D85 /* UIColor+RMRColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+RMRColor.h"; path = "source/categories/UIColor+RMRColor.h"; sourceTree = SOURCE_ROOT; };
+		78CC30C717D6579D000B8D85 /* UIColor+RMRColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+RMRColor.m"; path = "source/categories/UIColor+RMRColor.m"; sourceTree = SOURCE_ROOT; };
+		78CC30CA17D65C4C000B8D85 /* RMRTextGrid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RMRTextGrid.h; path = source/views/textgrid/RMRTextGrid.h; sourceTree = SOURCE_ROOT; };
+		78CC30CB17D65C4C000B8D85 /* RMRTextGrid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RMRTextGrid.m; path = source/views/textgrid/RMRTextGrid.m; sourceTree = SOURCE_ROOT; };
+		78CC30CC17D65C4C000B8D85 /* RMRTextItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RMRTextItem.h; path = source/views/textgrid/RMRTextItem.h; sourceTree = SOURCE_ROOT; };
+		78CC30CD17D65C4C000B8D85 /* RMRTextItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RMRTextItem.m; path = source/views/textgrid/RMRTextItem.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +164,8 @@
 			children = (
 				78CC307817D64DD7000B8D85 /* Categories */,
 				78CC308217D64DE9000B8D85 /* Comm */,
+				78CC30BF17D65774000B8D85 /* Containers */,
+				78CC30BE17D6576B000B8D85 /* Types */,
 				78CC308A17D64E2A000B8D85 /* Util */,
 				78CC308B17D64E35000B8D85 /* Views */,
 			);
@@ -158,6 +175,8 @@
 		78CC307817D64DD7000B8D85 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				78CC30C617D6579D000B8D85 /* UIColor+RMRColor.h */,
+				78CC30C717D6579D000B8D85 /* UIColor+RMRColor.m */,
 				78CC307917D64DE5000B8D85 /* NSArray+RMRArray.h */,
 				78CC307A17D64DE5000B8D85 /* NSArray+RMRArray.m */,
 				78CC307B17D64DE5000B8D85 /* NSObject+RMRCast.h */,
@@ -205,8 +224,9 @@
 		78CC308B17D64E35000B8D85 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				78CC309917D64E6E000B8D85 /* SimpleTableView */,
 				78CC309817D64E62000B8D85 /* MapView */,
+				78CC309917D64E6E000B8D85 /* SimpleTableView */,
+				78CC30C917D65C3C000B8D85 /* TextGrid */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -247,6 +267,35 @@
 				78CC309F17D64E7E000B8D85 /* RRSimpleTableViewItem.m */,
 			);
 			name = SimpleTableView;
+			sourceTree = "<group>";
+		};
+		78CC30BE17D6576B000B8D85 /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				78CC30C317D6578F000B8D85 /* RMRPair.h */,
+				78CC30C417D6578F000B8D85 /* RMRPair.m */,
+			);
+			name = Types;
+			sourceTree = "<group>";
+		};
+		78CC30BF17D65774000B8D85 /* Containers */ = {
+			isa = PBXGroup;
+			children = (
+				78CC30C017D65784000B8D85 /* RMR2DArray.h */,
+				78CC30C117D65784000B8D85 /* RMR2DArray.m */,
+			);
+			name = Containers;
+			sourceTree = "<group>";
+		};
+		78CC30C917D65C3C000B8D85 /* TextGrid */ = {
+			isa = PBXGroup;
+			children = (
+				78CC30CA17D65C4C000B8D85 /* RMRTextGrid.h */,
+				78CC30CB17D65C4C000B8D85 /* RMRTextGrid.m */,
+				78CC30CC17D65C4C000B8D85 /* RMRTextItem.h */,
+				78CC30CD17D65C4C000B8D85 /* RMRTextItem.m */,
+			);
+			name = TextGrid;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -320,6 +369,11 @@
 				78CC30BA17D64E8A000B8D85 /* RMRMercatorProjection.m in Sources */,
 				78CC30BB17D64E8A000B8D85 /* RMROSMTileProvider.m in Sources */,
 				78CC30BC17D64E8A000B8D85 /* RMRTileCache.m in Sources */,
+				78CC30C217D65784000B8D85 /* RMR2DArray.m in Sources */,
+				78CC30C517D6578F000B8D85 /* RMRPair.m in Sources */,
+				78CC30C817D6579D000B8D85 /* UIColor+RMRColor.m in Sources */,
+				78CC30CE17D65C4C000B8D85 /* RMRTextGrid.m in Sources */,
+				78CC30CF17D65C4C000B8D85 /* RMRTextItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
