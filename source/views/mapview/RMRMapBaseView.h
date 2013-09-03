@@ -1,0 +1,27 @@
+//
+//  RMRMapBaseView.h
+//  Util
+//
+//  Created by Roland Rabien on 2013-08-05.
+//  Copyright (c) 2013 Roland Rabien. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+#import "RMRTileProvider.h"
+#import "RMRTileCache.h"
+
+@interface RMRMapBaseView : UIView
+{
+@private
+	RMRTileCache* cache;
+	id<RMRTileProvider> tileProvider;
+}
+
+@property (nonatomic, assign) id <RMRTileProvider> tileProvider;
+@property (nonatomic) NSMutableARMRay* mapPaths;
+
+- (void)configureLayer;
+- (NSString *)cacheDirectory;
+
+@end
+
