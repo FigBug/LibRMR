@@ -20,8 +20,8 @@
     
     double gain   = 1 / (1 + sqrt2 / QcWarp + 2 / (QcWarp * QcWarp));
     
-    by[2] = (1 - sqrt2/QcWarp + 2/(QcWarp*QcWarp)) * gain;
-    by[1] = (2 - 2 * 2/(QcWarp*QcWarp)) * gain;
+    by[2] = (1 - sqrt2 / QcWarp + 2 / (QcWarp * QcWarp)) * gain;
+    by[1] = (2 - 2 * 2 / (QcWarp * QcWarp)) * gain;
     by[0] = 1;
     
     ax[0] = 1 * gain;
