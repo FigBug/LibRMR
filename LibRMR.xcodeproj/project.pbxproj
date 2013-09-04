@@ -39,6 +39,7 @@
 		78CC30DD17D68F11000B8D85 /* RMRArchiveWritre.m in Sources */ = {isa = PBXBuildFile; fileRef = 78CC30DC17D68F11000B8D85 /* RMRArchiveWritre.m */; };
 		78CC30E017D692A4000B8D85 /* RMRArchiveReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 78CC30DF17D692A4000B8D85 /* RMRArchiveReader.m */; };
 		78CC30E717D6993C000B8D85 /* UIView+RMRRect.m in Sources */ = {isa = PBXBuildFile; fileRef = 78CC30E617D69939000B8D85 /* UIView+RMRRect.m */; };
+		78CC30EA17D7971A000B8D85 /* RMRButterworthFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 78CC30E917D79719000B8D85 /* RMRButterworthFilter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -122,6 +123,8 @@
 		78CC30DF17D692A4000B8D85 /* RMRArchiveReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RMRArchiveReader.m; path = source/util/RMRArchiveReader.m; sourceTree = SOURCE_ROOT; };
 		78CC30E517D69938000B8D85 /* UIView+RMRRect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+RMRRect.h"; path = "source/categories/UIView+RMRRect.h"; sourceTree = SOURCE_ROOT; };
 		78CC30E617D69939000B8D85 /* UIView+RMRRect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+RMRRect.m"; path = "source/categories/UIView+RMRRect.m"; sourceTree = SOURCE_ROOT; };
+		78CC30E817D79718000B8D85 /* RMRButterworthFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RMRButterworthFilter.h; path = source/util/RMRButterworthFilter.h; sourceTree = SOURCE_ROOT; };
+		78CC30E917D79719000B8D85 /* RMRButterworthFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RMRButterworthFilter.m; path = source/util/RMRButterworthFilter.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -235,6 +238,8 @@
 				78CC30DF17D692A4000B8D85 /* RMRArchiveReader.m */,
 				78CC30DB17D68F11000B8D85 /* RMRArchiveWriter.h */,
 				78CC30DC17D68F11000B8D85 /* RMRArchiveWritre.m */,
+				78CC30E817D79718000B8D85 /* RMRButterworthFilter.h */,
+				78CC30E917D79719000B8D85 /* RMRButterworthFilter.m */,
 				78CC308C17D64E59000B8D85 /* RMRDefaults.h */,
 				78CC308D17D64E59000B8D85 /* RMRDefaults.m */,
 				78CC308E17D64E59000B8D85 /* RMRLog.h */,
@@ -420,6 +425,7 @@
 				78CC30DD17D68F11000B8D85 /* RMRArchiveWritre.m in Sources */,
 				78CC30E017D692A4000B8D85 /* RMRArchiveReader.m in Sources */,
 				78CC30E717D6993C000B8D85 /* UIView+RMRRect.m in Sources */,
+				78CC30EA17D7971A000B8D85 /* RMRButterworthFilter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
