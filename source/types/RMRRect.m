@@ -162,7 +162,7 @@
 {
     if ([object isKindOfClass:[RMRRect class]])
     {
-        RMRRect* other;
+        RMRRect* other = (RMRRect*)object;
         return CGRectEqualToRect(rc, other->rc);
     }
     return NO;

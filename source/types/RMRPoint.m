@@ -90,7 +90,7 @@
 {
     if ([object isKindOfClass:[RMRPoint class]])
     {
-        RMRPoint* other;
+        RMRPoint* other = (RMRPoint*)object;
         return CGPointEqualToPoint(pt, other->pt);
     }
     return NO;

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		78239E6417D8FDC400DA41AD /* libarc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78239E5C17D8F84700DA41AD /* libarc.a */; };
+		78239E7717D9082500DA41AD /* RMRLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 78239E7617D9082500DA41AD /* RMRLine.m */; };
 		78CC306917D64D7F000B8D85 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78CC306817D64D7F000B8D85 /* Foundation.framework */; };
 		78CC307F17D64DE5000B8D85 /* NSArray+RMRArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 78CC307A17D64DE5000B8D85 /* NSArray+RMRArray.m */; };
 		78CC308017D64DE5000B8D85 /* NSObject+RMRCast.m in Sources */ = {isa = PBXBuildFile; fileRef = 78CC307C17D64DE5000B8D85 /* NSObject+RMRCast.m */; };
@@ -59,6 +60,8 @@
 		78239E4717D8F69F00DA41AD /* RMR.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RMR.h; path = source/RMR.h; sourceTree = SOURCE_ROOT; };
 		78239E5C17D8F84700DA41AD /* libarc.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libarc.a; path = dependencies/libarc/libarc.a; sourceTree = "<group>"; };
 		78239E7217D900BE00DA41AD /* RMR-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "RMR-Prefix.pch"; path = "source/RMR-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		78239E7517D9082500DA41AD /* RMRLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RMRLine.h; path = source/types/RMRLine.h; sourceTree = SOURCE_ROOT; };
+		78239E7617D9082500DA41AD /* RMRLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RMRLine.m; path = source/types/RMRLine.m; sourceTree = SOURCE_ROOT; };
 		78CC306517D64D7F000B8D85 /* libRMR.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRMR.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		78CC306817D64D7F000B8D85 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		78CC307917D64DE5000B8D85 /* NSArray+RMRArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray+RMRArray.h"; path = "source/categories/NSArray+RMRArray.h"; sourceTree = SOURCE_ROOT; };
@@ -309,6 +312,8 @@
 		78CC30BE17D6576B000B8D85 /* Types */ = {
 			isa = PBXGroup;
 			children = (
+				78239E7517D9082500DA41AD /* RMRLine.h */,
+				78239E7617D9082500DA41AD /* RMRLine.m */,
 				78CC30C317D6578F000B8D85 /* RMRPair.h */,
 				78CC30C417D6578F000B8D85 /* RMRPair.m */,
 				78CC30D017D668FD000B8D85 /* RMRPoint.h */,
@@ -432,6 +437,7 @@
 				78CC30E017D692A4000B8D85 /* RMRArchiveReader.m in Sources */,
 				78CC30E717D6993C000B8D85 /* UIView+RMRRect.m in Sources */,
 				78CC30EA17D7971A000B8D85 /* RMRButterworthFilter.m in Sources */,
+				78239E7717D9082500DA41AD /* RMRLine.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

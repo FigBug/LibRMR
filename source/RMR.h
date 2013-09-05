@@ -16,6 +16,7 @@
 
 #import "containers/RMR2DArray.h"
 
+#import "types/RMRLine.h"
 #import "types/RMRPair.h"
 #import "types/RMRPoint.h"
 #import "types/RMRRect.h"
