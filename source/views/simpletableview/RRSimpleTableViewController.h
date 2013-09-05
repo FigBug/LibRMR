@@ -6,8 +6,6 @@
 //  Copyright (c) 2013 Roland Rabien. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-
 @class RRSimpleTableViewGroup;
 @class RRSimpleTableViewItem;
 

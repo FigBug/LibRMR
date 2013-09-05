@@ -5,10 +5,6 @@
 //  Copyright (c) 2013 Roland Rabien. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import <CoreGraphics/CoreGraphics.h>
-#import <UIKit/UIKit.h>
-
 @interface RMRPoint : NSObject<NSCopying,NSCoding> {
     CGPoint pt;
 }

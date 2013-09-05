@@ -5,8 +5,6 @@
 //  Copyright (c) 2012 Roland Rabien. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-
 @interface RMRVideoUtil : NSObject
 
 + (BOOL)trim:(NSString*)file start:(double)start length:(double)length done:(void(^)(BOOL ok))done;

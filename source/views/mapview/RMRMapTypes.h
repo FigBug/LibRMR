@@ -5,8 +5,6 @@
 //  Copyright Matt Rajca 2010. All rights reserved.
 //
 
-#import <CoreGraphics/CoreGraphics.h>
-
 typedef double RMRLatitude;
 typedef double RMRLongitude;
 

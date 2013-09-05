@@ -5,8 +5,6 @@
 //  Copyright (c) 2012 Roland Rabien. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-
 @interface UIColor (RMRColor)
 
 + (UIColor*)colorWithHue:(CGFloat)hue saturation:(CGFloat)saturation lightness:(CGFloat)lightness alpha:(CGFloat)alpha;

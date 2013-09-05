@@ -5,8 +5,6 @@
 //  Copyright (c) 2013 Roland Rabien. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-
 @interface RMR2DArray : NSObject {
     NSMutableArray* rows;
 }

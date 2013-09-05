@@ -6,7 +6,6 @@
 //  Copyright (c) 2013 Roland Rabien. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 #import "RMRTileProvider.h"
 #import "RMRTileCache.h"
 

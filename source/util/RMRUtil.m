@@ -7,7 +7,6 @@
 
 #import "RMRUtil.h"
 #import "RMRDefaults.h"
-#import <MessageUI/MessageUI.h>
 
 #define kEncodedObject  @"encodedObject"
 

@@ -6,8 +6,6 @@
 //  Copyright (c) 2013 Roland Rabien. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-
 @interface RMRButterworthFilter : NSObject {
     double xv[3];
     double yv[3];

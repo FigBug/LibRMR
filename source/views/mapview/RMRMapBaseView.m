@@ -10,7 +10,6 @@
 #import "RMRMapBaseView.h"
 #import "RMRMapTypes.h"
 #import "RMRMapPath.h"
-#import <QuartzCore/QuartzCore.h>
 
 #define DEG_CIRCLE 360
 #define DEG_TO_RAD (M_PI / (DEG_CIRCLE / 2))

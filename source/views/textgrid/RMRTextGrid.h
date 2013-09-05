@@ -6,8 +6,7 @@
 //  Copyright (c) 2013 Roland Rabien. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-#import "RMR2DArray.h"
+@class RMR2DArray;
 
 @interface RMRTextGrid : UIView {
     RMR2DArray* text;

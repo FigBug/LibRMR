@@ -6,9 +6,6 @@
 //  Copyright (c) 2013 Roland Rabien. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
-
 @interface RMRMapPath : NSObject
 
 @property (nonatomic) UIColor* color;

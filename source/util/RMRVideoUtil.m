@@ -8,7 +8,6 @@
 #import "RMRVideoUtil.h"
 #import "RMRUtil.h"
 #import "RMRLog.h"
-#import <AVFoundation/AVFoundation.h>
 
 @implementation RMRVideoUtil
 

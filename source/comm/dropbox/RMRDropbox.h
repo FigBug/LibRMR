@@ -5,9 +5,6 @@
 //  Copyright (c) 2012 Roland Rabien. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import <CoreGraphics/CoreGraphics.h>
-#import <UIKit/UIKit.h>
 #import "RMRDropboxTransfer.h"
 
 #ifdef HAS_DROPBOX

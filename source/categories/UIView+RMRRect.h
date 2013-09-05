@@ -6,8 +6,7 @@
 //  Copyright (c) 2013 Roland Rabien. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-#import "RMRRect.h"
+#import "../types/RMRRect.h"
 
 @interface UIView (RMRRect)
 

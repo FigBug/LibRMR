@@ -1,0 +1,14 @@
+//
+// Prefix header for all source files of the 'LibRMR' target in the 'LibRMR' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+    #import <UIKit/UIKit.h>
+    #import <CoreGraphics/CoreGraphics.h>
+    #import <UIKit/UIKit.h>
+    #import <CoreLocation/CoreLocation.h>
+    #import <QuartzCore/QuartzCore.h>
+    #import <MessageUI/MessageUI.h>
+    #import <AVFoundation/AVFoundation.h>
+#endif

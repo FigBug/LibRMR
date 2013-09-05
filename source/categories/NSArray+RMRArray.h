@@ -5,8 +5,6 @@
 //  Copyright (c) 2012 Roland Rabien. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-
 @interface NSArray (RMRArray)
 
 - (id)firstObject;

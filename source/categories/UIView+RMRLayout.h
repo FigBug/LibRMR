@@ -5,8 +5,6 @@
 //
 //
 
-#import <UIKit/UIKit.h>
-
 @interface UIView (RMRLayout)
 
 - (void)layoutHorizontal;

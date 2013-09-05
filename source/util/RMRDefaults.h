@@ -5,8 +5,6 @@
 //  Copyright (c) 2012 Roland Rabien. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-
 #define RMRBoolForKey(key) [RMRDefaults boolForKey: key defaultValue: key##Default]
 #define RMRIntegerForKey(key) [RMRDefaults integerForKey: key defaultValue: key##Default]
 #define RMRStringArrayForKey(key) [RMRDefaults stringArrayForKey: key defaultValue: key##Default]

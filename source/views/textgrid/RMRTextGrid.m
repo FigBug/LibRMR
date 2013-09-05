@@ -8,6 +8,7 @@
 
 #import "RMRTextGrid.h"
 #import "RMRTextItem.h"
+#import "RMR2DArray.h"
 #import "NSObject+RMRCast.h"
 
 @implementation RMRTextGrid

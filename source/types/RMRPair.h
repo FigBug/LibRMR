@@ -5,8 +5,6 @@
 //  Copyright (c) 2013 Roland Rabien. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-
 @interface RMRPair : NSObject<NSCopying,NSCoding> {
     id first;
     id second;

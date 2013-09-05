@@ -5,7 +5,6 @@
 //  Copyright Matt Rajca 2010. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 #import "RMRMapTypes.h"
 #import "RMRMapPath.h"
 #import "RMRMapBaseView.h"

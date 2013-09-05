@@ -7,8 +7,6 @@
 
 #import "RMRMapView.h"
 
-#import <QuartzCore/QuartzCore.h>
-
 #import "RMRMercatorProjection.h"
 #import "RMRProjection.h"
 #import "RMRTileCache.h"

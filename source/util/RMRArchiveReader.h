@@ -6,8 +6,6 @@
 //  Copyright (c) 2013 Roland Rabien. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-
 @interface RMRArchiveReader : NSObject {
     NSString* srcPath;
 }

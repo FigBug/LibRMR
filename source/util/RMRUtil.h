@@ -5,9 +5,6 @@
 //  Copyright (c) 2012 Roland Rabien. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import <MessageUI/MessageUI.h>
-
 @interface RMRUtil : NSObject
 
 + (NSString*)formatTime:(double)time withHours:(BOOL)alwaysShowHours andMilliseconds: (BOOL)showMilli;
