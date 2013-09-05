@@ -15,7 +15,7 @@
 {
     RMRTimer* t     = [[RMRTimer alloc] init];
     
-    t->timer        = [NSTimer timerWithTimeInterval:seconds target:self selector:@selector(timerFired:) userInfo:nil repeats:YES];
+    t->timer        = [NSTimer timerWithTimeInterval:seconds target:t selector:@selector(timerFired:) userInfo:nil repeats:YES];
     t->timerBlock   = block;
     
     [[NSRunLoop mainRunLoop] addTimer:t->timer forMode:NSDefaultRunLoopMode];
@@ -27,7 +27,7 @@
 {
     RMRTimer* t     = [[RMRTimer alloc] init];
     
-    t->timer        = [NSTimer timerWithTimeInterval:seconds target:self selector:@selector(timerFired:) userInfo:nil repeats:NO];
+    t->timer        = [NSTimer timerWithTimeInterval:seconds target:t selector:@selector(timerFired:) userInfo:nil repeats:NO];
     t->timerBlock   = block;
     
     [[NSRunLoop mainRunLoop] addTimer:t->timer forMode:NSDefaultRunLoopMode];
@@ -39,7 +39,7 @@
 {
     RMRTimer* t = [[RMRTimer alloc] init];
     
-    t->timer    = [NSTimer timerWithTimeInterval:seconds target:self selector:@selector(timerFired:) userInfo:nil repeats:YES];
+    t->timer    = [NSTimer timerWithTimeInterval:seconds target:t selector:@selector(timerFired:) userInfo:nil repeats:YES];
     t->selector = selector;
     t->target   = target;
     
@@ -52,7 +52,7 @@
 {
     RMRTimer* t = [[RMRTimer alloc] init];
     
-    t->timer    = [NSTimer timerWithTimeInterval:seconds target:self selector:@selector(timerFired:) userInfo:nil repeats:NO];
+    t->timer    = [NSTimer timerWithTimeInterval:seconds target:t selector:@selector(timerFired:) userInfo:nil repeats:NO];
     t->selector = selector;
     t->target   = target;
     
