@@ -6,6 +6,8 @@
 //  Copyright (c) 2013 Roland Rabien. All rights reserved.
 //
 
+#import "macros/RMRMacros.h"
+
 #import "categories/NSArray+RMRArray.h"
 #import "categories/NSObject+RMRCast.h"
 #import "categories/UIColor+RMRColor.h"
@@ -26,6 +28,7 @@
 #import "util/RMRButterworthFilter.h"
 #import "util/RMRDefaults.h"
 #import "util/RMRLog.h"
+#import "util/RMRTimer.h"
 #import "util/RMRUtil.h"
 #import "util/RMRVideoUtil.h"
 #import "util/location/RMRLocationManager.h"

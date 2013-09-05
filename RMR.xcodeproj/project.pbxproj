@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		78239E6417D8FDC400DA41AD /* libarc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78239E5C17D8F84700DA41AD /* libarc.a */; };
 		78239E7717D9082500DA41AD /* RMRLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 78239E7617D9082500DA41AD /* RMRLine.m */; };
+		78239E8017D9276700DA41AD /* RMRTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 78239E7F17D9276700DA41AD /* RMRTimer.m */; };
 		78CC306917D64D7F000B8D85 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78CC306817D64D7F000B8D85 /* Foundation.framework */; };
 		78CC307F17D64DE5000B8D85 /* NSArray+RMRArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 78CC307A17D64DE5000B8D85 /* NSArray+RMRArray.m */; };
 		78CC308017D64DE5000B8D85 /* NSObject+RMRCast.m in Sources */ = {isa = PBXBuildFile; fileRef = 78CC307C17D64DE5000B8D85 /* NSObject+RMRCast.m */; };
@@ -62,6 +63,9 @@
 		78239E7217D900BE00DA41AD /* RMR-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "RMR-Prefix.pch"; path = "source/RMR-Prefix.pch"; sourceTree = SOURCE_ROOT; };
 		78239E7517D9082500DA41AD /* RMRLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RMRLine.h; path = source/types/RMRLine.h; sourceTree = SOURCE_ROOT; };
 		78239E7617D9082500DA41AD /* RMRLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RMRLine.m; path = source/types/RMRLine.m; sourceTree = SOURCE_ROOT; };
+		78239E7D17D926B800DA41AD /* RMRMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RMRMacros.h; path = source/macros/RMRMacros.h; sourceTree = SOURCE_ROOT; };
+		78239E7E17D9276700DA41AD /* RMRTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RMRTimer.h; path = source/util/RMRTimer.h; sourceTree = SOURCE_ROOT; };
+		78239E7F17D9276700DA41AD /* RMRTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RMRTimer.m; path = source/util/RMRTimer.m; sourceTree = SOURCE_ROOT; };
 		78CC306517D64D7F000B8D85 /* libRMR.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRMR.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		78CC306817D64D7F000B8D85 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		78CC307917D64DE5000B8D85 /* NSArray+RMRArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray+RMRArray.h"; path = "source/categories/NSArray+RMRArray.h"; sourceTree = SOURCE_ROOT; };
@@ -146,6 +150,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		78239E7C17D9269700DA41AD /* Macros */ = {
+			isa = PBXGroup;
+			children = (
+				78239E7D17D926B800DA41AD /* RMRMacros.h */,
+			);
+			name = Macros;
+			sourceTree = "<group>";
+		};
 		78CC305C17D64D7F000B8D85 = {
 			isa = PBXGroup;
 			children = (
@@ -196,6 +208,7 @@
 				78CC307817D64DD7000B8D85 /* Categories */,
 				78CC308217D64DE9000B8D85 /* Comm */,
 				78CC30BF17D65774000B8D85 /* Containers */,
+				78239E7C17D9269700DA41AD /* Macros */,
 				78CC30BE17D6576B000B8D85 /* Types */,
 				78CC308A17D64E2A000B8D85 /* Util */,
 				78CC308B17D64E35000B8D85 /* Views */,
@@ -253,6 +266,8 @@
 				78CC308D17D64E59000B8D85 /* RMRDefaults.m */,
 				78CC308E17D64E59000B8D85 /* RMRLog.h */,
 				78CC308F17D64E59000B8D85 /* RMRLog.m */,
+				78239E7E17D9276700DA41AD /* RMRTimer.h */,
+				78239E7F17D9276700DA41AD /* RMRTimer.m */,
 				78CC309017D64E59000B8D85 /* RMRUtil.h */,
 				78CC309117D64E59000B8D85 /* RMRUtil.m */,
 				78CC309217D64E59000B8D85 /* RMRVideoUtil.h */,
@@ -438,6 +453,7 @@
 				78CC30E717D6993C000B8D85 /* UIView+RMRRect.m in Sources */,
 				78CC30EA17D7971A000B8D85 /* RMRButterworthFilter.m in Sources */,
 				78239E7717D9082500DA41AD /* RMRLine.m in Sources */,
+				78239E8017D9276700DA41AD /* RMRTimer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
