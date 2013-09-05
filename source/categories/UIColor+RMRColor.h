@@ -9,8 +9,18 @@
 
 @interface UIColor (RMRColor)
 
++ (UIColor*)colorWithHue:(CGFloat)hue saturation:(CGFloat)saturation lightness:(CGFloat)lightness alpha:(CGFloat)alpha;
+- (UIColor*)initWithHue:(CGFloat)hue saturation:(CGFloat)saturation lightness:(CGFloat)lightness alpha:(CGFloat)alpha;
+
+- (BOOL)getHue:(CGFloat*)hue saturation:(CGFloat*)saturation lightness:(CGFloat*)lightness alpha:(CGFloat*)alpha;
+
 - (UIColor*)lightenColorBy:(float)value;
-- (UIColor *)darkenColorBy:(float)value;
+- (UIColor*)darkenColorBy:(float)value;
+
+- (UIColor*)goldenRatioColor:(int)idx;
+
 - (BOOL)isLightColor;
+
+
 
 @end
