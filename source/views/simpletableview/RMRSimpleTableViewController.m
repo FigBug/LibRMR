@@ -63,7 +63,6 @@
     if (cell == nil)
         cell = [[UITableViewCell alloc] initWithStyle:item.style reuseIdentifier:ident];
 
-    
     [item configureCell:cell];
         
     return cell;
@@ -79,7 +78,14 @@
 
 - (void)tableView:(UITableView*)tableView didSelectRowAtIndexPath:(NSIndexPath*)indexPath
 {
-    [self.tableView reloadData];
+    RMRSimpleTableViewGroup* group = [groups objectAtIndex:indexPath.section];
+    RMRSimpleTableViewItem* item   = [group.items objectAtIndex:indexPath.item];
+
+    if (item.selectBlock)
+    {
+        if (!item.selectBlock(item))
+            [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    }
 }
 
 #pragma mark - User functions

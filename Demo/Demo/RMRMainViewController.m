@@ -7,11 +7,14 @@
 //
 
 #import "RMRMainViewController.h"
+#import "RMRMapViewController.h"
 
 @implementation RMRMainViewController
 
 - (void)viewDidLoad
 {
+    self.title = @"LibRMR";
+    
     [super viewDidLoad];
     
     [self setup];
@@ -28,8 +31,20 @@
     RMRSimpleTableViewItem* item;
     
     item = [self addItemToGroup:demosGrp text:@"Text Grid"];
+    item.accessory = UITableViewCellAccessoryDisclosureIndicator;
+    item.selectBlock = ^(RMRSimpleTableViewItem* item)
+    {
+        return NO;
+    };
     
     item = [self addItemToGroup:demosGrp text:@"Map"];
+    item.accessory = UITableViewCellAccessoryDisclosureIndicator;
+    item.selectBlock = ^(RMRSimpleTableViewItem* item)
+    {
+        RMRMapViewController* vc = [[RMRMapViewController alloc] initWithNibName:@"RMRMapViewController" bundle:nil];
+        [self.navigationController pushViewController:vc animated:YES];
+        return NO;
+    };
     
 }
 

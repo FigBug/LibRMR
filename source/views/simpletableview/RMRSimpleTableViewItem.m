@@ -13,6 +13,8 @@
 @synthesize text;
 @synthesize detailText;
 @synthesize style;
+@synthesize accessory;
+@synthesize selectBlock;
 
 - (id)initWithOwner:(RMRSimpleTableViewController*)owner_ group:(RMRSimpleTableViewGroup*)group_;
 {
@@ -25,6 +27,7 @@
         text        = nil;
         detailText  = nil;
         style       = UITableViewCellStyleSubtitle;
+        accessory   = UITableViewCellAccessoryNone;
     }
     return self;
 }
@@ -33,6 +36,7 @@
 {
     cell.textLabel.text         = text;
     cell.detailTextLabel.text   = detailText;
+    cell.accessoryType          = accessory;
 }
 
 @end

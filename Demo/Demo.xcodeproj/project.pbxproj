@@ -18,6 +18,9 @@
 		7806148917DA22D0009E89D0 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7806148817DA22D0009E89D0 /* Default-568h@2x.png */; };
 		7806148C17DA22D0009E89D0 /* RMRMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7806148B17DA22D0009E89D0 /* RMRMainViewController.m */; };
 		780614A217DA236D009E89D0 /* libRMR.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7806149F17DA2354009E89D0 /* libRMR.a */; };
+		78C8BA1117DA2CF400586887 /* RMRMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78C8BA0F17DA2CF400586887 /* RMRMapViewController.m */; };
+		78C8BA1217DA2CF400586887 /* RMRMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78C8BA1017DA2CF400586887 /* RMRMapViewController.xib */; };
+		78C8BA1417DA360900586887 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C8BA1317DA360900586887 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +57,10 @@
 		7806148A17DA22D0009E89D0 /* RMRMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RMRMainViewController.h; sourceTree = "<group>"; };
 		7806148B17DA22D0009E89D0 /* RMRMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RMRMainViewController.m; sourceTree = "<group>"; };
 		7806149A17DA2353009E89D0 /* RMR.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RMR.xcodeproj; path = ../../RMR.xcodeproj; sourceTree = "<group>"; };
+		78C8BA0E17DA2CF400586887 /* RMRMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMRMapViewController.h; sourceTree = "<group>"; };
+		78C8BA0F17DA2CF400586887 /* RMRMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMRMapViewController.m; sourceTree = "<group>"; };
+		78C8BA1017DA2CF400586887 /* RMRMapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RMRMapViewController.xib; sourceTree = "<group>"; };
+		78C8BA1317DA360900586887 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78C8BA1417DA360900586887 /* QuartzCore.framework in Frameworks */,
 				780614A217DA236D009E89D0 /* libRMR.a in Frameworks */,
 				7806147317DA22D0009E89D0 /* UIKit.framework in Frameworks */,
 				7806147517DA22D0009E89D0 /* Foundation.framework in Frameworks */,
@@ -91,6 +99,7 @@
 		7806147117DA22D0009E89D0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				78C8BA1317DA360900586887 /* QuartzCore.framework */,
 				7806147217DA22D0009E89D0 /* UIKit.framework */,
 				7806147417DA22D0009E89D0 /* Foundation.framework */,
 				7806147617DA22D0009E89D0 /* CoreGraphics.framework */,
@@ -159,6 +168,7 @@
 		78C8BA0B17DA295900586887 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				78C8BA0D17DA2C4000586887 /* Map */,
 				78C8BA0C17DA297F00586887 /* Main */,
 			);
 			name = ViewControllers;
@@ -171,6 +181,16 @@
 				7806148B17DA22D0009E89D0 /* RMRMainViewController.m */,
 			);
 			name = Main;
+			sourceTree = "<group>";
+		};
+		78C8BA0D17DA2C4000586887 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				78C8BA0E17DA2CF400586887 /* RMRMapViewController.h */,
+				78C8BA0F17DA2CF400586887 /* RMRMapViewController.m */,
+				78C8BA1017DA2CF400586887 /* RMRMapViewController.xib */,
+			);
+			name = Map;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,6 +266,7 @@
 				7806148517DA22D0009E89D0 /* Default.png in Resources */,
 				7806148717DA22D0009E89D0 /* Default@2x.png in Resources */,
 				7806148917DA22D0009E89D0 /* Default-568h@2x.png in Resources */,
+				78C8BA1217DA2CF400586887 /* RMRMapViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +280,7 @@
 				7806147F17DA22D0009E89D0 /* main.m in Sources */,
 				7806148317DA22D0009E89D0 /* RMRAppDelegate.m in Sources */,
 				7806148C17DA22D0009E89D0 /* RMRMainViewController.m in Sources */,
+				78C8BA1117DA2CF400586887 /* RMRMapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

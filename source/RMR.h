@@ -35,4 +35,6 @@
 
 #import "views/mapview/RMRMapView.h"
 #import "views/simpletableview/RMRSimpleTableViewController.h"
+#import "views/simpletableview/RMRSimpleTableViewGroup.h"
+#import "views/simpletableview/RMRSimpleTableViewItem.h"
 #import "views/textgrid/RMRTextGrid.h"
