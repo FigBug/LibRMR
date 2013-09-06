@@ -6,19 +6,19 @@
 //  Copyright (c) 2013 Roland Rabien. All rights reserved.
 //
 
-@class RRSimpleTableViewController;
-@class RRSimpleTableViewGroup;
+@class RMRSimpleTableViewController;
+@class RMRSimpleTableViewGroup;
 
-@interface RRSimpleTableViewItem : NSObject {
-    RRSimpleTableViewGroup* __weak group;
-    RRSimpleTableViewController* __weak owner;
+@interface RMRSimpleTableViewItem : NSObject {
+    RMRSimpleTableViewGroup* __weak group;
+    RMRSimpleTableViewController* __weak owner;
 }
 
 @property (nonatomic) NSString* text;
 @property (nonatomic) NSString* detailText;
 @property (nonatomic) UITableViewCellStyle style;
 
-- (id)initWithOwner:(RRSimpleTableViewController*)owner group:(RRSimpleTableViewGroup*)group;
+- (id)initWithOwner:(RMRSimpleTableViewController*)owner group:(RMRSimpleTableViewGroup*)group;
 - (void)configureCell:(UITableViewCell*)cell;
 
 @end

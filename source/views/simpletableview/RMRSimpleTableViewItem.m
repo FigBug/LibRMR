@@ -6,15 +6,15 @@
 //  Copyright (c) 2013 Roland Rabien. All rights reserved.
 //
 
-#import "RRSimpleTableViewItem.h"
+#import "RMRSimpleTableViewItem.h"
 
-@implementation RRSimpleTableViewItem
+@implementation RMRSimpleTableViewItem
 
 @synthesize text;
 @synthesize detailText;
 @synthesize style;
 
-- (id)initWithOwner:(RRSimpleTableViewController*)owner_ group:(RRSimpleTableViewGroup*)group_;
+- (id)initWithOwner:(RMRSimpleTableViewController*)owner_ group:(RMRSimpleTableViewGroup*)group_;
 {
     self = [super init];
     if (self)

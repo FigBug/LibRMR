@@ -20,9 +20,9 @@
 		78CC309517D64E59000B8D85 /* RMRLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 78CC308F17D64E59000B8D85 /* RMRLog.m */; };
 		78CC309617D64E59000B8D85 /* RMRUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 78CC309117D64E59000B8D85 /* RMRUtil.m */; };
 		78CC309717D64E59000B8D85 /* RMRVideoUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 78CC309317D64E59000B8D85 /* RMRVideoUtil.m */; };
-		78CC30A017D64E7E000B8D85 /* RRSimpleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78CC309B17D64E7E000B8D85 /* RRSimpleTableViewController.m */; };
-		78CC30A117D64E7E000B8D85 /* RRSimpleTableViewGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 78CC309D17D64E7E000B8D85 /* RRSimpleTableViewGroup.m */; };
-		78CC30A217D64E7E000B8D85 /* RRSimpleTableViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 78CC309F17D64E7E000B8D85 /* RRSimpleTableViewItem.m */; };
+		78CC30A017D64E7E000B8D85 /* RMRSimpleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78CC309B17D64E7E000B8D85 /* RMRSimpleTableViewController.m */; };
+		78CC30A117D64E7E000B8D85 /* RMRSimpleTableViewGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 78CC309D17D64E7E000B8D85 /* RMRSimpleTableViewGroup.m */; };
+		78CC30A217D64E7E000B8D85 /* RMRSimpleTableViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 78CC309F17D64E7E000B8D85 /* RMRSimpleTableViewItem.m */; };
 		78CC30B517D64E8A000B8D85 /* RMRMapBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 78CC30A417D64E8A000B8D85 /* RMRMapBaseView.m */; };
 		78CC30B617D64E8A000B8D85 /* RMRMapPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 78CC30A617D64E8A000B8D85 /* RMRMapPath.m */; };
 		78CC30B717D64E8A000B8D85 /* RMRMapQuestOSMTileProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 78CC30A817D64E8A000B8D85 /* RMRMapQuestOSMTileProvider.m */; };
@@ -86,12 +86,12 @@
 		78CC309117D64E59000B8D85 /* RMRUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RMRUtil.m; path = source/util/RMRUtil.m; sourceTree = SOURCE_ROOT; };
 		78CC309217D64E59000B8D85 /* RMRVideoUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RMRVideoUtil.h; path = source/util/RMRVideoUtil.h; sourceTree = SOURCE_ROOT; };
 		78CC309317D64E59000B8D85 /* RMRVideoUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RMRVideoUtil.m; path = source/util/RMRVideoUtil.m; sourceTree = SOURCE_ROOT; };
-		78CC309A17D64E7E000B8D85 /* RRSimpleTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RRSimpleTableViewController.h; path = source/views/simpletableview/RRSimpleTableViewController.h; sourceTree = SOURCE_ROOT; };
-		78CC309B17D64E7E000B8D85 /* RRSimpleTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RRSimpleTableViewController.m; path = source/views/simpletableview/RRSimpleTableViewController.m; sourceTree = SOURCE_ROOT; };
-		78CC309C17D64E7E000B8D85 /* RRSimpleTableViewGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RRSimpleTableViewGroup.h; path = source/views/simpletableview/RRSimpleTableViewGroup.h; sourceTree = SOURCE_ROOT; };
-		78CC309D17D64E7E000B8D85 /* RRSimpleTableViewGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RRSimpleTableViewGroup.m; path = source/views/simpletableview/RRSimpleTableViewGroup.m; sourceTree = SOURCE_ROOT; };
-		78CC309E17D64E7E000B8D85 /* RRSimpleTableViewItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RRSimpleTableViewItem.h; path = source/views/simpletableview/RRSimpleTableViewItem.h; sourceTree = SOURCE_ROOT; };
-		78CC309F17D64E7E000B8D85 /* RRSimpleTableViewItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RRSimpleTableViewItem.m; path = source/views/simpletableview/RRSimpleTableViewItem.m; sourceTree = SOURCE_ROOT; };
+		78CC309A17D64E7E000B8D85 /* RMRSimpleTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RMRSimpleTableViewController.h; path = source/views/simpletableview/RMRSimpleTableViewController.h; sourceTree = SOURCE_ROOT; };
+		78CC309B17D64E7E000B8D85 /* RMRSimpleTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RMRSimpleTableViewController.m; path = source/views/simpletableview/RMRSimpleTableViewController.m; sourceTree = SOURCE_ROOT; };
+		78CC309C17D64E7E000B8D85 /* RMRSimpleTableViewGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RMRSimpleTableViewGroup.h; path = source/views/simpletableview/RMRSimpleTableViewGroup.h; sourceTree = SOURCE_ROOT; };
+		78CC309D17D64E7E000B8D85 /* RMRSimpleTableViewGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RMRSimpleTableViewGroup.m; path = source/views/simpletableview/RMRSimpleTableViewGroup.m; sourceTree = SOURCE_ROOT; };
+		78CC309E17D64E7E000B8D85 /* RMRSimpleTableViewItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RMRSimpleTableViewItem.h; path = source/views/simpletableview/RMRSimpleTableViewItem.h; sourceTree = SOURCE_ROOT; };
+		78CC309F17D64E7E000B8D85 /* RMRSimpleTableViewItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RMRSimpleTableViewItem.m; path = source/views/simpletableview/RMRSimpleTableViewItem.m; sourceTree = SOURCE_ROOT; };
 		78CC30A317D64E8A000B8D85 /* RMRMapBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RMRMapBaseView.h; path = source/views/mapview/RMRMapBaseView.h; sourceTree = SOURCE_ROOT; };
 		78CC30A417D64E8A000B8D85 /* RMRMapBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RMRMapBaseView.m; path = source/views/mapview/RMRMapBaseView.m; sourceTree = SOURCE_ROOT; };
 		78CC30A517D64E8A000B8D85 /* RMRMapPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RMRMapPath.h; path = source/views/mapview/RMRMapPath.h; sourceTree = SOURCE_ROOT; };
@@ -314,12 +314,12 @@
 		78CC309917D64E6E000B8D85 /* SimpleTableView */ = {
 			isa = PBXGroup;
 			children = (
-				78CC309A17D64E7E000B8D85 /* RRSimpleTableViewController.h */,
-				78CC309B17D64E7E000B8D85 /* RRSimpleTableViewController.m */,
-				78CC309C17D64E7E000B8D85 /* RRSimpleTableViewGroup.h */,
-				78CC309D17D64E7E000B8D85 /* RRSimpleTableViewGroup.m */,
-				78CC309E17D64E7E000B8D85 /* RRSimpleTableViewItem.h */,
-				78CC309F17D64E7E000B8D85 /* RRSimpleTableViewItem.m */,
+				78CC309A17D64E7E000B8D85 /* RMRSimpleTableViewController.h */,
+				78CC309B17D64E7E000B8D85 /* RMRSimpleTableViewController.m */,
+				78CC309C17D64E7E000B8D85 /* RMRSimpleTableViewGroup.h */,
+				78CC309D17D64E7E000B8D85 /* RMRSimpleTableViewGroup.m */,
+				78CC309E17D64E7E000B8D85 /* RMRSimpleTableViewItem.h */,
+				78CC309F17D64E7E000B8D85 /* RMRSimpleTableViewItem.m */,
 			);
 			name = SimpleTableView;
 			sourceTree = "<group>";
@@ -429,9 +429,9 @@
 				78CC309517D64E59000B8D85 /* RMRLog.m in Sources */,
 				78CC309617D64E59000B8D85 /* RMRUtil.m in Sources */,
 				78CC309717D64E59000B8D85 /* RMRVideoUtil.m in Sources */,
-				78CC30A017D64E7E000B8D85 /* RRSimpleTableViewController.m in Sources */,
-				78CC30A117D64E7E000B8D85 /* RRSimpleTableViewGroup.m in Sources */,
-				78CC30A217D64E7E000B8D85 /* RRSimpleTableViewItem.m in Sources */,
+				78CC30A017D64E7E000B8D85 /* RMRSimpleTableViewController.m in Sources */,
+				78CC30A117D64E7E000B8D85 /* RMRSimpleTableViewGroup.m in Sources */,
+				78CC30A217D64E7E000B8D85 /* RMRSimpleTableViewItem.m in Sources */,
 				78CC30B517D64E8A000B8D85 /* RMRMapBaseView.m in Sources */,
 				78CC30B617D64E8A000B8D85 /* RMRMapPath.m in Sources */,
 				78CC30B717D64E8A000B8D85 /* RMRMapQuestOSMTileProvider.m in Sources */,

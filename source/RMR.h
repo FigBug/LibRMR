@@ -34,5 +34,5 @@
 #import "util/location/RMRLocationManager.h"
 
 #import "views/mapview/RMRMapView.h"
-#import "views/simpletableview/RRSimpleTableViewController.h"
+#import "views/simpletableview/RMRSimpleTableViewController.h"
 #import "views/textgrid/RMRTextGrid.h"

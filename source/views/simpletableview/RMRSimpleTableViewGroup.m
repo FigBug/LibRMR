@@ -6,15 +6,15 @@
 //  Copyright (c) 2013 Roland Rabien. All rights reserved.
 //
 
-#import "RRSimpleTableViewGroup.h"
-#import "RRSimpleTableViewItem.h"
-#import "RRSimpleTableViewController.h"
+#import "RMRSimpleTableViewGroup.h"
+#import "RMRSimpleTableViewItem.h"
+#import "RMRSimpleTableViewController.h"
 
-@implementation RRSimpleTableViewGroup
+@implementation RMRSimpleTableViewGroup
 
 @synthesize name;
 
-- (id)initWithOwner:(RRSimpleTableViewController*)owner_ name:(NSString*)name_
+- (id)initWithOwner:(RMRSimpleTableViewController*)owner_ name:(NSString*)name_
 {
     self = [super init];
     if (self)
@@ -31,19 +31,19 @@
     return [items copy];
 }
 
-- (RRSimpleTableViewItem*)addItem
+- (RMRSimpleTableViewItem*)addItem
 {
     return [self addItemText:nil detailText:nil];
 }
 
-- (RRSimpleTableViewItem*)addItemText:(NSString*)text
+- (RMRSimpleTableViewItem*)addItemText:(NSString*)text
 {
     return [self addItemText:text detailText:nil];
 }
 
-- (RRSimpleTableViewItem*)addItemText:(NSString*)text detailText:(NSString*)detailText
+- (RMRSimpleTableViewItem*)addItemText:(NSString*)text detailText:(NSString*)detailText
 {
-    RRSimpleTableViewItem* item = [[RRSimpleTableViewItem alloc] initWithOwner:owner group:self];
+    RMRSimpleTableViewItem* item = [[RMRSimpleTableViewItem alloc] initWithOwner:owner group:self];
     item.text       = text;
     item.detailText = detailText;
     
