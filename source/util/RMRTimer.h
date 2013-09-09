@@ -14,6 +14,9 @@
     void (^timerBlock)(RMRTimer* timer);
     SEL selector;
     id target;
+    
+    NSTimeInterval interval;
+    BOOL repeats;
 }
 
 + (RMRTimer*)repeatingTimerWithTimeInterval:(NSTimeInterval)seconds callingBlock:(void(^)(RMRTimer*))block;
@@ -23,5 +26,8 @@
 + (RMRTimer*)nonRepeatingTimerWithTimeInterval:(NSTimeInterval)seconds target:(id)target selector:(SEL)selector;
 
 - (void)invalidate;
+
++ (void)disableTimers;
++ (void)enableTimers;
 
 @end
