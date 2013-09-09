@@ -16,7 +16,7 @@
 @property (nonatomic) double rowHeight;
 @property (nonatomic) double defaultColumnWidth;
 
-- (void)setText:(NSString*)text atX:(int)x y:(int)y color:(UIColor*)col strokeColor:(UIColor*)stroke;
+- (void)setText:(NSString*)text atRow:(int)row column:(int)col color:(UIColor*)color strokeColor:(UIColor*)stroke;
 - (void)setColumn:(int)col width:(double)width;
 - (void)clear;
 

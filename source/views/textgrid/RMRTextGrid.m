@@ -21,14 +21,29 @@
     self = [super initWithFrame:frame];
     if (self)
     {
-        text                = [[RMR2DArray alloc] init];
-        font                = [UIFont boldSystemFontOfSize:19];
-        rowHeight           = 20;
-        defaultColumnWidth  = 100;
-        columnWidths        = [[NSMutableArray alloc] init];
-        self.opaque         = NO;
+        [self setup];
     }
     return self;
+}
+
+- (id)initWithCoder:(NSCoder*)aDecoder
+{
+    self = [super initWithCoder:aDecoder];
+    if (self)
+    {
+        [self setup];
+    }
+    return self;
+}
+
+- (void)setup
+{
+    text                = [[RMR2DArray alloc] init];
+    font                = [UIFont boldSystemFontOfSize:19];
+    rowHeight           = 20;
+    defaultColumnWidth  = 100;
+    columnWidths        = [[NSMutableArray alloc] init];
+    self.opaque         = NO;
 }
 
 - (void)drawString:(NSString*)string at:(CGPoint)pnt on:(CGContextRef)ctx color:(CGColorRef)color stoke:(CGColorRef)stroke
@@ -62,18 +77,18 @@
     }
 }
 
-- (void)setText:(NSString*)str atX:(int)x y:(int)y color:(UIColor*)color strokeColor:(UIColor*)stroke
+- (void)setText:(NSString*)str atRow:(int)row column:(int)col color:(UIColor*)color strokeColor:(UIColor*)stroke
 {
     RMRTextItem* itm = [[RMRTextItem alloc] init];
     itm.text        = str;
     itm.color       = color;
     itm.strokeColor = stroke;
     
-    if (![itm isEqual:[text objectAtRow:y column:x]])
+    if (![itm isEqual:[text objectAtRow:row column:col]])
     {
-        [text setObject:itm atRow:y column:x];
+        [text setObject:itm atRow:row column:col];
         
-        [self setNeedsDisplayInRect:CGRectMake([self columnPosition: x], y * rowHeight, [self columnWidth:x], rowHeight + 3)];
+        [self setNeedsDisplayInRect:CGRectMake([self columnPosition: col], row * rowHeight, [self columnWidth:col], rowHeight + 3)];
     }
 }
 

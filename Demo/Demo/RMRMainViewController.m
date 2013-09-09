@@ -8,6 +8,7 @@
 
 #import "RMRMainViewController.h"
 #import "RMRMapViewController.h"
+#import "RMRTextGridViewController.h"
 
 @implementation RMRMainViewController
 
@@ -34,6 +35,8 @@
     item.accessory = UITableViewCellAccessoryDisclosureIndicator;
     item.selectBlock = ^(RMRSimpleTableViewItem* item)
     {
+        RMRTextGridViewController* vc = [[RMRTextGridViewController alloc] initWithNibName:@"RMRTextGridViewController" bundle:nil];
+        [self.navigationController pushViewController:vc animated:YES];
         return NO;
     };
     

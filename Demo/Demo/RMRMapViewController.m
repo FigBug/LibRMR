@@ -19,8 +19,6 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self)
     {
-        [RMRMapView class];
-        
         self.title = @"RMRMapView";
     }
     return self;
