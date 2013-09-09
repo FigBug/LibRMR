@@ -37,14 +37,14 @@
 // The default projection is RMRMercatorProjection
 @property (nonatomic, retain) id <RMRProjection> mapProjection;
 
-@property (nonatomic, assign) RMRMapCoordinate center; // animated
+@property (nonatomic, assign) RMRMapCoordinate centerCoordinate; // animated
 @property (nonatomic, assign) NSUInteger zoomLevel;   // animated
 
 
 // tileProvider must not be nil
 - (id)initWithFrame:(CGRect)frame tileProvider:(id <RMRTileProvider>)tileProvider;
 
-- (void)setCenter:(RMRMapCoordinate)coord animated:(BOOL)anim;
+- (void)setCenterCoordinate:(RMRMapCoordinate)coord animated:(BOOL)anim;
 - (void)setZoomLevel:(NSUInteger)zoom animated:(BOOL)anim;
 
 - (void)addPath:(RMRMapPath*)path;

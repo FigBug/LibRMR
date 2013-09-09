@@ -99,10 +99,10 @@
 		7806147117DA22D0009E89D0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7806147617DA22D0009E89D0 /* CoreGraphics.framework */,
+				7806147417DA22D0009E89D0 /* Foundation.framework */,
 				78C8BA1317DA360900586887 /* QuartzCore.framework */,
 				7806147217DA22D0009E89D0 /* UIKit.framework */,
-				7806147417DA22D0009E89D0 /* Foundation.framework */,
-				7806147617DA22D0009E89D0 /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

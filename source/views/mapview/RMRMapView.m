@@ -11,12 +11,13 @@
 #import "RMRProjection.h"
 #import "RMRTileCache.h"
 #import "RMRTileProvider.h"
+#import "RMRMapQuestOSMTileProvider.h"
 
 @implementation RMRMapView
 
 @synthesize tileProvider = tileProvider;
 @synthesize mapProjection = mapProjection;
-@dynamic center, zoomLevel;
+@dynamic centerCoordinate, zoomLevel;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -59,6 +60,7 @@
 	self.bounces                        = NO;
 	
 	self.mapProjection = [[RMRMercatorProjection alloc] init];
+    self.tileProvider  = [[RMRMapQuestOSMTileProvider alloc] init];
 }
 
 - (void)configureScrollView
@@ -138,7 +140,7 @@
 			RMRMapCoordinate coord = [mapProjection coordinateForPoint:pt zoomLevel:zoom tileSize:[tileProvider tileSize]];
 			zoom++;
 			
-			[self setCenter:coord animated:NO];
+			[self setCenterCoordinate:coord animated:NO];
 			self.zoomLevel = zoom;
 		}
 	}
@@ -163,7 +165,7 @@
 		
 		baseView.tileProvider = tileProvider;
 		
-		[self setCenter:RMRMapCoordinateMake(0, 0) animated:NO];
+		[self setCenterCoordinate:RMRMapCoordinateMake(0, 0) animated:NO];
 	}
 }
 
@@ -182,7 +184,7 @@
 	[self setZoomScale:RMRMapScaleFromZoomLevel(zoom) animated:anim];
 }
 
-- (RMRMapCoordinate)center
+- (RMRMapCoordinate)centerCoordinate
 {
 	CGPoint pt = self.contentOffset;
 	pt.x += self.bounds.size.width  / 2;
@@ -191,12 +193,12 @@
 	return [mapProjection coordinateForPoint:pt zoomLevel:self.zoomLevel tileSize:[tileProvider tileSize]];
 }
 
-- (void)setCenter:(RMRMapCoordinate)coord
+- (void)setCenterCoordinate:(RMRMapCoordinate)coord
 {
-	[self setCenter:coord animated:YES];
+	[self setCenterCoordinate:coord animated:YES];
 }
 
-- (void)setCenter:(RMRMapCoordinate)coord animated:(BOOL)anim
+- (void)setCenterCoordinate:(RMRMapCoordinate)coord animated:(BOOL)anim
 {
 	CGPoint pt = [mapProjection pointForCoordinate:coord zoomLevel:self.zoomLevel tileSize:[tileProvider tileSize]];
 	

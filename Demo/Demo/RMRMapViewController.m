@@ -30,7 +30,8 @@
 {
     [super viewDidLoad];
     
-    //[map setCenter:RMRMapCoordinateMake(48.4222,-123.3657)];
+    [map setZoomLevel:14];
+    [map setCenterCoordinate:RMRMapCoordinateMake(48.4222,-123.3657)];
 }
 
 - (void)didReceiveMemoryWarning
