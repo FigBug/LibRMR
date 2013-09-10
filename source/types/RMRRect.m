@@ -18,6 +18,11 @@
     return [[RMRRect alloc] initWithCGRect:rc];
 }
 
++ (RMRRect*)rectWithCGPoint1:(CGPoint)p1 CGPoint2:(CGPoint)p2
+{
+    return [[RMRRect alloc] initWithCGPoint1:p1 CGPoint2:p2];
+}
+
 + (RMRRect*)rectWithX:(CGFloat)x y:(CGFloat)y width:(CGFloat)width height:(CGFloat)height
 {
     return [[RMRRect alloc] initWithX:x y:y width:width height:height];
@@ -36,6 +41,11 @@
         rc = CGRectStandardize(rc_);
     }
     return self;
+}
+
+- (id)initWithCGPoint1:(CGPoint)p1 CGPoint2:(CGPoint)p2
+{
+    return [self initWithCGRect:CGRectMake(p1.x, p1.y, p2.x - p1.x, p2.y - p1.y)];
 }
 
 - (id)initWithX:(CGFloat)x y:(CGFloat)y width:(CGFloat)width height:(CGFloat)height
@@ -143,6 +153,11 @@
 - (RMRRect*)unionWith:(RMRRect*)other
 {
     return [RMRRect rectWithCGRect:CGRectUnion(rc, other.CGRect)];
+}
+
+- (RMRRect*)insetX:(CGFloat)dx y:(CGFloat)dy
+{
+    return [RMRRect rectWithCGRect:CGRectInset(rc, dx, dy)];
 }
 
 - (BOOL)containsPoint:(RMRPoint*)pt

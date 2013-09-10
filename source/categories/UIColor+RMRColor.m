@@ -144,13 +144,13 @@ static void hsl_to_hsv(CGFloat hh, CGFloat ss, CGFloat ll, CGFloat* h, CGFloat* 
     return (sum > 0.8);
 }
 
-- (UIColor*)goldenRatioColor:(int)idx
++ (UIColor*)goldenRatioColor:(int)idx
 {
     double h = fmod(idx * 0.618033988749895, 1);
     return [UIColor colorWithHue:h saturation:0.8 brightness:0.95 alpha:1.0];
 }
 
-- (UIColor*)uniqueColor:(int)idx
++ (UIColor*)uniqueColor:(int)idx
 {
     NSMutableArray* wheel = [[NSMutableArray alloc] init];
     double pos = 0;
