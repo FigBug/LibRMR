@@ -28,6 +28,16 @@
     return [[RMRRect alloc] initWithX:x y:y width:width height:height];
 }
 
++ (RMRRect*)nullRect
+{
+    return [[RMRRect alloc] initWithCGRect:CGRectNull];
+}
+
++ (RMRRect*)emptyRect
+{
+    return [[RMRRect alloc] init];
+}
+
 - (id)init
 {
     return [self initWithCGRect:CGRectMake(0, 0, 0, 0)];
@@ -51,6 +61,21 @@
 - (id)initWithX:(CGFloat)x y:(CGFloat)y width:(CGFloat)width height:(CGFloat)height
 {
     return [self initWithCGRect:CGRectMake(x, y, width, height)];
+}
+
+- (BOOL)isNull
+{
+    return CGRectIsNull(rc);
+}
+
+- (BOOL)isEmpty
+{
+    return CGRectIsEmpty(rc);
+}
+
+- (BOOL)isInfinite
+{
+    return CGRectIsInfinite(rc);
 }
 
 - (CGFloat)x

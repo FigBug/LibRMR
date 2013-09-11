@@ -14,11 +14,17 @@
 + (RMRRect*)rectWithCGRect:(CGRect)rc;
 + (RMRRect*)rectWithCGPoint1:(CGPoint)p1 CGPoint2:(CGPoint)p2;
 + (RMRRect*)rectWithX:(CGFloat)x y:(CGFloat)y width:(CGFloat)width height:(CGFloat)height;
++ (RMRRect*)nullRect;
++ (RMRRect*)emptyRect;
 
 - (id)init;
 - (id)initWithCGRect:(CGRect)rc;
 - (id)initWithCGPoint1:(CGPoint)p1 CGPoint2:(CGPoint)p2;
 - (id)initWithX:(CGFloat)x y:(CGFloat)y width:(CGFloat)width height:(CGFloat)height;
+
+- (BOOL)isNull;
+- (BOOL)isEmpty;
+- (BOOL)isInfinite;
 
 - (CGFloat)x;
 - (void)setX:(CGFloat)x;
