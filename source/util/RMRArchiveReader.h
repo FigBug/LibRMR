@@ -6,6 +6,8 @@
 //  Copyright (c) 2013 Roland Rabien. All rights reserved.
 //
 
+#ifdef RMR_HAS_ARCHIVE
+
 @interface RMRArchiveReader : NSObject {
     NSString* srcPath;
 }
@@ -15,3 +17,5 @@
 - (BOOL)extractToPath:(NSString*)dstPath;
 
 @end
+
+#endif

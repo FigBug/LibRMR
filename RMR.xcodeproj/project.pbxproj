@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		78239E6417D8FDC400DA41AD /* libarc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78239E5C17D8F84700DA41AD /* libarc.a */; };
 		78239E7717D9082500DA41AD /* RMRLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 78239E7617D9082500DA41AD /* RMRLine.m */; };
 		78239E8017D9276700DA41AD /* RMRTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 78239E7F17D9276700DA41AD /* RMRTimer.m */; };
+		783AB6E017E0F51B004190D7 /* RMRCPUMeter.m in Sources */ = {isa = PBXBuildFile; fileRef = 783AB6DF17E0F51B004190D7 /* RMRCPUMeter.m */; };
 		78CC306917D64D7F000B8D85 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78CC306817D64D7F000B8D85 /* Foundation.framework */; };
 		78CC307F17D64DE5000B8D85 /* NSArray+RMRArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 78CC307A17D64DE5000B8D85 /* NSArray+RMRArray.m */; };
 		78CC308017D64DE5000B8D85 /* NSObject+RMRCast.m in Sources */ = {isa = PBXBuildFile; fileRef = 78CC307C17D64DE5000B8D85 /* NSObject+RMRCast.m */; };
@@ -59,13 +59,14 @@
 
 /* Begin PBXFileReference section */
 		78239E4717D8F69F00DA41AD /* RMR.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RMR.h; path = source/RMR.h; sourceTree = SOURCE_ROOT; };
-		78239E5C17D8F84700DA41AD /* libarc.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libarc.a; path = dependencies/libarc/libarc.a; sourceTree = "<group>"; };
 		78239E7217D900BE00DA41AD /* RMR-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "RMR-Prefix.pch"; path = "source/RMR-Prefix.pch"; sourceTree = SOURCE_ROOT; };
 		78239E7517D9082500DA41AD /* RMRLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RMRLine.h; path = source/types/RMRLine.h; sourceTree = SOURCE_ROOT; };
 		78239E7617D9082500DA41AD /* RMRLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RMRLine.m; path = source/types/RMRLine.m; sourceTree = SOURCE_ROOT; };
 		78239E7D17D926B800DA41AD /* RMRMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RMRMacros.h; path = source/macros/RMRMacros.h; sourceTree = SOURCE_ROOT; };
 		78239E7E17D9276700DA41AD /* RMRTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RMRTimer.h; path = source/util/RMRTimer.h; sourceTree = SOURCE_ROOT; };
 		78239E7F17D9276700DA41AD /* RMRTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RMRTimer.m; path = source/util/RMRTimer.m; sourceTree = SOURCE_ROOT; };
+		783AB6DE17E0F51B004190D7 /* RMRCPUMeter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RMRCPUMeter.h; path = source/views/cpumeter/RMRCPUMeter.h; sourceTree = SOURCE_ROOT; };
+		783AB6DF17E0F51B004190D7 /* RMRCPUMeter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RMRCPUMeter.m; path = source/views/cpumeter/RMRCPUMeter.m; sourceTree = SOURCE_ROOT; };
 		78CC306517D64D7F000B8D85 /* libRMR.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRMR.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		78CC306817D64D7F000B8D85 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		78CC307917D64DE5000B8D85 /* NSArray+RMRArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray+RMRArray.h"; path = "source/categories/NSArray+RMRArray.h"; sourceTree = SOURCE_ROOT; };
@@ -142,7 +143,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				78239E6417D8FDC400DA41AD /* libarc.a in Frameworks */,
 				78CC306917D64D7F000B8D85 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -156,6 +156,15 @@
 				78239E7D17D926B800DA41AD /* RMRMacros.h */,
 			);
 			name = Macros;
+			sourceTree = "<group>";
+		};
+		783AB6DD17E0F4E1004190D7 /* CPUMeter */ = {
+			isa = PBXGroup;
+			children = (
+				783AB6DE17E0F51B004190D7 /* RMRCPUMeter.h */,
+				783AB6DF17E0F51B004190D7 /* RMRCPUMeter.m */,
+			);
+			name = CPUMeter;
 			sourceTree = "<group>";
 		};
 		78CC305C17D64D7F000B8D85 = {
@@ -178,7 +187,6 @@
 		78CC306717D64D7F000B8D85 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				78239E5C17D8F84700DA41AD /* libarc.a */,
 				78CC306817D64D7F000B8D85 /* Foundation.framework */,
 			);
 			name = Frameworks;
@@ -279,6 +287,7 @@
 		78CC308B17D64E35000B8D85 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				783AB6DD17E0F4E1004190D7 /* CPUMeter */,
 				78CC309817D64E62000B8D85 /* MapView */,
 				78CC309917D64E6E000B8D85 /* SimpleTableView */,
 				78CC30C917D65C3C000B8D85 /* TextGrid */,
@@ -454,6 +463,7 @@
 				78CC30EA17D7971A000B8D85 /* RMRButterworthFilter.m in Sources */,
 				78239E7717D9082500DA41AD /* RMRLine.m in Sources */,
 				78239E8017D9276700DA41AD /* RMRTimer.m in Sources */,
+				783AB6E017E0F51B004190D7 /* RMRCPUMeter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

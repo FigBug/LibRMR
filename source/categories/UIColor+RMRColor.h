@@ -9,6 +9,7 @@
 
 + (UIColor*)goldenRatioColor:(int)idx;
 + (UIColor*)uniqueColor:(int)idx;
++ (UIColor*)randomColor;
 
 + (UIColor*)colorWithHue:(CGFloat)hue saturation:(CGFloat)saturation lightness:(CGFloat)lightness alpha:(CGFloat)alpha;
 - (UIColor*)initWithHue:(CGFloat)hue saturation:(CGFloat)saturation lightness:(CGFloat)lightness alpha:(CGFloat)alpha;

@@ -33,6 +33,7 @@
 #import "util/RMRVideoUtil.h"
 #import "util/location/RMRLocationManager.h"
 
+#import "views/cpumeter/RMRCPUMeter.h"
 #import "views/mapview/RMRMapView.h"
 #import "views/simpletableview/RMRSimpleTableViewController.h"
 #import "views/simpletableview/RMRSimpleTableViewGroup.h"

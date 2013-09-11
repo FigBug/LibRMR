@@ -5,19 +5,19 @@
 //  Copyright (c) 2012 Roland Rabien. All rights reserved.
 //
 
-#define RMRBoolForKey(key) [RMRDefaults boolForKey: key defaultValue: key##Default]
-#define RMRIntegerForKey(key) [RMRDefaults integerForKey: key defaultValue: key##Default]
-#define RMRStringArrayForKey(key) [RMRDefaults stringArrayForKey: key defaultValue: key##Default]
-#define RMRObjectForKey(key) [RMRDefaults objectForKey: key defaultValue: key##Default]
-#define RMRStringForKey(key) [RMRDefaults stringForKey: key defaultValue: key##Default]
-#define RMRDoubleForKey(key) [RMRDefaults doubleForKey: key defaultValue: key##Default]
+#define RMRDefaultsBoolForKey(key) [RMRDefaults boolForKey: key defaultValue: key##Default]
+#define RMRDefaultsIntegerForKey(key) [RMRDefaults integerForKey: key defaultValue: key##Default]
+#define RMRDefaultsStringArrayForKey(key) [RMRDefaults stringArrayForKey: key defaultValue: key##Default]
+#define RMRDefaultsObjectForKey(key) [RMRDefaults objectForKey: key defaultValue: key##Default]
+#define RMRDefaultsStringForKey(key) [RMRDefaults stringForKey: key defaultValue: key##Default]
+#define RMRDefaultsDoubleForKey(key) [RMRDefaults doubleForKey: key defaultValue: key##Default]
 
-#define RMRSetBoolForKey(key, value) [RMRDefaults setBool: value forKey: key];
-#define RMRSetIntegerForKey(key, value) [RMRDefaults setInteger: value forKey: key];
-#define RMRSetStringArrayForKey(key, value) [RMRDefaults setObject: value forKey: key];
-#define RMRSetObjectForKey(key, value) [RMRDefaults setObject: value forKey: key];
-#define RMRSetStringForKey(key, value) [RMRDefaults setObject: value forKey: key];
-#define RMRSetDoubleForKey(key, value) [RMRDefaults setDouble: value forKey: key];
+#define RMRDefaultsSetBoolForKey(key, value) [RMRDefaults setBool: value forKey: key];
+#define RMRDefaultsSetIntegerForKey(key, value) [RMRDefaults setInteger: value forKey: key];
+#define RMRDefaultsSetStringArrayForKey(key, value) [RMRDefaults setObject: value forKey: key];
+#define RMRDefaultsSetObjectForKey(key, value) [RMRDefaults setObject: value forKey: key];
+#define RMRDefaultsSetStringForKey(key, value) [RMRDefaults setObject: value forKey: key];
+#define RMRDefaultsSetDoubleForKey(key, value) [RMRDefaults setDouble: value forKey: key];
 
 @interface RMRDefaults : NSObject
 

@@ -7,7 +7,7 @@
 
 #import "RMRDropboxTransfer.h"
 
-#ifdef HAS_DROPBOX
+#ifdef RMR_HAS_DROPBOX
 #import <DropboxSDK/DropboxSDK.h>
 
 //==================================================================

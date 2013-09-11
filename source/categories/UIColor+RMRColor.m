@@ -7,6 +7,8 @@
 
 #import "UIColor+RMRColor.h"
 
+#define ARC4RANDOM_MAX      0x100000000
+
 static void hsv_to_hsl(CGFloat h, CGFloat s, CGFloat v, CGFloat* hh, CGFloat* ss, CGFloat *ll)
 {
     *hh = h;
@@ -187,6 +189,14 @@ static void hsl_to_hsv(CGFloat hh, CGFloat ss, CGFloat ll, CGFloat* h, CGFloat* 
         if (idx < wheel.count)
             return [UIColor colorWithHue:pos saturation:0.94 brightness:0.47 alpha:1.0];
     }
+}
+
++ (UIColor*)randomColor
+{
+    return [UIColor colorWithRed:(double)arc4random() / ARC4RANDOM_MAX
+                           green:(double)arc4random() / ARC4RANDOM_MAX
+                            blue:(double)arc4random() / ARC4RANDOM_MAX
+                           alpha:1.0];
 }
 
 @end
