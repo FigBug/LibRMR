@@ -152,6 +152,7 @@ static void hsl_to_hsv(CGFloat hh, CGFloat ss, CGFloat ll, CGFloat* h, CGFloat* 
     return [UIColor colorWithHue:h saturation:0.8 brightness:0.95 alpha:1.0];
 }
 
+
 + (UIColor*)uniqueColor:(int)idx
 {
     NSMutableArray* wheel = [[NSMutableArray alloc] init];
@@ -186,8 +187,10 @@ static void hsl_to_hsv(CGFloat hh, CGFloat ss, CGFloat ll, CGFloat* h, CGFloat* 
             [wheel addObject:[NSNumber numberWithDouble:pos]];
             [wheel sortUsingSelector:@selector(compare:)];
         }
-        if (idx < wheel.count)
+        if (idx < (wheel.count - 1))
+        {
             return [UIColor colorWithHue:pos saturation:0.94 brightness:0.47 alpha:1.0];
+        }
     }
 }
 

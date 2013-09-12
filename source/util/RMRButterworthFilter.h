@@ -14,7 +14,7 @@
     double by[3];
 }
 
-- (void)initWithSampleRate:(int)rate cuttoffFrequnecy:(double)freq;
+- (id)initWithSampleRate:(int)rate cuttoffFrequnecy:(double)freq;
 - (double)filter:(double)val;
 
 @end

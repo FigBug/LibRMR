@@ -9,7 +9,9 @@
 #import "macros/RMRMacros.h"
 
 #import "categories/NSArray+RMRArray.h"
+#import "categories/NSMutableString+RMRMutableString.h"
 #import "categories/NSObject+RMRCast.h"
+#import "categories/NSString+RMRString.h"
 #import "categories/UIColor+RMRColor.h"
 #import "categories/UIView+RMRLayout.h"
 #import "categories/UIView+RMRRect.h"
@@ -28,6 +30,7 @@
 #import "util/RMRButterworthFilter.h"
 #import "util/RMRDefaults.h"
 #import "util/RMRLog.h"
+#import "util/RMRRollingAverage.h"
 #import "util/RMRTimer.h"
 #import "util/RMRUtil.h"
 #import "util/RMRVideoUtil.h"

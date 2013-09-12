@@ -10,26 +10,31 @@
 
 @implementation RMRButterworthFilter
 
-- (void)initWithSampleRate:(int)sampleRate cuttoffFrequnecy:(double)cutoff
+- (id)initWithSampleRate:(int)sampleRate cuttoffFrequnecy:(double)cutoff
 {
-    double PI      = 3.1415926535897932385;
-    double sqrt2   = 1.4142135623730950488;
-    
-    double QcRaw  = (2 * PI * cutoff) / sampleRate; // Find cutoff frequency in [0..PI]
-    double QcWarp = tan(QcRaw); // Warp cutoff frequency
-    
-    double gain   = 1 / (1 + sqrt2 / QcWarp + 2 / (QcWarp * QcWarp));
-    
-    by[2] = (1 - sqrt2 / QcWarp + 2 / (QcWarp * QcWarp)) * gain;
-    by[1] = (2 - 2 * 2 / (QcWarp * QcWarp)) * gain;
-    by[0] = 1;
-    
-    ax[0] = 1 * gain;
-    ax[1] = 2 * gain;
-    ax[2] = 1 * gain;
-    
-    memset(xv, 0, sizeof(xv));
-    memset(yv, 0, sizeof(yv));
+    self = [super init];
+    if (self)
+    {
+        double PI      = 3.1415926535897932385;
+        double sqrt2   = 1.4142135623730950488;
+        
+        double QcRaw  = (2 * PI * cutoff) / sampleRate; // Find cutoff frequency in [0..PI]
+        double QcWarp = tan(QcRaw); // Warp cutoff frequency
+        
+        double gain   = 1 / (1 + sqrt2 / QcWarp + 2 / (QcWarp * QcWarp));
+        
+        by[2] = (1 - sqrt2 / QcWarp + 2 / (QcWarp * QcWarp)) * gain;
+        by[1] = (2 - 2 * 2 / (QcWarp * QcWarp)) * gain;
+        by[0] = 1;
+        
+        ax[0] = 1 * gain;
+        ax[1] = 2 * gain;
+        ax[2] = 1 * gain;
+        
+        memset(xv, 0, sizeof(xv));
+        memset(yv, 0, sizeof(yv));
+    }
+    return self;
 }
 
 - (double)filter:(double)sample

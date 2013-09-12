@@ -21,6 +21,4 @@
 
 - (BOOL)isLightColor;
 
-
-
 @end
