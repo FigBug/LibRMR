@@ -63,29 +63,70 @@
         return [[NSUserDefaults standardUserDefaults] doubleForKey:key];
 }
 
-+ (void)setBool:(BOOL)value forKey:(NSString*)defaultName
++ (void)setBool:(BOOL)value forKey:(NSString*)key
 {
-    [[NSUserDefaults standardUserDefaults] setBool:value forKey:defaultName];
+    [[NSUserDefaults standardUserDefaults] setBool:value forKey:key];
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
-+ (void)setInteger:(NSInteger)value forKey:(NSString*)defaultName
++ (void)setInteger:(NSInteger)value forKey:(NSString*)key
 {
-    [[NSUserDefaults standardUserDefaults] setInteger:value forKey:defaultName];
+    [[NSUserDefaults standardUserDefaults] setInteger:value forKey:key];
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
-+ (void)setObject:(NSObject*)value forKey:(NSString*)defaultName
++ (void)setObject:(NSObject*)value forKey:(NSString*)key
 {
-    [[NSUserDefaults standardUserDefaults] setObject:value forKey:defaultName];
+    [[NSUserDefaults standardUserDefaults] setObject:value forKey:key];
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
-+ (void)setDouble:(double)value forKey:(NSString*)defaultName
++ (void)setDouble:(double)value forKey:(NSString*)key
 {
-    [[NSUserDefaults standardUserDefaults] setDouble:value forKey:defaultName];
+    [[NSUserDefaults standardUserDefaults] setDouble:value forKey:key];
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
+
++ (void)ifUnsetSetBool:(BOOL)value forKey:(NSString*)key
+{
+    NSObject* res = [[NSUserDefaults standardUserDefaults] objectForKey:key];
+    if (res == nil)
+    {
+        [[NSUserDefaults standardUserDefaults] setBool:value forKey:key];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
+}
+
++ (void)ifUnsetSetInteger:(NSInteger)value forKey:(NSString*)key
+{
+    NSObject* res = [[NSUserDefaults standardUserDefaults] objectForKey:key];
+    if (res == nil)
+    {
+        [[NSUserDefaults standardUserDefaults] setInteger:value forKey:key];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
+}
+
++ (void)ifUnsetSetObject:(NSObject*)value forKey:(NSString*)key
+{
+    NSObject* res = [[NSUserDefaults standardUserDefaults] objectForKey:key];
+    if (res == nil)
+    {
+        [[NSUserDefaults standardUserDefaults] setObject:value forKey:key];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
+}
+
++ (void)ifUnsetSetDouble:(double)value forKey:(NSString*)key
+{
+    NSObject* res = [[NSUserDefaults standardUserDefaults] objectForKey:key];
+    if (res == nil)
+    {
+        [[NSUserDefaults standardUserDefaults] setDouble:value forKey:key];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
+}
+
 
 + (NSString*)createSpecialDir:(NSString*)dir
 {

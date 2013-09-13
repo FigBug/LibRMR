@@ -166,6 +166,8 @@
 		baseView.tileProvider = tileProvider;
 		
 		[self setCenterCoordinate:RMRMapCoordinateMake(0, 0) animated:NO];
+        
+        [self setNeedsDisplay];
 	}
 }
 

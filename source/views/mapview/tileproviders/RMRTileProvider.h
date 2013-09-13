@@ -14,4 +14,6 @@
 
 - (CGSize)tileSize;
 
+- (NSString*)prefix;
+
 @end

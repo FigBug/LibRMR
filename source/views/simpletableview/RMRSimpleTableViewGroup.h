@@ -1,5 +1,5 @@
 //
-//  RRSimpleTableViewGroup.h
+// RMRSimpleTableViewGroup.h
 //  Util
 //
 //  Created by Roland Rabien on 2013-08-02.
@@ -23,5 +23,7 @@
 - (RMRSimpleTableViewItem*)addItem;
 - (RMRSimpleTableViewItem*)addItemText:(NSString*)name;
 - (RMRSimpleTableViewItem*)addItemText:(NSString*)name detailText:(NSString*)detailText;
+
+- (RMRSimpleTableViewItem*)addItemCheckText:(NSString*)name setting:(NSString*)setting value:(id)value;
 
 @end

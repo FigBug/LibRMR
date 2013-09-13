@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 Roland Rabien. All rights reserved.
 //
 
-#import "RMRTileProvider.h"
+#import "tileproviders/RMRTileProvider.h"
 #import "RMRTileCache.h"
 
 @interface RMRMapBaseView : UIView

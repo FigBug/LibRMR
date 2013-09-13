@@ -165,7 +165,7 @@ static NSString* const kLastFlushedKey = @"lastFlushedTileCache";
 	NSUInteger x = floor(crect.origin.x / crect.size.width);
 	NSUInteger y = floor(crect.origin.y / crect.size.width);
 	
-	NSData* tileData = [cache tileAtX:x y:y zoomLevel:zoomLevel];
+	NSData* tileData = [cache tileWithPrefix:tileProvider.prefix atX:x y:y zoomLevel:zoomLevel];
 	
 	if (!tileData)
     {
@@ -175,7 +175,7 @@ static NSString* const kLastFlushedKey = @"lastFlushedTileCache";
 		if (!tileData)
 			return;
 		
-		[cache setTile:tileData x:x y:y zoomLevel:zoomLevel];
+		[cache setTile:tileData prefix:tileProvider.prefix x:x y:y zoomLevel:zoomLevel];
 	}
 	
 	UIImage* tileImage = [[UIImage alloc] initWithData:tileData];

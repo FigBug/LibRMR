@@ -1,5 +1,5 @@
 //
-//  RRSimpleTableViewGroup.m
+// RMRSimpleTableViewGroup.m
 //  Util
 //
 //  Created by Roland Rabien on 2013-08-02.
@@ -8,6 +8,7 @@
 
 #import "RMRSimpleTableViewGroup.h"
 #import "RMRSimpleTableViewItem.h"
+#import "RMRSimpleTableViewItemCheck.h"
 #import "RMRSimpleTableViewController.h"
 
 @implementation RMRSimpleTableViewGroup
@@ -52,6 +53,22 @@
     [owner reload];
     
     return item;
+}
+
+- (RMRSimpleTableViewItem*)addItemCheckText:(NSString*)text setting:(NSString*)setting value:(id)value
+{
+    RMRSimpleTableViewItemCheck* item = [[RMRSimpleTableViewItemCheck alloc] initWithOwner:owner group:self];
+    item.text       = text;
+    item.detailText = nil;
+    item.setting    = setting;
+    item.value      = value;
+    
+    [items addObject:item];
+    
+    [owner reload];
+    
+    return item;
+
 }
 
 @end

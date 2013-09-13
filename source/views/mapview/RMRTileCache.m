@@ -11,8 +11,8 @@
 
 @interface RMRTileCache ()
 
-- (NSString *)tileKeyForX:(NSUInteger)x y:(NSUInteger)y zoomLevel:(NSUInteger)zoom;
-- (NSString *)pathForTileAtX:(NSUInteger)x y:(NSUInteger)y zoomLevel:(NSUInteger)zoom;
+- (NSString *)tileKeyWithPrefix:(NSString*)prefix forX:(NSUInteger)x y:(NSUInteger)y zoomLevel:(NSUInteger)zoom;
+- (NSString *)pathForTileWithPrefix:(NSString*)prefix atX:(NSUInteger)x y:(NSUInteger)y zoomLevel:(NSUInteger)zoom;
 
 - (NSDate *)modificationDateForItemAtPath:(NSString *)aPath;
 - (NSArray *)cacheContents;
@@ -47,26 +47,26 @@ static NSString *const kTileKeyFormat = @"%d_%d_%d.png";
 	return self;
 }
 
-- (NSString*)tileKeyForX:(NSUInteger)x y:(NSUInteger)y zoomLevel:(NSUInteger)zoom
+- (NSString*)tileKeyWithPrefix:(NSString*)prefix forX:(NSUInteger)x y:(NSUInteger)y zoomLevel:(NSUInteger)zoom
 {
 	return [NSString stringWithFormat:kTileKeyFormat, x, y, zoom];
 }
 
-- (NSString*)pathForTileAtX:(NSUInteger)x y:(NSUInteger)y zoomLevel:(NSUInteger)zoom
+- (NSString*)pathForTileWithPrefix:(NSString*)prefix atX:(NSUInteger)x y:(NSUInteger)y zoomLevel:(NSUInteger)zoom
 {
-	NSString* tileKey = [self tileKeyForX:x y:y zoomLevel:zoom];
+	NSString* tileKey = [self tileKeyWithPrefix:prefix forX:x y:y zoomLevel:zoom];
 	
 	return [self.cacheDirectory stringByAppendingPathComponent:tileKey];
 }
 
-- (NSData*)tileAtX:(NSUInteger)x y:(NSUInteger)y zoomLevel:(NSUInteger)zoom
+- (NSData*)tileWithPrefix:(NSString*)prefix atX:(NSUInteger)x y:(NSUInteger)y zoomLevel:(NSUInteger)zoom
 {
 	if (self.flushing)
 		return nil;
 	
 	NSFileManager* fm = [[NSFileManager alloc] init];
 	
-	NSString* path = [self pathForTileAtX:x y:y zoomLevel:zoom];
+	NSString* path = [self pathForTileWithPrefix:prefix atX:x y:y zoomLevel:zoom];
 	NSData* data = [fm contentsAtPath:path];
 	
 	if (!data)
@@ -75,12 +75,12 @@ static NSString *const kTileKeyFormat = @"%d_%d_%d.png";
 	return data;
 }
 
-- (void)setTile:(NSData *)data x:(NSUInteger)x y:(NSUInteger)y zoomLevel:(NSUInteger)zoom
+- (void)setTile:(NSData *)data prefix:(NSString*)prefix x:(NSUInteger)x y:(NSUInteger)y zoomLevel:(NSUInteger)zoom
 {
 	if (self.flushing)
 		return;
 	
-	NSString* path = [self pathForTileAtX:x y:y zoomLevel:zoom];
+	NSString* path = [self pathForTileWithPrefix:prefix atX:x y:y zoomLevel:zoom];
 	[data writeToFile:path atomically:YES];
 }
 

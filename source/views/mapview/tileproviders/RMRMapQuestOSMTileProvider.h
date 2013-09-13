@@ -9,7 +9,7 @@
 
 /* An OpenStreetMap tile provider */
 
-@interface RMRMapQuestOSMTileProvider : NSObject <RMRTileProvider>
+@interface RMRMapQuestOSMTileProvider : NSObject<RMRTileProvider>
 {
 }
 
