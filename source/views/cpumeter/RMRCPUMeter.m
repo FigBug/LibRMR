@@ -55,15 +55,11 @@
     mach_msg_type_number_t thread_info_count;
     
     thread_basic_info_t basic_info_th;
-    uint32_t stat_thread = 0; // Mach threads
     
     // get threads in the task
     kr = task_threads(mach_task_self(), &thread_list, &thread_count);
     if (kr != KERN_SUCCESS)
         return -1;
-    
-    if (thread_count > 0)
-        stat_thread += thread_count;
     
     long tot_sec = 0;
     long tot_usec = 0;
