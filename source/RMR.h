@@ -9,6 +9,7 @@
 #import "macros/RMRMacros.h"
 
 #import "categories/NSArray+RMRArray.h"
+#import "categories/NSDate+RMRDate.h"
 #import "categories/NSMutableString+RMRMutableString.h"
 #import "categories/NSObject+RMRCast.h"
 #import "categories/NSString+RMRString.h"

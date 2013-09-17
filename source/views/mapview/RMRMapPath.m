@@ -11,7 +11,6 @@
 @implementation RMRMapPath
 
 @synthesize color;
-@synthesize points;
 
 - (id)init
 {
@@ -22,6 +21,14 @@
         points  = [[NSMutableArray alloc] init];
     }
     return self;
+}
+
+- (NSArray*)points
+{
+    @synchronized (points)
+    {
+        return [points copy];
+    }
 }
 
 @end

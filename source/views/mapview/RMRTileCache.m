@@ -75,7 +75,7 @@ static NSString *const kTileKeyFormat = @"%@_%d_%d_%d.png";
 	return data;
 }
 
-- (void)setTile:(NSData *)data prefix:(NSString*)prefix x:(NSUInteger)x y:(NSUInteger)y zoomLevel:(NSUInteger)zoom
+- (void)setTile:(NSData*)data prefix:(NSString*)prefix x:(NSUInteger)x y:(NSUInteger)y zoomLevel:(NSUInteger)zoom
 {
 	if (self.flushing)
 		return;
