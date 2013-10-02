@@ -5,12 +5,12 @@
 //  Created by Roland Rabien on 2013-08-02.
 //  Copyright (c) 2013 Roland Rabien. All rights reserved.
 //
-#import "RMRSimpleTaableViewItemProtocol.h"
+#import "RMRSimpleTableViewItemProtocol.h"
 
 @class RMRSimpleTableViewController;
 @class RMRSimpleTableViewGroup;
 
-@interface RMRSimpleTableViewItem : NSObject<RMRSimpleTaableViewItemProtocol> {
+@interface RMRSimpleTableViewItem : NSObject<RMRSimpleTableViewItemProtocol> {
     RMRSimpleTableViewGroup* __weak group;
     RMRSimpleTableViewController* __weak owner;
 }

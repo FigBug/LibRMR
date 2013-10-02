@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol RMRSimpleTaableViewItemProtocol <NSObject>
+@protocol RMRSimpleTableViewItemProtocol <NSObject>
 
 @optional
 

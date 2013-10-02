@@ -14,6 +14,14 @@
 		783AB6E317E1246D004190D7 /* NSMutableString+RMRMutableString.m in Sources */ = {isa = PBXBuildFile; fileRef = 783AB6E217E1246D004190D7 /* NSMutableString+RMRMutableString.m */; };
 		783AB6E617E12810004190D7 /* NSString+RMRString.m in Sources */ = {isa = PBXBuildFile; fileRef = 783AB6E517E1280F004190D7 /* NSString+RMRString.m */; };
 		783AF9EB17FC9B5800EDA793 /* UIAlertView+RMRAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 783AF9EA17FC9B5800EDA793 /* UIAlertView+RMRAlertView.m */; };
+		783AFA0A17FCB81C00EDA793 /* RMRSimpleTableViewItemCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = 783AFA0917FCB81C00EDA793 /* RMRSimpleTableViewItemCheck.m */; };
+		783AFA1917FCB85500EDA793 /* RMRMapQuestOSMTileProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 783AFA0D17FCB85500EDA793 /* RMRMapQuestOSMTileProvider.m */; };
+		783AFA1A17FCB85500EDA793 /* RMROpenCycleMapLandscapeTileProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 783AFA0F17FCB85500EDA793 /* RMROpenCycleMapLandscapeTileProvider.m */; };
+		783AFA1B17FCB85500EDA793 /* RMROpenCycleMapTileProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 783AFA1117FCB85500EDA793 /* RMROpenCycleMapTileProvider.m */; };
+		783AFA1C17FCB85500EDA793 /* RMROpenCycleMapTransportTileProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 783AFA1317FCB85500EDA793 /* RMROpenCycleMapTransportTileProvider.m */; };
+		783AFA1D17FCB85500EDA793 /* RMROSMTileProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 783AFA1517FCB85500EDA793 /* RMROSMTileProvider.m */; };
+		783AFA1E17FCB85500EDA793 /* RMRStamenTerrainTileProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 783AFA1717FCB85500EDA793 /* RMRStamenTerrainTileProvider.m */; };
+		783AFA2117FCB86700EDA793 /* NSDate+RMRDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 783AFA2017FCB86700EDA793 /* NSDate+RMRDate.m */; };
 		78CC306917D64D7F000B8D85 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78CC306817D64D7F000B8D85 /* Foundation.framework */; };
 		78CC307F17D64DE5000B8D85 /* NSArray+RMRArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 78CC307A17D64DE5000B8D85 /* NSArray+RMRArray.m */; };
 		78CC308017D64DE5000B8D85 /* NSObject+RMRCast.m in Sources */ = {isa = PBXBuildFile; fileRef = 78CC307C17D64DE5000B8D85 /* NSObject+RMRCast.m */; };
@@ -29,11 +37,9 @@
 		78CC30A217D64E7E000B8D85 /* RMRSimpleTableViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 78CC309F17D64E7E000B8D85 /* RMRSimpleTableViewItem.m */; };
 		78CC30B517D64E8A000B8D85 /* RMRMapBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 78CC30A417D64E8A000B8D85 /* RMRMapBaseView.m */; };
 		78CC30B617D64E8A000B8D85 /* RMRMapPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 78CC30A617D64E8A000B8D85 /* RMRMapPath.m */; };
-		78CC30B717D64E8A000B8D85 /* RMRMapQuestOSMTileProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 78CC30A817D64E8A000B8D85 /* RMRMapQuestOSMTileProvider.m */; };
 		78CC30B817D64E8A000B8D85 /* RMRMapTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 78CC30AA17D64E8A000B8D85 /* RMRMapTypes.m */; };
 		78CC30B917D64E8A000B8D85 /* RMRMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 78CC30AC17D64E8A000B8D85 /* RMRMapView.m */; };
 		78CC30BA17D64E8A000B8D85 /* RMRMercatorProjection.m in Sources */ = {isa = PBXBuildFile; fileRef = 78CC30AE17D64E8A000B8D85 /* RMRMercatorProjection.m */; };
-		78CC30BB17D64E8A000B8D85 /* RMROSMTileProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 78CC30B017D64E8A000B8D85 /* RMROSMTileProvider.m */; };
 		78CC30BC17D64E8A000B8D85 /* RMRTileCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 78CC30B317D64E8A000B8D85 /* RMRTileCache.m */; };
 		78CC30C217D65784000B8D85 /* RMR2DArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 78CC30C117D65784000B8D85 /* RMR2DArray.m */; };
 		78CC30C517D6578F000B8D85 /* RMRPair.m in Sources */ = {isa = PBXBuildFile; fileRef = 78CC30C417D6578F000B8D85 /* RMRPair.m */; };
@@ -79,6 +85,24 @@
 		783AB6E517E1280F004190D7 /* NSString+RMRString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+RMRString.m"; path = "source/categories/NSString+RMRString.m"; sourceTree = SOURCE_ROOT; };
 		783AF9E917FC9B5800EDA793 /* UIAlertView+RMRAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIAlertView+RMRAlertView.h"; path = "source/categories/UIAlertView+RMRAlertView.h"; sourceTree = SOURCE_ROOT; };
 		783AF9EA17FC9B5800EDA793 /* UIAlertView+RMRAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIAlertView+RMRAlertView.m"; path = "source/categories/UIAlertView+RMRAlertView.m"; sourceTree = SOURCE_ROOT; };
+		783AFA0717FCB81C00EDA793 /* RMRSimpleTableViewItemProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RMRSimpleTableViewItemProtocol.h; path = source/views/simpletableview/RMRSimpleTableViewItemProtocol.h; sourceTree = SOURCE_ROOT; };
+		783AFA0817FCB81C00EDA793 /* RMRSimpleTableViewItemCheck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RMRSimpleTableViewItemCheck.h; path = source/views/simpletableview/RMRSimpleTableViewItemCheck.h; sourceTree = SOURCE_ROOT; };
+		783AFA0917FCB81C00EDA793 /* RMRSimpleTableViewItemCheck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RMRSimpleTableViewItemCheck.m; path = source/views/simpletableview/RMRSimpleTableViewItemCheck.m; sourceTree = SOURCE_ROOT; };
+		783AFA0C17FCB85500EDA793 /* RMRMapQuestOSMTileProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMRMapQuestOSMTileProvider.h; sourceTree = "<group>"; };
+		783AFA0D17FCB85500EDA793 /* RMRMapQuestOSMTileProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMRMapQuestOSMTileProvider.m; sourceTree = "<group>"; };
+		783AFA0E17FCB85500EDA793 /* RMROpenCycleMapLandscapeTileProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMROpenCycleMapLandscapeTileProvider.h; sourceTree = "<group>"; };
+		783AFA0F17FCB85500EDA793 /* RMROpenCycleMapLandscapeTileProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMROpenCycleMapLandscapeTileProvider.m; sourceTree = "<group>"; };
+		783AFA1017FCB85500EDA793 /* RMROpenCycleMapTileProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMROpenCycleMapTileProvider.h; sourceTree = "<group>"; };
+		783AFA1117FCB85500EDA793 /* RMROpenCycleMapTileProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMROpenCycleMapTileProvider.m; sourceTree = "<group>"; };
+		783AFA1217FCB85500EDA793 /* RMROpenCycleMapTransportTileProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMROpenCycleMapTransportTileProvider.h; sourceTree = "<group>"; };
+		783AFA1317FCB85500EDA793 /* RMROpenCycleMapTransportTileProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMROpenCycleMapTransportTileProvider.m; sourceTree = "<group>"; };
+		783AFA1417FCB85500EDA793 /* RMROSMTileProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMROSMTileProvider.h; sourceTree = "<group>"; };
+		783AFA1517FCB85500EDA793 /* RMROSMTileProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMROSMTileProvider.m; sourceTree = "<group>"; };
+		783AFA1617FCB85500EDA793 /* RMRStamenTerrainTileProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMRStamenTerrainTileProvider.h; sourceTree = "<group>"; };
+		783AFA1717FCB85500EDA793 /* RMRStamenTerrainTileProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMRStamenTerrainTileProvider.m; sourceTree = "<group>"; };
+		783AFA1817FCB85500EDA793 /* RMRTileProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMRTileProvider.h; sourceTree = "<group>"; };
+		783AFA1F17FCB86700EDA793 /* NSDate+RMRDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+RMRDate.h"; path = "source/categories/NSDate+RMRDate.h"; sourceTree = SOURCE_ROOT; };
+		783AFA2017FCB86700EDA793 /* NSDate+RMRDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+RMRDate.m"; path = "source/categories/NSDate+RMRDate.m"; sourceTree = SOURCE_ROOT; };
 		78CC306517D64D7F000B8D85 /* libRMR.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRMR.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		78CC306817D64D7F000B8D85 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		78CC307917D64DE5000B8D85 /* NSArray+RMRArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray+RMRArray.h"; path = "source/categories/NSArray+RMRArray.h"; sourceTree = SOURCE_ROOT; };
@@ -109,20 +133,15 @@
 		78CC30A417D64E8A000B8D85 /* RMRMapBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RMRMapBaseView.m; path = source/views/mapview/RMRMapBaseView.m; sourceTree = SOURCE_ROOT; };
 		78CC30A517D64E8A000B8D85 /* RMRMapPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RMRMapPath.h; path = source/views/mapview/RMRMapPath.h; sourceTree = SOURCE_ROOT; };
 		78CC30A617D64E8A000B8D85 /* RMRMapPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RMRMapPath.m; path = source/views/mapview/RMRMapPath.m; sourceTree = SOURCE_ROOT; };
-		78CC30A717D64E8A000B8D85 /* RMRMapQuestOSMTileProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RMRMapQuestOSMTileProvider.h; path = source/views/mapview/RMRMapQuestOSMTileProvider.h; sourceTree = SOURCE_ROOT; };
-		78CC30A817D64E8A000B8D85 /* RMRMapQuestOSMTileProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RMRMapQuestOSMTileProvider.m; path = source/views/mapview/RMRMapQuestOSMTileProvider.m; sourceTree = SOURCE_ROOT; };
 		78CC30A917D64E8A000B8D85 /* RMRMapTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RMRMapTypes.h; path = source/views/mapview/RMRMapTypes.h; sourceTree = SOURCE_ROOT; };
 		78CC30AA17D64E8A000B8D85 /* RMRMapTypes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RMRMapTypes.m; path = source/views/mapview/RMRMapTypes.m; sourceTree = SOURCE_ROOT; };
 		78CC30AB17D64E8A000B8D85 /* RMRMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RMRMapView.h; path = source/views/mapview/RMRMapView.h; sourceTree = SOURCE_ROOT; };
 		78CC30AC17D64E8A000B8D85 /* RMRMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RMRMapView.m; path = source/views/mapview/RMRMapView.m; sourceTree = SOURCE_ROOT; };
 		78CC30AD17D64E8A000B8D85 /* RMRMercatorProjection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RMRMercatorProjection.h; path = source/views/mapview/RMRMercatorProjection.h; sourceTree = SOURCE_ROOT; };
 		78CC30AE17D64E8A000B8D85 /* RMRMercatorProjection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RMRMercatorProjection.m; path = source/views/mapview/RMRMercatorProjection.m; sourceTree = SOURCE_ROOT; };
-		78CC30AF17D64E8A000B8D85 /* RMROSMTileProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RMROSMTileProvider.h; path = source/views/mapview/RMROSMTileProvider.h; sourceTree = SOURCE_ROOT; };
-		78CC30B017D64E8A000B8D85 /* RMROSMTileProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RMROSMTileProvider.m; path = source/views/mapview/RMROSMTileProvider.m; sourceTree = SOURCE_ROOT; };
 		78CC30B117D64E8A000B8D85 /* RMRProjection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RMRProjection.h; path = source/views/mapview/RMRProjection.h; sourceTree = SOURCE_ROOT; };
 		78CC30B217D64E8A000B8D85 /* RMRTileCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RMRTileCache.h; path = source/views/mapview/RMRTileCache.h; sourceTree = SOURCE_ROOT; };
 		78CC30B317D64E8A000B8D85 /* RMRTileCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RMRTileCache.m; path = source/views/mapview/RMRTileCache.m; sourceTree = SOURCE_ROOT; };
-		78CC30B417D64E8A000B8D85 /* RMRTileProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RMRTileProvider.h; path = source/views/mapview/RMRTileProvider.h; sourceTree = SOURCE_ROOT; };
 		78CC30C017D65784000B8D85 /* RMR2DArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RMR2DArray.h; path = source/containers/RMR2DArray.h; sourceTree = SOURCE_ROOT; };
 		78CC30C117D65784000B8D85 /* RMR2DArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RMR2DArray.m; path = source/containers/RMR2DArray.m; sourceTree = SOURCE_ROOT; };
 		78CC30C317D6578F000B8D85 /* RMRPair.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RMRPair.h; path = source/types/RMRPair.h; sourceTree = SOURCE_ROOT; };
@@ -178,6 +197,27 @@
 			);
 			name = CPUMeter;
 			sourceTree = "<group>";
+		};
+		783AFA0B17FCB85500EDA793 /* tileproviders */ = {
+			isa = PBXGroup;
+			children = (
+				783AFA0C17FCB85500EDA793 /* RMRMapQuestOSMTileProvider.h */,
+				783AFA0D17FCB85500EDA793 /* RMRMapQuestOSMTileProvider.m */,
+				783AFA0E17FCB85500EDA793 /* RMROpenCycleMapLandscapeTileProvider.h */,
+				783AFA0F17FCB85500EDA793 /* RMROpenCycleMapLandscapeTileProvider.m */,
+				783AFA1017FCB85500EDA793 /* RMROpenCycleMapTileProvider.h */,
+				783AFA1117FCB85500EDA793 /* RMROpenCycleMapTileProvider.m */,
+				783AFA1217FCB85500EDA793 /* RMROpenCycleMapTransportTileProvider.h */,
+				783AFA1317FCB85500EDA793 /* RMROpenCycleMapTransportTileProvider.m */,
+				783AFA1417FCB85500EDA793 /* RMROSMTileProvider.h */,
+				783AFA1517FCB85500EDA793 /* RMROSMTileProvider.m */,
+				783AFA1617FCB85500EDA793 /* RMRStamenTerrainTileProvider.h */,
+				783AFA1717FCB85500EDA793 /* RMRStamenTerrainTileProvider.m */,
+				783AFA1817FCB85500EDA793 /* RMRTileProvider.h */,
+			);
+			name = tileproviders;
+			path = source/views/mapview/tileproviders;
+			sourceTree = SOURCE_ROOT;
 		};
 		78CC305C17D64D7F000B8D85 = {
 			isa = PBXGroup;
@@ -241,6 +281,8 @@
 			children = (
 				78CC307917D64DE5000B8D85 /* NSArray+RMRArray.h */,
 				78CC307A17D64DE5000B8D85 /* NSArray+RMRArray.m */,
+				783AFA1F17FCB86700EDA793 /* NSDate+RMRDate.h */,
+				783AFA2017FCB86700EDA793 /* NSDate+RMRDate.m */,
 				783AB6E117E1246D004190D7 /* NSMutableString+RMRMutableString.h */,
 				783AB6E217E1246D004190D7 /* NSMutableString+RMRMutableString.m */,
 				78CC307B17D64DE5000B8D85 /* NSObject+RMRCast.h */,
@@ -318,24 +360,20 @@
 		78CC309817D64E62000B8D85 /* MapView */ = {
 			isa = PBXGroup;
 			children = (
+				783AFA0B17FCB85500EDA793 /* tileproviders */,
 				78CC30A317D64E8A000B8D85 /* RMRMapBaseView.h */,
 				78CC30A417D64E8A000B8D85 /* RMRMapBaseView.m */,
 				78CC30A517D64E8A000B8D85 /* RMRMapPath.h */,
 				78CC30A617D64E8A000B8D85 /* RMRMapPath.m */,
-				78CC30A717D64E8A000B8D85 /* RMRMapQuestOSMTileProvider.h */,
-				78CC30A817D64E8A000B8D85 /* RMRMapQuestOSMTileProvider.m */,
 				78CC30A917D64E8A000B8D85 /* RMRMapTypes.h */,
 				78CC30AA17D64E8A000B8D85 /* RMRMapTypes.m */,
 				78CC30AB17D64E8A000B8D85 /* RMRMapView.h */,
 				78CC30AC17D64E8A000B8D85 /* RMRMapView.m */,
 				78CC30AD17D64E8A000B8D85 /* RMRMercatorProjection.h */,
 				78CC30AE17D64E8A000B8D85 /* RMRMercatorProjection.m */,
-				78CC30AF17D64E8A000B8D85 /* RMROSMTileProvider.h */,
-				78CC30B017D64E8A000B8D85 /* RMROSMTileProvider.m */,
 				78CC30B117D64E8A000B8D85 /* RMRProjection.h */,
 				78CC30B217D64E8A000B8D85 /* RMRTileCache.h */,
 				78CC30B317D64E8A000B8D85 /* RMRTileCache.m */,
-				78CC30B417D64E8A000B8D85 /* RMRTileProvider.h */,
 			);
 			name = MapView;
 			sourceTree = "<group>";
@@ -343,6 +381,9 @@
 		78CC309917D64E6E000B8D85 /* SimpleTableView */ = {
 			isa = PBXGroup;
 			children = (
+				783AFA0717FCB81C00EDA793 /* RMRSimpleTableViewItemProtocol.h */,
+				783AFA0817FCB81C00EDA793 /* RMRSimpleTableViewItemCheck.h */,
+				783AFA0917FCB81C00EDA793 /* RMRSimpleTableViewItemCheck.m */,
 				78CC309A17D64E7E000B8D85 /* RMRSimpleTableViewController.h */,
 				78CC309B17D64E7E000B8D85 /* RMRSimpleTableViewController.m */,
 				78CC309C17D64E7E000B8D85 /* RMRSimpleTableViewGroup.h */,
@@ -456,19 +497,21 @@
 				78CC308817D64DF6000B8D85 /* RMRDropboxTransfer.m in Sources */,
 				78CC309417D64E59000B8D85 /* RMRDefaults.m in Sources */,
 				78CC309517D64E59000B8D85 /* RMRLog.m in Sources */,
+				783AFA1917FCB85500EDA793 /* RMRMapQuestOSMTileProvider.m in Sources */,
+				783AFA1B17FCB85500EDA793 /* RMROpenCycleMapTileProvider.m in Sources */,
 				78CC309617D64E59000B8D85 /* RMRUtil.m in Sources */,
+				783AFA2117FCB86700EDA793 /* NSDate+RMRDate.m in Sources */,
 				78CC309717D64E59000B8D85 /* RMRVideoUtil.m in Sources */,
 				78CC30A017D64E7E000B8D85 /* RMRSimpleTableViewController.m in Sources */,
 				78CC30A117D64E7E000B8D85 /* RMRSimpleTableViewGroup.m in Sources */,
 				78CC30A217D64E7E000B8D85 /* RMRSimpleTableViewItem.m in Sources */,
 				78CC30B517D64E8A000B8D85 /* RMRMapBaseView.m in Sources */,
 				78CC30B617D64E8A000B8D85 /* RMRMapPath.m in Sources */,
-				78CC30B717D64E8A000B8D85 /* RMRMapQuestOSMTileProvider.m in Sources */,
+				783AFA1D17FCB85500EDA793 /* RMROSMTileProvider.m in Sources */,
 				78CC30B817D64E8A000B8D85 /* RMRMapTypes.m in Sources */,
 				78CC30B917D64E8A000B8D85 /* RMRMapView.m in Sources */,
 				78CC30BA17D64E8A000B8D85 /* RMRMercatorProjection.m in Sources */,
 				783AF9EB17FC9B5800EDA793 /* UIAlertView+RMRAlertView.m in Sources */,
-				78CC30BB17D64E8A000B8D85 /* RMROSMTileProvider.m in Sources */,
 				78CC30BC17D64E8A000B8D85 /* RMRTileCache.m in Sources */,
 				78CC30C217D65784000B8D85 /* RMR2DArray.m in Sources */,
 				78CC30C517D6578F000B8D85 /* RMRPair.m in Sources */,
@@ -476,11 +519,15 @@
 				78CC30CE17D65C4C000B8D85 /* RMRTextGrid.m in Sources */,
 				78CC30CF17D65C4C000B8D85 /* RMRTextItem.m in Sources */,
 				78CC30D417D668FD000B8D85 /* RMRPoint.m in Sources */,
+				783AFA0A17FCB81C00EDA793 /* RMRSimpleTableViewItemCheck.m in Sources */,
+				783AFA1C17FCB85500EDA793 /* RMROpenCycleMapTransportTileProvider.m in Sources */,
 				78CC30D517D668FD000B8D85 /* RMRRect.m in Sources */,
 				78CC30DA17D67C75000B8D85 /* RMRLocationManager.m in Sources */,
 				78CC30DD17D68F11000B8D85 /* RMRArchiveWritre.m in Sources */,
+				783AFA1A17FCB85500EDA793 /* RMROpenCycleMapLandscapeTileProvider.m in Sources */,
 				78CC30E017D692A4000B8D85 /* RMRArchiveReader.m in Sources */,
 				78CC30E717D6993C000B8D85 /* UIView+RMRRect.m in Sources */,
+				783AFA1E17FCB85500EDA793 /* RMRStamenTerrainTileProvider.m in Sources */,
 				78CC30EA17D7971A000B8D85 /* RMRButterworthFilter.m in Sources */,
 				78239E7717D9082500DA41AD /* RMRLine.m in Sources */,
 				78239E8017D9276700DA41AD /* RMRTimer.m in Sources */,
