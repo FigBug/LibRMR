@@ -18,8 +18,8 @@
 - (id)initWithCacheDirectory:(NSString *)aPath;
 
 // thread safe...
-- (NSData *)tileAtX:(NSUInteger)x y:(NSUInteger)y zoomLevel:(NSUInteger)zoom;
-- (void)setTile:(NSData	*)data x:(NSUInteger)x y:(NSUInteger)y zoomLevel:(NSUInteger)zoom;
+- (NSData*)tileWithPrefix:(NSString*)prefix atX:(NSUInteger)x y:(NSUInteger)y zoomLevel:(NSUInteger)zoom;
+- (void)setTile:(NSData*)data prefix:(NSString*)prefix x:(NSUInteger)x y:(NSUInteger)y zoomLevel:(NSUInteger)zoom;
 
 // Dispatches a new thread and flushes old caches from the disk
 - (void)flushOldCaches;

@@ -6,9 +6,11 @@
 //  Copyright (c) 2013 Roland Rabien. All rights reserved.
 //
 
-@interface RMRMapPath : NSObject
+@interface RMRMapPath : NSObject {
+    NSMutableArray* points;
+}
 
 @property (nonatomic) UIColor* color;
-@property (nonatomic) NSMutableArray* points;
+@property (nonatomic,readonly) NSArray* points;
 
 @end

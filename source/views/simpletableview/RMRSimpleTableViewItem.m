@@ -1,5 +1,5 @@
 //
-//  RRSimpleTableViewItem.m
+// RMRSimpleTableViewItem.m
 //  Util
 //
 //  Created by Roland Rabien on 2013-08-02.
@@ -7,6 +7,8 @@
 //
 
 #import "RMRSimpleTableViewItem.h"
+#import "RMRSimpleTableViewGroup.h"
+#import "RMRSimpleTableViewController.h"
 
 @implementation RMRSimpleTableViewItem
 
@@ -37,6 +39,19 @@
     cell.textLabel.text         = text;
     cell.detailTextLabel.text   = detailText;
     cell.accessoryType          = accessory;
+}
+
+- (NSIndexPath*)indexPath
+{
+    int item    = [group.items indexOfObject:self];
+    int section = [owner.groups indexOfObject:group];
+    
+    return [NSIndexPath indexPathForItem:item inSection:section];
+}
+
+- (UITableViewCell*)cell
+{
+    return [owner.tableView cellForRowAtIndexPath:[self indexPath]];
 }
 
 @end

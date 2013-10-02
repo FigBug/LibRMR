@@ -295,16 +295,25 @@
 {
     if ([[NSFileManager defaultManager] fileExistsAtPath:fileName])
     {
-        NSData* data = [NSData dataWithContentsOfFile:fileName];
-        
-        NSKeyedUnarchiver* unarchiver = [[NSKeyedUnarchiver alloc] initForReadingWithData:data];
-        
-        return [unarchiver decodeObjectForKey:kEncodedObject];
+        NSData* data = [NSData dataWithContentsOfFile:fileName];        
+        if (data)
+        {
+            NSKeyedUnarchiver* unarchiver = [[NSKeyedUnarchiver alloc] initForReadingWithData:data];
+            if (unarchiver)
+            {
+                @try
+                {
+                    return [unarchiver decodeObjectForKey:kEncodedObject];
+                }
+                @catch (NSException* exception)
+                {
+                    NSLog(@"%@", exception);
+                    return nil;
+                }
+            }
+        }
     }
-    else
-    {
-        return NO;
-    }
+    return nil;
 }
 
 @end

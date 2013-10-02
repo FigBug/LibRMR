@@ -81,6 +81,10 @@
     RMRSimpleTableViewGroup* group = [groups objectAtIndex:indexPath.section];
     RMRSimpleTableViewItem* item   = [group.items objectAtIndex:indexPath.item];
 
+    if ([item respondsToSelector:@selector(didSelectRow)])
+    {
+        [item didSelectRow];
+    }
     if (item.selectBlock)
     {
         if (!item.selectBlock(item))
@@ -102,6 +106,11 @@
     [self.tableView reloadData];
 }
 
+- (NSArray*)groups
+{
+    return [groups copy];
+}
+
 - (RMRSimpleTableViewGroup*)addGroup
 {
     return [self addGroup:nil];
@@ -116,22 +125,5 @@
     
     return group;
 }
-
-- (RMRSimpleTableViewItem*)addItemToGroup:(RMRSimpleTableViewGroup*)group text:(NSString*)text
-{
-    return [self addItemToGroup:group text:text detailText:nil];
-}
-
-- (RMRSimpleTableViewItem*)addItemToGroup:(RMRSimpleTableViewGroup*)group text:(NSString*)text detailText:(NSString*)detailText
-{
-    RMRSimpleTableViewItem* item = [group addItem];
-    item.text       = text;
-    item.detailText = detailText;
-    
-    [self.tableView reloadData];
-    
-    return item;
-}
-
 
 @end

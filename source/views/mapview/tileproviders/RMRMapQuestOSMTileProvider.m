@@ -6,7 +6,6 @@
 //
 
 #import "RMRMapQuestOSMTileProvider.h"
-
 #import "RMRMapTypes.h"
 
 @implementation RMRMapQuestOSMTileProvider
@@ -31,6 +30,11 @@
 - (CGSize)tileSize
 {
 	return CGSizeMake(256.0f, 256.0f);
+}
+
+- (NSString*)prefix
+{
+    return @"MapQuestOSM";
 }
 
 @end

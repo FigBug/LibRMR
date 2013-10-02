@@ -1,15 +1,16 @@
 //
-//  RRSimpleTableViewItem.h
+// RMRSimpleTableViewItem.h
 //  Util
 //
 //  Created by Roland Rabien on 2013-08-02.
 //  Copyright (c) 2013 Roland Rabien. All rights reserved.
 //
+#import "RMRSimpleTaableViewItemProtocol.h"
 
 @class RMRSimpleTableViewController;
 @class RMRSimpleTableViewGroup;
 
-@interface RMRSimpleTableViewItem : NSObject {
+@interface RMRSimpleTableViewItem : NSObject<RMRSimpleTaableViewItemProtocol> {
     RMRSimpleTableViewGroup* __weak group;
     RMRSimpleTableViewController* __weak owner;
 }
@@ -22,5 +23,7 @@
 
 - (id)initWithOwner:(RMRSimpleTableViewController*)owner group:(RMRSimpleTableViewGroup*)group;
 - (void)configureCell:(UITableViewCell*)cell;
+- (NSIndexPath*)indexPath;
+- (UITableViewCell*)cell;
 
 @end

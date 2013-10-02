@@ -19,6 +19,14 @@
 #define RMRDefaultsSetStringForKey(key, value) [RMRDefaults setObject: value forKey: key];
 #define RMRDefaultsSetDoubleForKey(key, value) [RMRDefaults setDouble: value forKey: key];
 
+#define RMRDefaultsSetBoolToDefault(key) [RMRDefaults ifUnsetSetBool:key##Default forKey:key];
+#define RMRDefaultsSetIntegerToDefault(key) [RMRDefaults ifUnsetSetInterger:key##Default forKey:key];
+#define RMRDefaultsSetStringToDefault(key) [RMRDefaults ifUnsetSetObject:key##Default forKey:key];
+#define RMRDefaultsSetObjectToDefault(key) [RMRDefaults ifUnsetSetObject:key##Default forKey:key];
+#define RMRDefaultsSetStringArrayToDefault(key) [RMRDefaults ifUnsetSetObject:key##Default forKey:key];
+#define RMRDefaultsSetDoubleToDefault(key) [RMRDefaults ifUnsetSetDouble:key##Default forKey:key];
+
+
 @interface RMRDefaults : NSObject
 
 + (BOOL)boolForKey:(NSString*)key defaultValue:(BOOL)def;
@@ -32,6 +40,11 @@
 + (void)setInteger:(NSInteger)value forKey:(NSString*)defaultName;
 + (void)setObject:(NSObject*)value forKey:(NSString*)defaultName;
 + (void)setDouble:(double)value forKey:(NSString*)defaultName;
+
++ (void)ifUnsetSetBool:(BOOL)value forKey:(NSString*)key;
++ (void)ifUnsetSetInteger:(NSInteger)value forKey:(NSString*)key;
++ (void)ifUnsetSetObject:(NSObject*)value forKey:(NSString*)key;
++ (void)ifUnsetSetDouble:(double)value forKey:(NSString*)key;
 
 + (NSString*)namedDir:(NSString*)name;
 + (NSString*)settingsDir;
