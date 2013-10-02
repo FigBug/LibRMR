@@ -215,7 +215,7 @@
     if (alphaInfo == kCGImageAlphaNone)
     	alphaInfo = kCGImageAlphaNoneSkipLast;
     
-    CGContextRef bitmap = CGBitmapContextCreate (NULL, thumbRect.size.width, thumbRect.size.height, 8, thumbRect.size.width * 3, CGColorSpaceCreateDeviceRGB(), alphaInfo);
+    CGContextRef bitmap = CGBitmapContextCreate(NULL, thumbRect.size.width, thumbRect.size.height, 8, thumbRect.size.width * 3, CGColorSpaceCreateDeviceRGB(), (CGBitmapInfo)alphaInfo);
     
     CGContextDrawImage(bitmap, thumbRect, imageRef);
     

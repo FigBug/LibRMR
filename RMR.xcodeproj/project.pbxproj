@@ -13,6 +13,7 @@
 		783AB6E017E0F51B004190D7 /* RMRCPUMeter.m in Sources */ = {isa = PBXBuildFile; fileRef = 783AB6DF17E0F51B004190D7 /* RMRCPUMeter.m */; };
 		783AB6E317E1246D004190D7 /* NSMutableString+RMRMutableString.m in Sources */ = {isa = PBXBuildFile; fileRef = 783AB6E217E1246D004190D7 /* NSMutableString+RMRMutableString.m */; };
 		783AB6E617E12810004190D7 /* NSString+RMRString.m in Sources */ = {isa = PBXBuildFile; fileRef = 783AB6E517E1280F004190D7 /* NSString+RMRString.m */; };
+		783AF9EB17FC9B5800EDA793 /* UIAlertView+RMRAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 783AF9EA17FC9B5800EDA793 /* UIAlertView+RMRAlertView.m */; };
 		78CC306917D64D7F000B8D85 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78CC306817D64D7F000B8D85 /* Foundation.framework */; };
 		78CC307F17D64DE5000B8D85 /* NSArray+RMRArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 78CC307A17D64DE5000B8D85 /* NSArray+RMRArray.m */; };
 		78CC308017D64DE5000B8D85 /* NSObject+RMRCast.m in Sources */ = {isa = PBXBuildFile; fileRef = 78CC307C17D64DE5000B8D85 /* NSObject+RMRCast.m */; };
@@ -76,6 +77,8 @@
 		783AB6E217E1246D004190D7 /* NSMutableString+RMRMutableString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSMutableString+RMRMutableString.m"; path = "source/categories/NSMutableString+RMRMutableString.m"; sourceTree = SOURCE_ROOT; };
 		783AB6E417E1280F004190D7 /* NSString+RMRString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+RMRString.h"; path = "source/categories/NSString+RMRString.h"; sourceTree = SOURCE_ROOT; };
 		783AB6E517E1280F004190D7 /* NSString+RMRString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+RMRString.m"; path = "source/categories/NSString+RMRString.m"; sourceTree = SOURCE_ROOT; };
+		783AF9E917FC9B5800EDA793 /* UIAlertView+RMRAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIAlertView+RMRAlertView.h"; path = "source/categories/UIAlertView+RMRAlertView.h"; sourceTree = SOURCE_ROOT; };
+		783AF9EA17FC9B5800EDA793 /* UIAlertView+RMRAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIAlertView+RMRAlertView.m"; path = "source/categories/UIAlertView+RMRAlertView.m"; sourceTree = SOURCE_ROOT; };
 		78CC306517D64D7F000B8D85 /* libRMR.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRMR.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		78CC306817D64D7F000B8D85 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		78CC307917D64DE5000B8D85 /* NSArray+RMRArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray+RMRArray.h"; path = "source/categories/NSArray+RMRArray.h"; sourceTree = SOURCE_ROOT; };
@@ -244,6 +247,8 @@
 				78CC307C17D64DE5000B8D85 /* NSObject+RMRCast.m */,
 				783AB6E417E1280F004190D7 /* NSString+RMRString.h */,
 				783AB6E517E1280F004190D7 /* NSString+RMRString.m */,
+				783AF9E917FC9B5800EDA793 /* UIAlertView+RMRAlertView.h */,
+				783AF9EA17FC9B5800EDA793 /* UIAlertView+RMRAlertView.m */,
 				78CC30C617D6579D000B8D85 /* UIColor+RMRColor.h */,
 				78CC30C717D6579D000B8D85 /* UIColor+RMRColor.m */,
 				78CC307D17D64DE5000B8D85 /* UIView+RMRLayout.h */,
@@ -462,6 +467,7 @@
 				78CC30B817D64E8A000B8D85 /* RMRMapTypes.m in Sources */,
 				78CC30B917D64E8A000B8D85 /* RMRMapView.m in Sources */,
 				78CC30BA17D64E8A000B8D85 /* RMRMercatorProjection.m in Sources */,
+				783AF9EB17FC9B5800EDA793 /* UIAlertView+RMRAlertView.m in Sources */,
 				78CC30BB17D64E8A000B8D85 /* RMROSMTileProvider.m in Sources */,
 				78CC30BC17D64E8A000B8D85 /* RMRTileCache.m in Sources */,
 				78CC30C217D65784000B8D85 /* RMR2DArray.m in Sources */,
