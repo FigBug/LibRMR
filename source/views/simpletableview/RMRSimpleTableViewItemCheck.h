@@ -12,5 +12,6 @@
 
 @property (nonatomic) NSString* setting;
 @property (nonatomic) NSString* value;
+@property (nonatomic) NSString* notification;
 
 @end

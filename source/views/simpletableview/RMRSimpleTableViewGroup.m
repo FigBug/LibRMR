@@ -57,18 +57,23 @@
 
 - (RMRSimpleTableViewItem*)addItemCheckText:(NSString*)text setting:(NSString*)setting value:(id)value
 {
+    return [self addItemCheckText:text setting:setting value:value notification:nil];
+}
+
+- (RMRSimpleTableViewItem*)addItemCheckText:(NSString*)text setting:(NSString*)setting value:(id)value notification:(NSString*)notification
+{
     RMRSimpleTableViewItemCheck* item = [[RMRSimpleTableViewItemCheck alloc] initWithOwner:owner group:self];
-    item.text       = text;
-    item.detailText = nil;
-    item.setting    = setting;
-    item.value      = value;
+    item.text           = text;
+    item.detailText     = nil;
+    item.setting        = setting;
+    item.value          = value;
+    item.notification   = notification;
     
     [items addObject:item];
     
     [owner reload];
     
     return item;
-
 }
 
 @end
