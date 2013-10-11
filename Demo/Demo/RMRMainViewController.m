@@ -31,7 +31,7 @@
     RMRSimpleTableViewGroup* demosGrp = [self addGroup:@"Demos"];
     RMRSimpleTableViewItem* item;
     
-    item = [self addItemToGroup:demosGrp text:@"Text Grid"];
+    item = [demosGrp addItemText:@"Text Grid"];
     item.accessory = UITableViewCellAccessoryDisclosureIndicator;
     item.selectBlock = ^(RMRSimpleTableViewItem* item)
     {
@@ -40,7 +40,7 @@
         return NO;
     };
     
-    item = [self addItemToGroup:demosGrp text:@"Map"];
+    item = [demosGrp addItemText:@"Map"];
     item.accessory = UITableViewCellAccessoryDisclosureIndicator;
     item.selectBlock = ^(RMRSimpleTableViewItem* item)
     {
