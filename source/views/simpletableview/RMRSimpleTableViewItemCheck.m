@@ -15,6 +15,7 @@
 
 @synthesize setting;
 @synthesize value;
+@synthesize notification;
 
 - (void)configureCell:(UITableViewCell*)cell
 {
@@ -46,6 +47,8 @@
     UITableViewCell* cell = [self cell];
     if (cell)
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:notification object:nil];
     
     [owner.tableView deselectRowAtIndexPath:[self indexPath] animated:YES];
 }

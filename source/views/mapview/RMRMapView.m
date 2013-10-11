@@ -58,6 +58,7 @@
 	self.showsVerticalScrollIndicator   = NO;
 	self.scrollsToTop                   = NO;
 	self.bounces                        = NO;
+    self.pagingEnabled                  = NO;
 	
 	self.mapProjection = [[RMRMercatorProjection alloc] init];
     self.tileProvider  = [[RMRMapQuestOSMTileProvider alloc] init];

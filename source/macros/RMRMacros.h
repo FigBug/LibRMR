@@ -13,3 +13,7 @@
         x; \
         _Pragma("clang diagnostic pop") \
     } while (0)
+
+#define BOUNDED(lo, hi, value) (value < lo ? lo : (value > hi ? hi : value))
+
+#define FIXDOUBLE(x) ((isnan(x) || isinf(x)) ? 0 : x)

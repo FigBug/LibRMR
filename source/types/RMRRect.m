@@ -28,6 +28,11 @@
     return [[RMRRect alloc] initWithX:x y:y width:width height:height];
 }
 
++ (RMRRect*)rectWithCenter:(CGPoint)center width:(CGFloat)width height:(CGFloat)height
+{
+    return [[RMRRect alloc] initWithCenter:center width:width height:height];
+}
+
 + (RMRRect*)nullRect
 {
     return [[RMRRect alloc] initWithCGRect:CGRectNull];
@@ -61,6 +66,11 @@
 - (id)initWithX:(CGFloat)x y:(CGFloat)y width:(CGFloat)width height:(CGFloat)height
 {
     return [self initWithCGRect:CGRectMake(x, y, width, height)];
+}
+
+- (id)initWithCenter:(CGPoint)center width:(CGFloat)width height:(CGFloat)height
+{
+    return [self initWithCGRect:CGRectMake(center.x - width / 2, center.y - height / 2, width, height)];
 }
 
 - (BOOL)isNull
@@ -195,6 +205,15 @@
     return [RMRPoint pointWithX:CGRectGetMinX(rc) y:CGRectGetMidY(rc)];
 }
 
+- (CGFloat)xAtPercent:(CGFloat)percent
+{
+    return rc.origin.x + rc.size.width * percent;
+}
+
+- (CGFloat)yAtPercent:(CGFloat)percent
+{
+    return rc.origin.y + rc.size.height * percent;
+}
 
 #pragma mark - NSObject
 
