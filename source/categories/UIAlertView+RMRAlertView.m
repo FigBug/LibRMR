@@ -1,12 +1,11 @@
 //
 //  UIAlertView+RMRAlertView.m
-//  SPIN Starts
 //
 
 #import "UIAlertView+RMRAlertView.h"
 #import <objc/runtime.h>
 
-static const char kSPNAlertWrapper;
+static const char kRMRAlertWrapper;
 
 //=====================================================================================
 @interface RMRAlertWrapper : NSObject
@@ -41,7 +40,7 @@ static const char kSPNAlertWrapper;
     alertWrapper.completionBlock = completion;
     self.delegate = alertWrapper;
     
-    objc_setAssociatedObject(self, &kSPNAlertWrapper, alertWrapper, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, &kRMRAlertWrapper, alertWrapper, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     
     [self show];
 }

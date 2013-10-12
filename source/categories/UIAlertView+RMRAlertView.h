@@ -1,6 +1,5 @@
 //
 //  UIAlertView+RMRAlertView.h
-//  SPIN Starts
 //
 
 #import <UIKit/UIKit.h>
