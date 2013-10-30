@@ -6,8 +6,6 @@
 //  Copyright (c) 2013 Roland Rabien. All rights reserved.
 //
 
-#ifdef RMR_HAS_ARCHIVE
-
 @interface RMRArchiveWriter : NSObject {
     NSMutableArray* srcFiles;
     NSMutableArray* dstFiles;
@@ -22,5 +20,3 @@
 - (BOOL)write;
 
 @end
-
-#endif

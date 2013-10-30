@@ -17,6 +17,7 @@
 @synthesize style;
 @synthesize accessory;
 @synthesize selectBlock;
+@synthesize deleteBlock;
 
 - (id)initWithOwner:(RMRSimpleTableViewController*)owner_ group:(RMRSimpleTableViewGroup*)group_;
 {

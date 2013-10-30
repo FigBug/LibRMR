@@ -27,4 +27,6 @@
 - (RMRSimpleTableViewItem*)addItemCheckText:(NSString*)name setting:(NSString*)setting value:(id)value;
 - (RMRSimpleTableViewItem*)addItemCheckText:(NSString*)name setting:(NSString*)setting value:(id)value notification:(NSString*)notification;
 
+- (BOOL)removeItem:(RMRSimpleTableViewItem*)item;
+
 @end

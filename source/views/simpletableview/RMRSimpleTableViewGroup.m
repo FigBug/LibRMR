@@ -76,4 +76,14 @@
     return item;
 }
 
+- (BOOL)removeItem:(RMRSimpleTableViewItem*)item
+{
+    if ([items containsObject:item])
+    {
+        [items removeObject:item];
+        return YES;
+    }
+    return NO;
+}
+
 @end

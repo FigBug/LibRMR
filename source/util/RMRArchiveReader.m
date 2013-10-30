@@ -10,8 +10,6 @@
 #import "archive.h"
 #import "archive_entry.h"
 
-#ifdef RMR_HAS_ARCHIVE
-
 @implementation RMRArchiveReader
 
 + (RMRArchiveReader*)archiveWriterForPath:(NSString*)path
@@ -82,5 +80,3 @@
 }
 
 @end
-
-#endif

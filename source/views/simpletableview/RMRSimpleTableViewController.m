@@ -74,6 +74,21 @@
     return group.name;
 }
 
+- (void)tableView:(UITableView*)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath*)indexPath
+{
+    if (editingStyle == UITableViewCellEditingStyleDelete)
+    {
+        RMRSimpleTableViewGroup* group = [groups objectAtIndex:indexPath.section];
+        RMRSimpleTableViewItem* item   = [group.items objectAtIndex:indexPath.item];
+        
+        if (item.deleteBlock(item))
+        {
+            [group removeItem:item];
+            [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        }
+    }
+}
+
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView*)tableView didSelectRowAtIndexPath:(NSIndexPath*)indexPath
@@ -90,6 +105,17 @@
         if (!item.selectBlock(item))
             [tableView deselectRowAtIndexPath:indexPath animated:YES];
     }
+}
+
+- (UITableViewCellEditingStyle)tableView:(UITableView*)tableView editingStyleForRowAtIndexPath:(NSIndexPath*)indexPath
+{
+    RMRSimpleTableViewGroup* group = [groups objectAtIndex:indexPath.section];
+    RMRSimpleTableViewItem* item   = [group.items objectAtIndex:indexPath.item];
+
+    if (item.deleteBlock)
+        return UITableViewCellEditingStyleDelete;
+    
+    return UITableViewCellEditingStyleNone;
 }
 
 #pragma mark - User functions

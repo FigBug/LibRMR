@@ -11,5 +11,6 @@
 @interface NSDate (RMRDate)
 
 + (NSDate*)dateWithXSDDateTime:(NSString*)dateTime;
+- (NSString*)stringWithFileSystemSafeDateTime;
 
 @end

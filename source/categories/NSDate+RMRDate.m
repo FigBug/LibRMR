@@ -29,4 +29,17 @@
     return date;
 }
 
+- (NSString*)stringWithFileSystemSafeDateTime
+{
+    static NSDateFormatter* dateTimeFormatter;
+    if (!dateTimeFormatter)
+    {
+        dateTimeFormatter            = [[NSDateFormatter alloc] init];  // Keep around forever
+        dateTimeFormatter.timeStyle  = NSDateFormatterFullStyle;
+        dateTimeFormatter.dateFormat = @"yyyy-MM-dd HH-mm-ss";
+    }
+
+    return [dateTimeFormatter stringFromDate:self];
+}
+
 @end

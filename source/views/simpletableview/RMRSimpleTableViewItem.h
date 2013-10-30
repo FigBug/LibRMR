@@ -20,6 +20,7 @@
 @property (nonatomic) UITableViewCellStyle style;
 @property (nonatomic) UITableViewCellAccessoryType accessory;
 @property (nonatomic,copy) BOOL(^selectBlock)(RMRSimpleTableViewItem* item);
+@property (nonatomic,copy) BOOL(^deleteBlock)(RMRSimpleTableViewItem* item);
 
 - (id)initWithOwner:(RMRSimpleTableViewController*)owner group:(RMRSimpleTableViewGroup*)group;
 - (void)configureCell:(UITableViewCell*)cell;
