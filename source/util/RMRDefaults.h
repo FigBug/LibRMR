@@ -20,7 +20,7 @@
 #define RMRDefaultsSetDoubleForKey(key, value) [RMRDefaults setDouble: value forKey: key];
 
 #define RMRDefaultsSetBoolToDefault(key) [RMRDefaults ifUnsetSetBool:key##Default forKey:key];
-#define RMRDefaultsSetIntegerToDefault(key) [RMRDefaults ifUnsetSetInterger:key##Default forKey:key];
+#define RMRDefaultsSetIntegerToDefault(key) [RMRDefaults ifUnsetSetInteger:key##Default forKey:key];
 #define RMRDefaultsSetStringToDefault(key) [RMRDefaults ifUnsetSetObject:key##Default forKey:key];
 #define RMRDefaultsSetObjectToDefault(key) [RMRDefaults ifUnsetSetObject:key##Default forKey:key];
 #define RMRDefaultsSetStringArrayToDefault(key) [RMRDefaults ifUnsetSetObject:key##Default forKey:key];

@@ -16,6 +16,7 @@
 @synthesize detailText;
 @synthesize style;
 @synthesize accessory;
+@synthesize accessoryView;
 @synthesize selectBlock;
 @synthesize deleteBlock;
 
@@ -39,7 +40,10 @@
 {
     cell.textLabel.text         = text;
     cell.detailTextLabel.text   = detailText;
-    cell.accessoryType          = accessory;
+    if (accessoryView)
+        cell.accessoryView      = accessoryView;
+    else
+        cell.accessoryType      = accessory;
 }
 
 - (NSIndexPath*)indexPath

@@ -22,7 +22,10 @@
 		783AFA1D17FCB85500EDA793 /* RMROSMTileProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 783AFA1517FCB85500EDA793 /* RMROSMTileProvider.m */; };
 		783AFA1E17FCB85500EDA793 /* RMRStamenTerrainTileProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 783AFA1717FCB85500EDA793 /* RMRStamenTerrainTileProvider.m */; };
 		783AFA2117FCB86700EDA793 /* NSDate+RMRDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 783AFA2017FCB86700EDA793 /* NSDate+RMRDate.m */; };
-		78443B16180616EB004389DC /* UIView+RMRView.m in Sources */ = {isa = PBXBuildFile; fileRef = 78443B15180616EB004389DC /* UIView+RMRView.m */; };
+		7867622C183438AD0067A4DB /* UIView+RMRView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7867622B183438AD0067A4DB /* UIView+RMRView.m */; };
+		78676233183449DC0067A4DB /* RMRSimpleTableViewItemDualSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 7867622E183449DC0067A4DB /* RMRSimpleTableViewItemDualSlider.m */; };
+		78676234183449DC0067A4DB /* RMRSimpleTableViewItemSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 78676230183449DC0067A4DB /* RMRSimpleTableViewItemSlider.m */; };
+		78676235183449DC0067A4DB /* RMRSimpleTableViewItemSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 78676232183449DC0067A4DB /* RMRSimpleTableViewItemSwitch.m */; };
 		7881E92818204EA500EA7116 /* NSFileManager+RMRFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7881E92718204EA500EA7116 /* NSFileManager+RMRFileManager.m */; };
 		78CC306917D64D7F000B8D85 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78CC306817D64D7F000B8D85 /* Foundation.framework */; };
 		78CC307F17D64DE5000B8D85 /* NSArray+RMRArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 78CC307A17D64DE5000B8D85 /* NSArray+RMRArray.m */; };
@@ -105,8 +108,14 @@
 		783AFA1817FCB85500EDA793 /* RMRTileProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMRTileProvider.h; sourceTree = "<group>"; };
 		783AFA1F17FCB86700EDA793 /* NSDate+RMRDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+RMRDate.h"; path = "source/categories/NSDate+RMRDate.h"; sourceTree = SOURCE_ROOT; };
 		783AFA2017FCB86700EDA793 /* NSDate+RMRDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+RMRDate.m"; path = "source/categories/NSDate+RMRDate.m"; sourceTree = SOURCE_ROOT; };
-		78443B14180616EB004389DC /* UIView+RMRView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+RMRView.h"; sourceTree = SOURCE_ROOT; };
-		78443B15180616EB004389DC /* UIView+RMRView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+RMRView.m"; sourceTree = SOURCE_ROOT; };
+		7867622A183438AD0067A4DB /* UIView+RMRView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+RMRView.h"; path = "source/categories/UIView+RMRView.h"; sourceTree = SOURCE_ROOT; };
+		7867622B183438AD0067A4DB /* UIView+RMRView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+RMRView.m"; path = "source/categories/UIView+RMRView.m"; sourceTree = SOURCE_ROOT; };
+		7867622D183449DC0067A4DB /* RMRSimpleTableViewItemDualSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RMRSimpleTableViewItemDualSlider.h; path = source/views/simpletableview/RMRSimpleTableViewItemDualSlider.h; sourceTree = SOURCE_ROOT; };
+		7867622E183449DC0067A4DB /* RMRSimpleTableViewItemDualSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RMRSimpleTableViewItemDualSlider.m; path = source/views/simpletableview/RMRSimpleTableViewItemDualSlider.m; sourceTree = SOURCE_ROOT; };
+		7867622F183449DC0067A4DB /* RMRSimpleTableViewItemSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RMRSimpleTableViewItemSlider.h; path = source/views/simpletableview/RMRSimpleTableViewItemSlider.h; sourceTree = SOURCE_ROOT; };
+		78676230183449DC0067A4DB /* RMRSimpleTableViewItemSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RMRSimpleTableViewItemSlider.m; path = source/views/simpletableview/RMRSimpleTableViewItemSlider.m; sourceTree = SOURCE_ROOT; };
+		78676231183449DC0067A4DB /* RMRSimpleTableViewItemSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RMRSimpleTableViewItemSwitch.h; path = source/views/simpletableview/RMRSimpleTableViewItemSwitch.h; sourceTree = SOURCE_ROOT; };
+		78676232183449DC0067A4DB /* RMRSimpleTableViewItemSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RMRSimpleTableViewItemSwitch.m; path = source/views/simpletableview/RMRSimpleTableViewItemSwitch.m; sourceTree = SOURCE_ROOT; };
 		7881E92618204EA500EA7116 /* NSFileManager+RMRFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSFileManager+RMRFileManager.h"; path = "source/categories/NSFileManager+RMRFileManager.h"; sourceTree = SOURCE_ROOT; };
 		7881E92718204EA500EA7116 /* NSFileManager+RMRFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSFileManager+RMRFileManager.m"; path = "source/categories/NSFileManager+RMRFileManager.m"; sourceTree = SOURCE_ROOT; };
 		78CC306517D64D7F000B8D85 /* libRMR.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRMR.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -305,8 +314,8 @@
 				78CC307E17D64DE5000B8D85 /* UIView+RMRLayout.m */,
 				78CC30E517D69938000B8D85 /* UIView+RMRRect.h */,
 				78CC30E617D69939000B8D85 /* UIView+RMRRect.m */,
-				78443B14180616EB004389DC /* UIView+RMRView.h */,
-				78443B15180616EB004389DC /* UIView+RMRView.m */,
+				7867622A183438AD0067A4DB /* UIView+RMRView.h */,
+				7867622B183438AD0067A4DB /* UIView+RMRView.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -391,15 +400,21 @@
 		78CC309917D64E6E000B8D85 /* SimpleTableView */ = {
 			isa = PBXGroup;
 			children = (
-				783AFA0717FCB81C00EDA793 /* RMRSimpleTableViewItemProtocol.h */,
-				783AFA0817FCB81C00EDA793 /* RMRSimpleTableViewItemCheck.h */,
-				783AFA0917FCB81C00EDA793 /* RMRSimpleTableViewItemCheck.m */,
 				78CC309A17D64E7E000B8D85 /* RMRSimpleTableViewController.h */,
 				78CC309B17D64E7E000B8D85 /* RMRSimpleTableViewController.m */,
 				78CC309C17D64E7E000B8D85 /* RMRSimpleTableViewGroup.h */,
 				78CC309D17D64E7E000B8D85 /* RMRSimpleTableViewGroup.m */,
 				78CC309E17D64E7E000B8D85 /* RMRSimpleTableViewItem.h */,
 				78CC309F17D64E7E000B8D85 /* RMRSimpleTableViewItem.m */,
+				783AFA0817FCB81C00EDA793 /* RMRSimpleTableViewItemCheck.h */,
+				783AFA0917FCB81C00EDA793 /* RMRSimpleTableViewItemCheck.m */,
+				7867622D183449DC0067A4DB /* RMRSimpleTableViewItemDualSlider.h */,
+				7867622E183449DC0067A4DB /* RMRSimpleTableViewItemDualSlider.m */,
+				783AFA0717FCB81C00EDA793 /* RMRSimpleTableViewItemProtocol.h */,
+				7867622F183449DC0067A4DB /* RMRSimpleTableViewItemSlider.h */,
+				78676230183449DC0067A4DB /* RMRSimpleTableViewItemSlider.m */,
+				78676231183449DC0067A4DB /* RMRSimpleTableViewItemSwitch.h */,
+				78676232183449DC0067A4DB /* RMRSimpleTableViewItemSwitch.m */,
 			);
 			name = SimpleTableView;
 			sourceTree = "<group>";
@@ -504,11 +519,13 @@
 				78CC308017D64DE5000B8D85 /* NSObject+RMRCast.m in Sources */,
 				78CC308117D64DE5000B8D85 /* UIView+RMRLayout.m in Sources */,
 				78CC308717D64DF6000B8D85 /* RMRDropbox.m in Sources */,
+				7867622C183438AD0067A4DB /* UIView+RMRView.m in Sources */,
 				78CC308817D64DF6000B8D85 /* RMRDropboxTransfer.m in Sources */,
 				78CC309417D64E59000B8D85 /* RMRDefaults.m in Sources */,
 				7881E92818204EA500EA7116 /* NSFileManager+RMRFileManager.m in Sources */,
 				78CC309517D64E59000B8D85 /* RMRLog.m in Sources */,
 				783AFA1917FCB85500EDA793 /* RMRMapQuestOSMTileProvider.m in Sources */,
+				78676235183449DC0067A4DB /* RMRSimpleTableViewItemSwitch.m in Sources */,
 				783AFA1B17FCB85500EDA793 /* RMROpenCycleMapTileProvider.m in Sources */,
 				78CC309617D64E59000B8D85 /* RMRUtil.m in Sources */,
 				783AFA2117FCB86700EDA793 /* NSDate+RMRDate.m in Sources */,
@@ -518,11 +535,11 @@
 				78CC30A217D64E7E000B8D85 /* RMRSimpleTableViewItem.m in Sources */,
 				78CC30B517D64E8A000B8D85 /* RMRMapBaseView.m in Sources */,
 				78CC30B617D64E8A000B8D85 /* RMRMapPath.m in Sources */,
-				78443B16180616EB004389DC /* UIView+RMRView.m in Sources */,
 				783AFA1D17FCB85500EDA793 /* RMROSMTileProvider.m in Sources */,
 				78CC30B817D64E8A000B8D85 /* RMRMapTypes.m in Sources */,
 				78CC30B917D64E8A000B8D85 /* RMRMapView.m in Sources */,
 				78CC30BA17D64E8A000B8D85 /* RMRMercatorProjection.m in Sources */,
+				78676234183449DC0067A4DB /* RMRSimpleTableViewItemSlider.m in Sources */,
 				783AF9EB17FC9B5800EDA793 /* UIAlertView+RMRAlertView.m in Sources */,
 				78CC30BC17D64E8A000B8D85 /* RMRTileCache.m in Sources */,
 				78CC30C217D65784000B8D85 /* RMR2DArray.m in Sources */,
@@ -531,6 +548,7 @@
 				78CC30CE17D65C4C000B8D85 /* RMRTextGrid.m in Sources */,
 				78CC30CF17D65C4C000B8D85 /* RMRTextItem.m in Sources */,
 				78CC30D417D668FD000B8D85 /* RMRPoint.m in Sources */,
+				78676233183449DC0067A4DB /* RMRSimpleTableViewItemDualSlider.m in Sources */,
 				783AFA0A17FCB81C00EDA793 /* RMRSimpleTableViewItemCheck.m in Sources */,
 				783AFA1C17FCB85500EDA793 /* RMROpenCycleMapTransportTileProvider.m in Sources */,
 				78CC30D517D668FD000B8D85 /* RMRRect.m in Sources */,

@@ -19,6 +19,7 @@
 @property (nonatomic) NSString* detailText;
 @property (nonatomic) UITableViewCellStyle style;
 @property (nonatomic) UITableViewCellAccessoryType accessory;
+@property (nonatomic) UIView* accessoryView;
 @property (nonatomic,copy) BOOL(^selectBlock)(RMRSimpleTableViewItem* item);
 @property (nonatomic,copy) BOOL(^deleteBlock)(RMRSimpleTableViewItem* item);
 

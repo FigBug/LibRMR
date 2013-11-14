@@ -9,6 +9,9 @@
 #import "RMRSimpleTableViewGroup.h"
 #import "RMRSimpleTableViewItem.h"
 #import "RMRSimpleTableViewItemCheck.h"
+#import "RMRSimpleTableViewItemSlider.h"
+#import "RMRSimpleTableViewItemDualSlider.h"
+#import "RMRSimpleTableViewItemSwitch.h"
 #import "RMRSimpleTableViewController.h"
 
 @implementation RMRSimpleTableViewGroup
@@ -74,6 +77,56 @@
     [owner reload];
     
     return item;
+}
+
+- (RMRSimpleTableViewItem*)addItemSliderText:(NSString*)text settings:(NSString*)setting min:(double)min max:(double)max step:(double)step
+{
+    RMRSimpleTableViewItemSlider* item = [[RMRSimpleTableViewItemSlider alloc] initWithOwner:owner group:self];
+    item.text           = text;
+    item.detailText     = nil;
+    item.setting        = setting;
+    item.min            = min;
+    item.max            = max;
+    item.step           = step;
+    
+    [items addObject:item];
+    
+    [owner reload];
+    
+    return item;
+}
+
+- (RMRSimpleTableViewItem*)addItemDualSliderText:(NSString*)text minSetting:(NSString*)minSetting maxSetting:(NSString*)maxSetting min:(double)min max:(double)max step:(double)step
+{
+    RMRSimpleTableViewItemDualSlider* item = [[RMRSimpleTableViewItemDualSlider alloc] initWithOwner:owner group:self];
+    item.text           = text;
+    item.detailText     = nil;
+    item.minSetting     = minSetting;
+    item.maxSetting     = maxSetting;
+    item.min            = min;
+    item.max            = max;
+    item.step           = step;
+    
+    [items addObject:item];
+    
+    [owner reload];
+    
+    return item;
+}
+
+- (RMRSimpleTableViewItem*)addItemSwitch:(NSString*)text setting:(NSString*)setting
+{
+    RMRSimpleTableViewItemSwitch* item = [[RMRSimpleTableViewItemSwitch alloc] initWithOwner:owner group:self];
+    item.text           = text;
+    item.detailText     = nil;
+    item.setting        = setting;
+    
+    [items addObject:item];
+    
+    [owner reload];
+    
+    return item;
+
 }
 
 - (BOOL)removeItem:(RMRSimpleTableViewItem*)item

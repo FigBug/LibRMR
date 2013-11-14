@@ -17,6 +17,7 @@
 #import "categories/UIColor+RMRColor.h"
 #import "categories/UIView+RMRLayout.h"
 #import "categories/UIView+RMRRect.h"
+#import "categories/UIView+RMRView.h"
 
 #import "comm/dropbox/RMRDropbox.h"
 

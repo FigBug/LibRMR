@@ -27,6 +27,10 @@
 - (RMRSimpleTableViewItem*)addItemCheckText:(NSString*)name setting:(NSString*)setting value:(id)value;
 - (RMRSimpleTableViewItem*)addItemCheckText:(NSString*)name setting:(NSString*)setting value:(id)value notification:(NSString*)notification;
 
+- (RMRSimpleTableViewItem*)addItemSliderText:(NSString*)name settings:(NSString*)setting min:(double)min max:(double)max step:(double)step;
+- (RMRSimpleTableViewItem*)addItemDualSliderText:(NSString*)name minSetting:(NSString*)minSetting maxSetting:(NSString*)maxSetting min:(double)min max:(double)max step:(double)step;
+- (RMRSimpleTableViewItem*)addItemSwitch:(NSString*)name setting:(NSString*)setting;
+
 - (BOOL)removeItem:(RMRSimpleTableViewItem*)item;
 
 @end
