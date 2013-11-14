@@ -16,18 +16,26 @@
 @synthesize setting;
 @synthesize notification;
 @synthesize uiSwitch;
+@synthesize switchedBlock;
 
-- (void)configureCell:(UITableViewCell*)cell
+- (id)initWithOwner:(RMRSimpleTableViewController*)owner_ group:(RMRSimpleTableViewGroup*)group_
 {
-    [super configureCell:cell];
-    
-    if (!uiSwitch)
+    self = [super initWithOwner:owner_ group:group_];
+    if (self)
     {
         uiSwitch = [[UISwitch alloc] init];
         [uiSwitch addTarget:self action:@selector(switched:) forControlEvents:UIControlEventValueChanged];
     }
+    return self;
+}
+
+- (void)configureCell:(UITableViewCell*)cell
+{
+    self.accessoryView = uiSwitch;
     
-    cell.accessoryView = uiSwitch;
+    [super configureCell:cell];
+    
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
     NSNumber* value = [RMRDefaults objectForKey:setting defaultValue:nil];
     if (value && value.boolValue)
@@ -39,6 +47,12 @@
 -(void)switched:(id)sender
 {
     RMRDefaultsSetBoolForKey(setting, uiSwitch.on);
+    
+    if (switchedBlock)
+        switchedBlock(self, uiSwitch.on);
+    
+    if (notification)
+        [[NSNotificationCenter defaultCenter] postNotificationName:notification object:nil];
 }
 
 @end

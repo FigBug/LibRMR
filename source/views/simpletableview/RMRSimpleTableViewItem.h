@@ -13,6 +13,7 @@
 @interface RMRSimpleTableViewItem : NSObject<RMRSimpleTableViewItemProtocol> {
     RMRSimpleTableViewGroup* __weak group;
     RMRSimpleTableViewController* __weak owner;
+    BOOL enabled;
 }
 
 @property (nonatomic) NSString* text;
@@ -27,5 +28,7 @@
 - (void)configureCell:(UITableViewCell*)cell;
 - (NSIndexPath*)indexPath;
 - (UITableViewCell*)cell;
+- (BOOL)enabled;
+- (void)setEnabled:(BOOL)enabled;
 
 @end

@@ -50,5 +50,11 @@
 #import "views/mapview/tileproviders/RMRStamenTerrainTileProvider.h"
 #import "views/simpletableview/RMRSimpleTableViewController.h"
 #import "views/simpletableview/RMRSimpleTableViewGroup.h"
-#import "views/simpletableview/RMRSimpleTableViewItem.h"
+#import "views/simpletableview/RMRSimpleTableViewItemDualSlider.h"
+#import "views/simpletableview/RMRSimpleTableViewItemSlider.h"
+#import "views/simpletableview/RMRSimpleTableViewItemSwitch.h"
+#import "views/sliders/RMRLabelSlider.h"
+#import "views/sliders/RMRLabelRangeSlider.h"
 #import "views/textgrid/RMRTextGrid.h"
+
+#import "../dependencies/NMRangeSlider/NMRangeSlider.h"

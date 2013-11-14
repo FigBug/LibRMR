@@ -58,12 +58,12 @@
     return item;
 }
 
-- (RMRSimpleTableViewItem*)addItemCheckText:(NSString*)text setting:(NSString*)setting value:(id)value
+- (RMRSimpleTableViewItemCheck*)addItemCheckText:(NSString*)text setting:(NSString*)setting value:(id)value
 {
     return [self addItemCheckText:text setting:setting value:value notification:nil];
 }
 
-- (RMRSimpleTableViewItem*)addItemCheckText:(NSString*)text setting:(NSString*)setting value:(id)value notification:(NSString*)notification
+- (RMRSimpleTableViewItemCheck*)addItemCheckText:(NSString*)text setting:(NSString*)setting value:(id)value notification:(NSString*)notification
 {
     RMRSimpleTableViewItemCheck* item = [[RMRSimpleTableViewItemCheck alloc] initWithOwner:owner group:self];
     item.text           = text;
@@ -79,7 +79,12 @@
     return item;
 }
 
-- (RMRSimpleTableViewItem*)addItemSliderText:(NSString*)text settings:(NSString*)setting min:(double)min max:(double)max step:(double)step
+- (RMRSimpleTableViewItemSlider*)addItemSliderText:(NSString*)text settings:(NSString*)setting min:(double)min max:(double)max step:(double)step
+{
+    return [self addItemSliderText:text settings:setting min:min max:max step:step notification:nil];
+}
+
+- (RMRSimpleTableViewItemSlider*)addItemSliderText:(NSString*)text settings:(NSString*)setting min:(double)min max:(double)max step:(double)step notification:(NSString*)notification
 {
     RMRSimpleTableViewItemSlider* item = [[RMRSimpleTableViewItemSlider alloc] initWithOwner:owner group:self];
     item.text           = text;
@@ -88,6 +93,7 @@
     item.min            = min;
     item.max            = max;
     item.step           = step;
+    item.notification   = notification;
     
     [items addObject:item];
     
@@ -96,7 +102,12 @@
     return item;
 }
 
-- (RMRSimpleTableViewItem*)addItemDualSliderText:(NSString*)text minSetting:(NSString*)minSetting maxSetting:(NSString*)maxSetting min:(double)min max:(double)max step:(double)step
+- (RMRSimpleTableViewItemDualSlider*)addItemDualSliderText:(NSString*)text minSetting:(NSString*)minSetting maxSetting:(NSString*)maxSetting min:(double)min max:(double)max step:(double)step
+{
+    return [self addItemDualSliderText:text minSetting:minSetting maxSetting:maxSetting min:min max:max step:step notification:nil];
+}
+
+- (RMRSimpleTableViewItemDualSlider*)addItemDualSliderText:(NSString*)text minSetting:(NSString*)minSetting maxSetting:(NSString*)maxSetting min:(double)min max:(double)max step:(double)step notification:(NSString*)notification
 {
     RMRSimpleTableViewItemDualSlider* item = [[RMRSimpleTableViewItemDualSlider alloc] initWithOwner:owner group:self];
     item.text           = text;
@@ -106,6 +117,7 @@
     item.min            = min;
     item.max            = max;
     item.step           = step;
+    item.notification   = notification;
     
     [items addObject:item];
     
@@ -114,12 +126,18 @@
     return item;
 }
 
-- (RMRSimpleTableViewItem*)addItemSwitch:(NSString*)text setting:(NSString*)setting
+- (RMRSimpleTableViewItemSwitch*)addItemSwitch:(NSString*)text setting:(NSString*)setting
+{
+    return [self addItemSwitch:text setting:setting notification:nil];
+}
+
+- (RMRSimpleTableViewItemSwitch*)addItemSwitch:(NSString*)text setting:(NSString*)setting notification:(NSString*)notification
 {
     RMRSimpleTableViewItemSwitch* item = [[RMRSimpleTableViewItemSwitch alloc] initWithOwner:owner group:self];
     item.text           = text;
     item.detailText     = nil;
     item.setting        = setting;
+    item.notification   = notification;
     
     [items addObject:item];
     

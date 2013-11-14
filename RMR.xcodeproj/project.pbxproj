@@ -26,6 +26,9 @@
 		78676233183449DC0067A4DB /* RMRSimpleTableViewItemDualSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 7867622E183449DC0067A4DB /* RMRSimpleTableViewItemDualSlider.m */; };
 		78676234183449DC0067A4DB /* RMRSimpleTableViewItemSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 78676230183449DC0067A4DB /* RMRSimpleTableViewItemSlider.m */; };
 		78676235183449DC0067A4DB /* RMRSimpleTableViewItemSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 78676232183449DC0067A4DB /* RMRSimpleTableViewItemSwitch.m */; };
+		78676257183533E20067A4DB /* NMRangeSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 78676256183533E20067A4DB /* NMRangeSlider.m */; };
+		78676263183534460067A4DB /* RMRLabelRangeSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 78676260183534460067A4DB /* RMRLabelRangeSlider.m */; };
+		78676264183534460067A4DB /* RMRLabelSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 78676262183534460067A4DB /* RMRLabelSlider.m */; };
 		7881E92818204EA500EA7116 /* NSFileManager+RMRFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7881E92718204EA500EA7116 /* NSFileManager+RMRFileManager.m */; };
 		78CC306917D64D7F000B8D85 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78CC306817D64D7F000B8D85 /* Foundation.framework */; };
 		78CC307F17D64DE5000B8D85 /* NSArray+RMRArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 78CC307A17D64DE5000B8D85 /* NSArray+RMRArray.m */; };
@@ -116,6 +119,15 @@
 		78676230183449DC0067A4DB /* RMRSimpleTableViewItemSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RMRSimpleTableViewItemSlider.m; path = source/views/simpletableview/RMRSimpleTableViewItemSlider.m; sourceTree = SOURCE_ROOT; };
 		78676231183449DC0067A4DB /* RMRSimpleTableViewItemSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RMRSimpleTableViewItemSwitch.h; path = source/views/simpletableview/RMRSimpleTableViewItemSwitch.h; sourceTree = SOURCE_ROOT; };
 		78676232183449DC0067A4DB /* RMRSimpleTableViewItemSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RMRSimpleTableViewItemSwitch.m; path = source/views/simpletableview/RMRSimpleTableViewItemSwitch.m; sourceTree = SOURCE_ROOT; };
+		78676255183533E20067A4DB /* NMRangeSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMRangeSlider.h; sourceTree = "<group>"; };
+		78676256183533E20067A4DB /* NMRangeSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMRangeSlider.m; sourceTree = "<group>"; };
+		78676259183534000067A4DB /* archive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = archive.h; sourceTree = "<group>"; };
+		7867625A183534000067A4DB /* archive_entry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = archive_entry.h; sourceTree = "<group>"; };
+		7867625B183534000067A4DB /* bzlib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bzlib.h; sourceTree = "<group>"; };
+		7867625F183534460067A4DB /* RMRLabelRangeSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RMRLabelRangeSlider.h; path = source/views/sliders/RMRLabelRangeSlider.h; sourceTree = SOURCE_ROOT; };
+		78676260183534460067A4DB /* RMRLabelRangeSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RMRLabelRangeSlider.m; path = source/views/sliders/RMRLabelRangeSlider.m; sourceTree = SOURCE_ROOT; };
+		78676261183534460067A4DB /* RMRLabelSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RMRLabelSlider.h; path = source/views/sliders/RMRLabelSlider.h; sourceTree = SOURCE_ROOT; };
+		78676262183534460067A4DB /* RMRLabelSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RMRLabelSlider.m; path = source/views/sliders/RMRLabelSlider.m; sourceTree = SOURCE_ROOT; };
 		7881E92618204EA500EA7116 /* NSFileManager+RMRFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSFileManager+RMRFileManager.h"; path = "source/categories/NSFileManager+RMRFileManager.h"; sourceTree = SOURCE_ROOT; };
 		7881E92718204EA500EA7116 /* NSFileManager+RMRFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSFileManager+RMRFileManager.m"; path = "source/categories/NSFileManager+RMRFileManager.m"; sourceTree = SOURCE_ROOT; };
 		78CC306517D64D7F000B8D85 /* libRMR.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRMR.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -234,6 +246,47 @@
 			path = source/views/mapview/tileproviders;
 			sourceTree = SOURCE_ROOT;
 		};
+		78676236183533AC0067A4DB /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				78676258183534000067A4DB /* libarc */,
+				78676237183533E20067A4DB /* NMRangeSlider */,
+			);
+			name = Dependencies;
+			sourceTree = "<group>";
+		};
+		78676237183533E20067A4DB /* NMRangeSlider */ = {
+			isa = PBXGroup;
+			children = (
+				78676255183533E20067A4DB /* NMRangeSlider.h */,
+				78676256183533E20067A4DB /* NMRangeSlider.m */,
+			);
+			name = NMRangeSlider;
+			path = dependencies/NMRangeSlider;
+			sourceTree = SOURCE_ROOT;
+		};
+		78676258183534000067A4DB /* libarc */ = {
+			isa = PBXGroup;
+			children = (
+				78676259183534000067A4DB /* archive.h */,
+				7867625A183534000067A4DB /* archive_entry.h */,
+				7867625B183534000067A4DB /* bzlib.h */,
+			);
+			name = libarc;
+			path = dependencies/libarc;
+			sourceTree = SOURCE_ROOT;
+		};
+		7867625E1835341C0067A4DB /* Sliders */ = {
+			isa = PBXGroup;
+			children = (
+				7867625F183534460067A4DB /* RMRLabelRangeSlider.h */,
+				78676260183534460067A4DB /* RMRLabelRangeSlider.m */,
+				78676261183534460067A4DB /* RMRLabelSlider.h */,
+				78676262183534460067A4DB /* RMRLabelSlider.m */,
+			);
+			name = Sliders;
+			sourceTree = "<group>";
+		};
 		78CC305C17D64D7F000B8D85 = {
 			isa = PBXGroup;
 			children = (
@@ -263,6 +316,7 @@
 			isa = PBXGroup;
 			children = (
 				78239E4717D8F69F00DA41AD /* RMR.h */,
+				78676236183533AC0067A4DB /* Dependencies */,
 				78CC307717D64DC6000B8D85 /* Source */,
 				78CC306B17D64D7F000B8D85 /* Supporting Files */,
 			);
@@ -371,6 +425,7 @@
 				783AB6DD17E0F4E1004190D7 /* CPUMeter */,
 				78CC309817D64E62000B8D85 /* MapView */,
 				78CC309917D64E6E000B8D85 /* SimpleTableView */,
+				7867625E1835341C0067A4DB /* Sliders */,
 				78CC30C917D65C3C000B8D85 /* TextGrid */,
 			);
 			name = Views;
@@ -519,18 +574,21 @@
 				78CC308017D64DE5000B8D85 /* NSObject+RMRCast.m in Sources */,
 				78CC308117D64DE5000B8D85 /* UIView+RMRLayout.m in Sources */,
 				78CC308717D64DF6000B8D85 /* RMRDropbox.m in Sources */,
+				78676264183534460067A4DB /* RMRLabelSlider.m in Sources */,
 				7867622C183438AD0067A4DB /* UIView+RMRView.m in Sources */,
 				78CC308817D64DF6000B8D85 /* RMRDropboxTransfer.m in Sources */,
 				78CC309417D64E59000B8D85 /* RMRDefaults.m in Sources */,
 				7881E92818204EA500EA7116 /* NSFileManager+RMRFileManager.m in Sources */,
 				78CC309517D64E59000B8D85 /* RMRLog.m in Sources */,
 				783AFA1917FCB85500EDA793 /* RMRMapQuestOSMTileProvider.m in Sources */,
+				78676257183533E20067A4DB /* NMRangeSlider.m in Sources */,
 				78676235183449DC0067A4DB /* RMRSimpleTableViewItemSwitch.m in Sources */,
 				783AFA1B17FCB85500EDA793 /* RMROpenCycleMapTileProvider.m in Sources */,
 				78CC309617D64E59000B8D85 /* RMRUtil.m in Sources */,
 				783AFA2117FCB86700EDA793 /* NSDate+RMRDate.m in Sources */,
 				78CC309717D64E59000B8D85 /* RMRVideoUtil.m in Sources */,
 				78CC30A017D64E7E000B8D85 /* RMRSimpleTableViewController.m in Sources */,
+				78676263183534460067A4DB /* RMRLabelRangeSlider.m in Sources */,
 				78CC30A117D64E7E000B8D85 /* RMRSimpleTableViewGroup.m in Sources */,
 				78CC30A217D64E7E000B8D85 /* RMRSimpleTableViewItem.m in Sources */,
 				78CC30B517D64E8A000B8D85 /* RMRMapBaseView.m in Sources */,
@@ -632,9 +690,14 @@
 				DSTROOT = /tmp/LibRMR.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "source/RMR-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					./dependencies/libarc,
+					./source,
+				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/dependencies/libarc\"",
+					"\\\"$(SRCROOT)/dependencies/libarc\\\"",
+					/Users/rrabien/dev/3rdparty/LibRMR/dependencies/libarc,
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = RMR;
@@ -648,9 +711,14 @@
 				DSTROOT = /tmp/LibRMR.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "source/RMR-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					./dependencies/libarc,
+					./source,
+				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/dependencies/libarc\"",
+					"\\\"$(SRCROOT)/dependencies/libarc\\\"",
+					/Users/rrabien/dev/3rdparty/LibRMR/dependencies/libarc,
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = RMR;

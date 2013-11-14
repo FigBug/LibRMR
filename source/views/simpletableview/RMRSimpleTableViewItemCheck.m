@@ -47,8 +47,9 @@
     UITableViewCell* cell = [self cell];
     if (cell)
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
-    
-    [[NSNotificationCenter defaultCenter] postNotificationName:notification object:nil];
+
+    if (notification)
+        [[NSNotificationCenter defaultCenter] postNotificationName:notification object:nil];
     
     [owner.tableView deselectRowAtIndexPath:[self indexPath] animated:YES];
 }
