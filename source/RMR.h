@@ -14,10 +14,12 @@
 #import "categories/NSMutableString+RMRMutableString.h"
 #import "categories/NSObject+RMRCast.h"
 #import "categories/NSString+RMRString.h"
+#import "categories/UIAlertView+RMRAlertView.h"
 #import "categories/UIColor+RMRColor.h"
 #import "categories/UIView+RMRLayout.h"
 #import "categories/UIView+RMRRect.h"
 #import "categories/UIView+RMRView.h"
+#import "categories/UIViewController+RMRViewController.h"
 
 #import "comm/dropbox/RMRDropbox.h"
 

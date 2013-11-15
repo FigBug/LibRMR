@@ -29,6 +29,7 @@
 		78676257183533E20067A4DB /* NMRangeSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 78676256183533E20067A4DB /* NMRangeSlider.m */; };
 		78676263183534460067A4DB /* RMRLabelRangeSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 78676260183534460067A4DB /* RMRLabelRangeSlider.m */; };
 		78676264183534460067A4DB /* RMRLabelSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 78676262183534460067A4DB /* RMRLabelSlider.m */; };
+		786762A41836ABB00067A4DB /* UIViewController+RMRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 786762A31836ABB00067A4DB /* UIViewController+RMRViewController.m */; };
 		7881E92818204EA500EA7116 /* NSFileManager+RMRFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7881E92718204EA500EA7116 /* NSFileManager+RMRFileManager.m */; };
 		78CC306917D64D7F000B8D85 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78CC306817D64D7F000B8D85 /* Foundation.framework */; };
 		78CC307F17D64DE5000B8D85 /* NSArray+RMRArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 78CC307A17D64DE5000B8D85 /* NSArray+RMRArray.m */; };
@@ -128,6 +129,8 @@
 		78676260183534460067A4DB /* RMRLabelRangeSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RMRLabelRangeSlider.m; path = source/views/sliders/RMRLabelRangeSlider.m; sourceTree = SOURCE_ROOT; };
 		78676261183534460067A4DB /* RMRLabelSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RMRLabelSlider.h; path = source/views/sliders/RMRLabelSlider.h; sourceTree = SOURCE_ROOT; };
 		78676262183534460067A4DB /* RMRLabelSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RMRLabelSlider.m; path = source/views/sliders/RMRLabelSlider.m; sourceTree = SOURCE_ROOT; };
+		786762A21836ABB00067A4DB /* UIViewController+RMRViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+RMRViewController.h"; path = "source/categories/UIViewController+RMRViewController.h"; sourceTree = SOURCE_ROOT; };
+		786762A31836ABB00067A4DB /* UIViewController+RMRViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+RMRViewController.m"; path = "source/categories/UIViewController+RMRViewController.m"; sourceTree = SOURCE_ROOT; };
 		7881E92618204EA500EA7116 /* NSFileManager+RMRFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSFileManager+RMRFileManager.h"; path = "source/categories/NSFileManager+RMRFileManager.h"; sourceTree = SOURCE_ROOT; };
 		7881E92718204EA500EA7116 /* NSFileManager+RMRFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSFileManager+RMRFileManager.m"; path = "source/categories/NSFileManager+RMRFileManager.m"; sourceTree = SOURCE_ROOT; };
 		78CC306517D64D7F000B8D85 /* libRMR.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRMR.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -370,6 +373,8 @@
 				78CC30E617D69939000B8D85 /* UIView+RMRRect.m */,
 				7867622A183438AD0067A4DB /* UIView+RMRView.h */,
 				7867622B183438AD0067A4DB /* UIView+RMRView.m */,
+				786762A21836ABB00067A4DB /* UIViewController+RMRViewController.h */,
+				786762A31836ABB00067A4DB /* UIViewController+RMRViewController.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -571,6 +576,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				78CC307F17D64DE5000B8D85 /* NSArray+RMRArray.m in Sources */,
+				786762A41836ABB00067A4DB /* UIViewController+RMRViewController.m in Sources */,
 				78CC308017D64DE5000B8D85 /* NSObject+RMRCast.m in Sources */,
 				78CC308117D64DE5000B8D85 /* UIView+RMRLayout.m in Sources */,
 				78CC308717D64DF6000B8D85 /* RMRDropbox.m in Sources */,
