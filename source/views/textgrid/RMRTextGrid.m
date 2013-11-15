@@ -39,7 +39,7 @@
 - (void)setup
 {
     text                = [[RMR2DArray alloc] init];
-    font                = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
+    font                = [UIFont boldSystemFontOfSize:19];
     rowHeight           = 20;
     defaultColumnWidth  = 100;
     columnWidths        = [[NSMutableArray alloc] init];
