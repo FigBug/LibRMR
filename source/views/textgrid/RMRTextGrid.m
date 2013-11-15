@@ -49,13 +49,22 @@
 - (void)drawString:(NSString*)string at:(CGPoint)pnt on:(CGContextRef)ctx color:(CGColorRef)color stoke:(CGColorRef)stroke
 {
     CGContextSetLineDash(ctx, 0, NULL, 0);
-    CGContextSetTextDrawingMode(ctx, kCGTextFillStroke);
-    CGContextSetLineWidth(ctx, 1.0);
+    CGContextSetLineWidth(ctx, 1);
     
     CGContextSetFillColorWithColor(ctx, color);
+    CGContextSetStrokeColorWithColor(ctx, color);
+    
+    CGContextSetTextDrawingMode(ctx, kCGTextFill);
+    [string drawAtPoint:pnt withFont:font];
+    
+    CGContextSetFillColorWithColor(ctx, stroke);
     CGContextSetStrokeColorWithColor(ctx, stroke);
     
-    [string drawAtPoint:pnt withFont:font];
+    if ([UIScreen mainScreen].scale >= 2.0)
+    {
+        CGContextSetTextDrawingMode(ctx, kCGTextStroke);
+        [string drawAtPoint:pnt withFont:font];
+    }
 }
 
 - (void)drawRect:(CGRect)rect
