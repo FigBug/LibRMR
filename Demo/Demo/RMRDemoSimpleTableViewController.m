@@ -46,7 +46,7 @@
     [group addItemText:@"Text" detailText:@"Detail"];
     [group addItemSwitchText:@"Switch" setting:nil];
     [group addItemSliderText:@"Slider" settings:nil min:0 max:10 step:0.5];
-    [group addItemSliderText:@"Dual Slider" settings:nil min:0 max:20 step:0.2];
+    [group addItemDualSliderText:@"Dual Slider" minSetting:nil maxSetting:nil min:0 max:20 step:0.2];
     [group addItemCheckText:@"Check 1" setting:nil value:@0];
     [group addItemCheckText:@"Check 2" setting:nil value:@1];
     
