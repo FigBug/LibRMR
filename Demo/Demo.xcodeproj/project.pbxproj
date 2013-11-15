@@ -19,6 +19,8 @@
 		7806148C17DA22D0009E89D0 /* RMRMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7806148B17DA22D0009E89D0 /* RMRMainViewController.m */; };
 		780614A217DA236D009E89D0 /* libRMR.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7806149F17DA2354009E89D0 /* libRMR.a */; };
 		7812143217EB3B3B00B62FBC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7812143117EB3B3B00B62FBC /* Images.xcassets */; };
+		789A3F00183670E900E53FC9 /* libarc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 789A3EFF183670E900E53FC9 /* libarc.a */; };
+		789A3F041836722600E53FC9 /* RMRDemoSimpleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 789A3F031836722600E53FC9 /* RMRDemoSimpleTableViewController.m */; };
 		78A9EEC017DE3F32000E13CE /* RMRTextGridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78A9EEBE17DE3F32000E13CE /* RMRTextGridViewController.m */; };
 		78A9EEC117DE3F32000E13CE /* RMRTextGridViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78A9EEBF17DE3F32000E13CE /* RMRTextGridViewController.xib */; };
 		78A9EEC417DE42F2000E13CE /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 78A9EEC317DE42F2000E13CE /* libz.dylib */; };
@@ -65,6 +67,9 @@
 		7806148B17DA22D0009E89D0 /* RMRMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RMRMainViewController.m; sourceTree = "<group>"; };
 		7806149A17DA2353009E89D0 /* RMR.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RMR.xcodeproj; path = ../../RMR.xcodeproj; sourceTree = "<group>"; };
 		7812143117EB3B3B00B62FBC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		789A3EFF183670E900E53FC9 /* libarc.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libarc.a; path = ../dependencies/libarc/libarc.a; sourceTree = "<group>"; };
+		789A3F021836722600E53FC9 /* RMRDemoSimpleTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMRDemoSimpleTableViewController.h; sourceTree = "<group>"; };
+		789A3F031836722600E53FC9 /* RMRDemoSimpleTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMRDemoSimpleTableViewController.m; sourceTree = "<group>"; };
 		78A9EEBD17DE3F32000E13CE /* RMRTextGridViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMRTextGridViewController.h; sourceTree = "<group>"; };
 		78A9EEBE17DE3F32000E13CE /* RMRTextGridViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMRTextGridViewController.m; sourceTree = "<group>"; };
 		78A9EEBF17DE3F32000E13CE /* RMRTextGridViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RMRTextGridViewController.xib; sourceTree = "<group>"; };
@@ -83,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				789A3F00183670E900E53FC9 /* libarc.a in Frameworks */,
 				78A9EECA17DE431C000E13CE /* AVFoundation.framework in Frameworks */,
 				78A9EEC817DE4312000E13CE /* CoreLocation.framework in Frameworks */,
 				78A9EEC617DE4302000E13CE /* CoreMedia.framework in Frameworks */,
@@ -118,6 +124,7 @@
 		7806147117DA22D0009E89D0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				789A3EFF183670E900E53FC9 /* libarc.a */,
 				78A9EEC317DE42F2000E13CE /* libz.dylib */,
 				78A9EEC917DE431C000E13CE /* AVFoundation.framework */,
 				7806147617DA22D0009E89D0 /* CoreGraphics.framework */,
@@ -180,6 +187,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		789A3F01183671C300E53FC9 /* DemoSimpleTable */ = {
+			isa = PBXGroup;
+			children = (
+				789A3F021836722600E53FC9 /* RMRDemoSimpleTableViewController.h */,
+				789A3F031836722600E53FC9 /* RMRDemoSimpleTableViewController.m */,
+			);
+			name = DemoSimpleTable;
+			sourceTree = "<group>";
+		};
 		78A9EEC217DE3F3B000E13CE /* TextGrid */ = {
 			isa = PBXGroup;
 			children = (
@@ -202,6 +218,7 @@
 		78C8BA0B17DA295900586887 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				789A3F01183671C300E53FC9 /* DemoSimpleTable */,
 				78C8BA0C17DA297F00586887 /* Main */,
 				78C8BA0D17DA2C4000586887 /* Map */,
 				78A9EEC217DE3F3B000E13CE /* TextGrid */,
@@ -318,6 +335,7 @@
 				7806148317DA22D0009E89D0 /* RMRAppDelegate.m in Sources */,
 				7806148C17DA22D0009E89D0 /* RMRMainViewController.m in Sources */,
 				78C8BA1117DA2CF400586887 /* RMRMapViewController.m in Sources */,
+				789A3F041836722600E53FC9 /* RMRDemoSimpleTableViewController.m in Sources */,
 				78A9EEC017DE3F32000E13CE /* RMRTextGridViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -415,6 +433,10 @@
 				GCC_PREFIX_HEADER = "Demo/Demo-Prefix.pch";
 				INFOPLIST_FILE = "Demo/Demo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/rrabien/dev.github/LibRMR/dependencies/libarc,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -429,6 +451,10 @@
 				GCC_PREFIX_HEADER = "Demo/Demo-Prefix.pch";
 				INFOPLIST_FILE = "Demo/Demo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/rrabien/dev.github/LibRMR/dependencies/libarc,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

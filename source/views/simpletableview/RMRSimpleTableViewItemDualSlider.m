@@ -60,17 +60,23 @@
     
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
-    NSNumber* minValue = [RMRDefaults objectForKey:minSetting defaultValue:nil];
-    NSNumber* maxValue = [RMRDefaults objectForKey:maxSetting defaultValue:nil];
-    
-    slider.lowerValue = minValue.doubleValue;
-    slider.upperValue = maxValue.doubleValue;
+    if (minSetting && maxSetting)
+    {
+        NSNumber* minValue = [RMRDefaults objectForKey:minSetting defaultValue:nil];
+        NSNumber* maxValue = [RMRDefaults objectForKey:maxSetting defaultValue:nil];
+        
+        slider.lowerValue = minValue.doubleValue;
+        slider.upperValue = maxValue.doubleValue;
+    }
 }
 
 -(void)slid:(id)sender
 {
-    RMRDefaultsSetDoubleForKey(minSetting, slider.lowerValue);
-    RMRDefaultsSetDoubleForKey(maxSetting, slider.upperValue);
+    if (minSetting && maxSetting)
+    {
+        RMRDefaultsSetDoubleForKey(minSetting, slider.lowerValue);
+        RMRDefaultsSetDoubleForKey(maxSetting, slider.upperValue);
+    }
     
     if (slidBlock)
         slidBlock(self);

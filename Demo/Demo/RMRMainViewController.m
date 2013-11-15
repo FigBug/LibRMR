@@ -7,6 +7,7 @@
 //
 
 #import "RMRMainViewController.h"
+#import "RMRDemoSimpleTableViewController.h"
 #import "RMRMapViewController.h"
 #import "RMRTextGridViewController.h"
 
@@ -49,6 +50,14 @@
         return NO;
     };
     
+    item = [demosGrp addItemText:@"Simple Table View"];
+    item.accessory = UITableViewCellAccessoryDisclosureIndicator;
+    item.selectBlock = ^(RMRSimpleTableViewItem* item)
+    {
+        RMRDemoSimpleTableViewController* vc = [[RMRDemoSimpleTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
+        [self.navigationController pushViewController:vc animated:YES];
+        return NO;
+    };
 }
 
 @end

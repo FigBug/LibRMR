@@ -37,16 +37,20 @@
     
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
-    NSNumber* value = [RMRDefaults objectForKey:setting defaultValue:nil];
-    if (value && value.boolValue)
-        uiSwitch.on = YES;
-    else
-        uiSwitch.on = NO;
+    if (setting)
+    {
+        NSNumber* value = [RMRDefaults objectForKey:setting defaultValue:nil];
+        if (value && value.boolValue)
+            uiSwitch.on = YES;
+        else
+            uiSwitch.on = NO;
+    }
 }
 
 -(void)switched:(id)sender
 {
-    RMRDefaultsSetBoolForKey(setting, uiSwitch.on);
+    if (setting)
+        RMRDefaultsSetBoolForKey(setting, uiSwitch.on);
     
     if (switchedBlock)
         switchedBlock(self, uiSwitch.on);

@@ -21,7 +21,7 @@
 {
     [super configureCell:cell];
     
-    if ([[RMRDefaults objectForKey:setting defaultValue:nil] isEqual:value])
+    if (setting && [[RMRDefaults objectForKey:setting defaultValue:nil] isEqual:value])
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
     else
         cell.accessoryType = UITableViewCellAccessoryNone;
@@ -34,7 +34,7 @@
         if ([item isKindOfClass:[RMRSimpleTableViewItemCheck class]])
         {
             RMRSimpleTableViewItemCheck* itemCheck = (RMRSimpleTableViewItemCheck*)item;
-            if ([itemCheck.setting isEqual:setting] && itemCheck != self)
+            if (setting && [itemCheck.setting isEqual:setting] && itemCheck != self)
             {
                 UITableViewCell* cell = [itemCheck cell];
                 cell.accessoryType = UITableViewCellAccessoryNone;
@@ -42,7 +42,8 @@
         }
     }
     
-    [RMRDefaults setObject:value forKey:setting];
+    if (setting)
+        [RMRDefaults setObject:value forKey:setting];
     
     UITableViewCell* cell = [self cell];
     if (cell)

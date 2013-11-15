@@ -58,13 +58,17 @@
     
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
-    NSNumber* value = [RMRDefaults objectForKey:setting defaultValue:nil];
-    slider.value = value.doubleValue;
+    if (setting)
+    {
+        NSNumber* value = [RMRDefaults objectForKey:setting defaultValue:nil];
+        slider.value = value.doubleValue;
+    }
 }
 
 -(void)slid:(id)sender
 {
-    RMRDefaultsSetDoubleForKey(setting, slider.value);
+    if (setting)
+        RMRDefaultsSetDoubleForKey(setting, slider.value);
     
     if (slidBlock)
         slidBlock(self);
