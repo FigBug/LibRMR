@@ -31,8 +31,15 @@
         slider = [[RMRLabelSlider alloc] init];
         
         [slider.slider addTarget:self action:@selector(slid:) forControlEvents:UIControlEventValueChanged];
+        
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(orientationDidChange:) name:UIApplicationDidChangeStatusBarOrientationNotification object:NULL];
     }
     return self;
+}
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (void)configureCell:(UITableViewCell*)cell
@@ -78,6 +85,12 @@
     [super setEnabled:enabled_];
     
     slider.enabled = enabled_;
+}
+
+- (void)orientationDidChange:(NSNotification*)notification
+{
+    UITableView* table = owner.tableView;
+    slider.bounds = CGRectMake(0, 0, owner.tableView.boundsRect.height * 2.0/3.0, table.rowHeight);
 }
 
 @end

@@ -53,6 +53,8 @@
     
     if (notification)
         [[NSNotificationCenter defaultCenter] postNotificationName:notification object:nil];
+    
+    [owner updateEnabledStates];
 }
 
 @end

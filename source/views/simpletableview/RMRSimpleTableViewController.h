@@ -21,5 +21,6 @@
 - (RMRSimpleTableViewGroup*)addGroup:(NSString*)name;
 
 - (void)reload;
+- (void)updateEnabledStates;
 
 @end

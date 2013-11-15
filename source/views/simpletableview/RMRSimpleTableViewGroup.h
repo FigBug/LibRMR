@@ -20,6 +20,7 @@
 }
 
 @property (nonatomic) NSString* name;
+@property (nonatomic) NSString* footer;
 @property (nonatomic,readonly) NSArray* items;
 
 - (id)initWithOwner:(RMRSimpleTableViewController*)owner name:(NSString*)name;
@@ -27,6 +28,9 @@
 - (RMRSimpleTableViewItem*)addItem;
 - (RMRSimpleTableViewItem*)addItemText:(NSString*)name;
 - (RMRSimpleTableViewItem*)addItemText:(NSString*)name detailText:(NSString*)detailText;
+- (RMRSimpleTableViewItem*)addItemText:(NSString*)name detailText:(NSString*)detailText style:(UITableViewCellStyle)style;
+
+- (RMRSimpleTableViewItem*)addItemButtonText:(NSString*)name select:(BOOL(^)(RMRSimpleTableViewItem* item))select;
 
 - (RMRSimpleTableViewItemCheck*)addItemCheckText:(NSString*)name setting:(NSString*)setting value:(id)value;
 - (RMRSimpleTableViewItemCheck*)addItemCheckText:(NSString*)name setting:(NSString*)setting value:(id)value notification:(NSString*)notification;
@@ -37,8 +41,8 @@
 - (RMRSimpleTableViewItemDualSlider*)addItemDualSliderText:(NSString*)name minSetting:(NSString*)minSetting maxSetting:(NSString*)maxSetting min:(double)min max:(double)max step:(double)step;
 - (RMRSimpleTableViewItemDualSlider*)addItemDualSliderText:(NSString*)name minSetting:(NSString*)minSetting maxSetting:(NSString*)maxSetting min:(double)min max:(double)max step:(double)step notification:(NSString*)notification;
 
-- (RMRSimpleTableViewItemSwitch*)addItemSwitch:(NSString*)name setting:(NSString*)setting;
-- (RMRSimpleTableViewItemSwitch*)addItemSwitch:(NSString*)name setting:(NSString*)setting notification:(NSString*)notification;
+- (RMRSimpleTableViewItemSwitch*)addItemSwitchText:(NSString*)name setting:(NSString*)setting;
+- (RMRSimpleTableViewItemSwitch*)addItemSwitchText:(NSString*)name setting:(NSString*)setting notification:(NSString*)notification;
 
 - (BOOL)removeItem:(RMRSimpleTableViewItem*)item;
 

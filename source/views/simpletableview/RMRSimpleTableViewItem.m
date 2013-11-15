@@ -14,26 +14,29 @@
 @implementation RMRSimpleTableViewItem
 
 @synthesize text;
+@synthesize textAlignment;
 @synthesize detailText;
 @synthesize style;
 @synthesize accessory;
 @synthesize accessoryView;
 @synthesize selectBlock;
 @synthesize deleteBlock;
+@synthesize enabledBlock;
 
 - (id)initWithOwner:(RMRSimpleTableViewController*)owner_ group:(RMRSimpleTableViewGroup*)group_;
 {
     self = [super init];
     if (self)
     {
-        owner       = owner_;
-        group       = group_;
+        owner           = owner_;
+        group           = group_;
         
-        text        = nil;
-        detailText  = nil;
-        style       = UITableViewCellStyleSubtitle;
-        accessory   = UITableViewCellAccessoryNone;
-        enabled     = YES;
+        text            = nil;
+        textAlignment   = NSTextAlignmentLeft;
+        detailText      = nil;
+        style           = UITableViewCellStyleSubtitle;
+        accessory       = UITableViewCellAccessoryNone;
+        enabled         = YES;
     }
     return self;
 }
@@ -41,6 +44,7 @@
 - (void)configureCell:(UITableViewCell*)cell
 {
     cell.textLabel.text             = text;
+    cell.textLabel.textAlignment    = textAlignment;
     cell.textLabel.enabled          = enabled;
     
     cell.detailTextLabel.text       = detailText;
@@ -60,6 +64,11 @@
         cell.accessoryView      = nil;
         cell.accessoryType      = accessory;
     }
+    
+    if (enabledBlock)
+        self.enabled = enabledBlock(self);
+    else
+        self.enabled = YES;
 }
 
 - (NSIndexPath*)indexPath
@@ -96,6 +105,16 @@
             if (control)
                 control.enabled = enabled;
         }
+    }
+}
+
+- (void)updateEnabledState
+{
+    if (enabledBlock)
+    {
+        BOOL shouldBeEnabled = enabledBlock(self);
+        if (shouldBeEnabled != enabled)
+            self.enabled = shouldBeEnabled;
     }
 }
 

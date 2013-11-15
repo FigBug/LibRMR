@@ -74,6 +74,12 @@
     return group.name;
 }
 
+- (NSString*)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section
+{
+    RMRSimpleTableViewGroup* group = [groups objectAtIndex:section];
+    return group.footer;
+}
+
 - (void)tableView:(UITableView*)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath*)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete)
@@ -150,6 +156,17 @@
     [self.tableView reloadData];
     
     return group;
+}
+
+- (void)updateEnabledStates
+{
+    for (RMRSimpleTableViewGroup* group in groups)
+    {
+        for (RMRSimpleTableViewItem* item in group.items)
+        {
+            [item updateEnabledState];
+        }
+    }
 }
 
 @end

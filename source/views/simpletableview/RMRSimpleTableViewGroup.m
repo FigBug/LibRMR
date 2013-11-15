@@ -17,6 +17,7 @@
 @implementation RMRSimpleTableViewGroup
 
 @synthesize name;
+@synthesize footer;
 
 - (id)initWithOwner:(RMRSimpleTableViewController*)owner_ name:(NSString*)name_
 {
@@ -37,23 +38,40 @@
 
 - (RMRSimpleTableViewItem*)addItem
 {
-    return [self addItemText:nil detailText:nil];
+    return [self addItemText:nil detailText:nil style:UITableViewCellStyleSubtitle];
 }
 
 - (RMRSimpleTableViewItem*)addItemText:(NSString*)text
 {
-    return [self addItemText:text detailText:nil];
+    return [self addItemText:text detailText:nil style:UITableViewCellStyleSubtitle];
 }
 
 - (RMRSimpleTableViewItem*)addItemText:(NSString*)text detailText:(NSString*)detailText
 {
+    return [self addItemText:text detailText:detailText style:UITableViewCellStyleSubtitle];
+}
+
+- (RMRSimpleTableViewItem*)addItemText:(NSString*)text detailText:(NSString*)detailText style:(UITableViewCellStyle)style
+{
     RMRSimpleTableViewItem* item = [[RMRSimpleTableViewItem alloc] initWithOwner:owner group:self];
     item.text       = text;
     item.detailText = detailText;
+    item.style      = style;
     
     [items addObject:item];
     
     [owner reload];
+    
+    return item;
+}
+
+- (RMRSimpleTableViewItem*)addItemButtonText:(NSString*)text select:(BOOL(^)(RMRSimpleTableViewItem* item))select
+{
+    RMRSimpleTableViewItem* item = [self addItemText:text];
+    
+    item.selectBlock    = select;
+    item.style          = UITableViewCellStyleDefault;
+    item.textAlignment  = NSTextAlignmentCenter;
     
     return item;
 }
@@ -126,12 +144,12 @@
     return item;
 }
 
-- (RMRSimpleTableViewItemSwitch*)addItemSwitch:(NSString*)text setting:(NSString*)setting
+- (RMRSimpleTableViewItemSwitch*)addItemSwitchText:(NSString*)text setting:(NSString*)setting
 {
-    return [self addItemSwitch:text setting:setting notification:nil];
+    return [self addItemSwitchText:text setting:setting notification:nil];
 }
 
-- (RMRSimpleTableViewItemSwitch*)addItemSwitch:(NSString*)text setting:(NSString*)setting notification:(NSString*)notification
+- (RMRSimpleTableViewItemSwitch*)addItemSwitchText:(NSString*)text setting:(NSString*)setting notification:(NSString*)notification
 {
     RMRSimpleTableViewItemSwitch* item = [[RMRSimpleTableViewItemSwitch alloc] initWithOwner:owner group:self];
     item.text           = text;

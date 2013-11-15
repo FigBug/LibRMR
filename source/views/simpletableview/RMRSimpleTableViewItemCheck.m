@@ -52,6 +52,8 @@
         [[NSNotificationCenter defaultCenter] postNotificationName:notification object:nil];
     
     [owner.tableView deselectRowAtIndexPath:[self indexPath] animated:YES];
+    
+    [owner updateEnabledStates];
 }
 
 @end

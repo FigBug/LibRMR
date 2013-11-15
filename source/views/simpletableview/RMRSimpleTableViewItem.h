@@ -17,12 +17,14 @@
 }
 
 @property (nonatomic) NSString* text;
+@property (nonatomic) NSTextAlignment textAlignment;
 @property (nonatomic) NSString* detailText;
 @property (nonatomic) UITableViewCellStyle style;
 @property (nonatomic) UITableViewCellAccessoryType accessory;
 @property (nonatomic) UIView* accessoryView;
 @property (nonatomic,copy) BOOL(^selectBlock)(RMRSimpleTableViewItem* item);
 @property (nonatomic,copy) BOOL(^deleteBlock)(RMRSimpleTableViewItem* item);
+@property (nonatomic,copy) BOOL(^enabledBlock)(RMRSimpleTableViewItem* item);
 
 - (id)initWithOwner:(RMRSimpleTableViewController*)owner group:(RMRSimpleTableViewGroup*)group;
 - (void)configureCell:(UITableViewCell*)cell;
@@ -30,5 +32,6 @@
 - (UITableViewCell*)cell;
 - (BOOL)enabled;
 - (void)setEnabled:(BOOL)enabled;
+- (void)updateEnabledState;
 
 @end
